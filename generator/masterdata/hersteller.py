@@ -2,7 +2,7 @@ import random
 import yaml
 
 from generator.base import BaseGenerator
-from generator.csv_writer import CSVWriter
+from generator.infrastructure.csv_writer import CSVWriter
 
 
 class HerstellerGenerator(BaseGenerator):

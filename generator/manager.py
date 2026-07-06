@@ -1,5 +1,6 @@
-from generator.warengruppen import WarengruppenGenerator
-from generator.hersteller import HerstellerGenerator
+from generator.masterdata.warengruppen import WarengruppenGenerator
+from generator.masterdata.hersteller import HerstellerGenerator
+from generator.infrastructure.project_paths import ProjectPaths
 
 
 class GeneratorManager:
