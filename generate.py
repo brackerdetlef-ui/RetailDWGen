@@ -1,6 +1,15 @@
+from pathlib import Path
+
 from generator.config import Config
 from generator.logger import setup_logger
 from generator.manager import GeneratorManager
+
+
+def read_version():
+
+    return Path("VERSION").read_text(
+        encoding="utf-8"
+    ).strip()
 
 
 def main():
@@ -9,10 +18,12 @@ def main():
 
     logger = setup_logger()
 
-    print("=" * 50)
+    print()
+
+    print("=" * 60)
     print(config.get("project", "name"))
-    print("Version", config.get("project", "version"))
-    print("=" * 50)
+    print("Version", read_version())
+    print("=" * 60)
 
     manager = GeneratorManager(
         config,
@@ -21,8 +32,11 @@ def main():
 
     manager.run()
 
-    print("Fertig.")
+    print()
+    print("RetailDWGen erfolgreich beendet.")
+    print()
 
 
 if __name__ == "__main__":
-   main()
+
+    main()

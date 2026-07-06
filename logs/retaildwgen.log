@@ -12,3 +12,9 @@
 2026-07-06 12:19:35,578 INFO Starte HerstellerGenerator
 2026-07-06 12:19:35,579 INFO 10 Hersteller erzeugt.
 2026-07-06 12:19:35,579 INFO HerstellerGenerator beendet
+2026-07-06 13:47:56,272 INFO Starte WarengruppenGenerator
+2026-07-06 13:47:56,284 INFO 50 Warengruppen erzeugt.
+2026-07-06 13:47:56,284 INFO WarengruppenGenerator beendet
+2026-07-06 13:47:56,284 INFO Starte HerstellerGenerator
+2026-07-06 13:47:56,287 INFO 10 Hersteller erzeugt.
+2026-07-06 13:47:56,287 INFO HerstellerGenerator beendet

@@ -1,19 +1,15 @@
 project:
+
   name: RetailDWGen
-  version: 0.4
 
 general:
+
   seed: 4711
+
   encoding: utf-8
+
   delimiter: ";"
 
 output:
-  base_folder: output
 
-masterdata:
-  warengruppen: 50
-  artikel: 15000
-  lieferanten: 3000
-  kunden: 250000
-  filialen: 25
-  mitarbeiter: 500
+  folder: output

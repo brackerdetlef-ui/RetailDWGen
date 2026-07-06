@@ -5,16 +5,16 @@ Generator für realistische Testdaten eines Handelsunternehmens.
 ## Voraussetzungen
 
 - Python 3.10.12
-- PostgreSQL (später)
-- dbt (später)
+- Linux Mint
 
 ## Installation
 
 ```bash
 python3 -m venv .venv
+
 source .venv/bin/activate
 
-pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 ```
 
 ## Start
@@ -22,3 +22,11 @@ pip install -r requirements.txt
 ```bash
 python generate.py
 ```
+
+Die erzeugten CSV-Dateien befinden sich anschließend im Ordner
+
+```
+output/
+```
+A
+
