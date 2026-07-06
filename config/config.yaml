@@ -13,3 +13,7 @@ general:
 output:
 
   folder: output
+
+generator:
+
+  lieferanten: 100

@@ -24,3 +24,18 @@
 2026-07-06 18:23:30,149 INFO Starte HerstellerGenerator
 2026-07-06 18:23:30,151 INFO 10 Hersteller erzeugt.
 2026-07-06 18:23:30,151 INFO HerstellerGenerator beendet
+2026-07-06 18:32:43,049 INFO Starte WarengruppenGenerator
+2026-07-06 18:32:43,055 INFO 50 Warengruppen erzeugt.
+2026-07-06 18:32:43,056 INFO WarengruppenGenerator beendet
+2026-07-06 18:32:43,056 INFO Starte HerstellerGenerator
+2026-07-06 18:32:43,058 INFO 10 Hersteller erzeugt.
+2026-07-06 18:32:43,058 INFO HerstellerGenerator beendet
+2026-07-06 18:52:48,278 INFO Starte WarengruppenGenerator
+2026-07-06 18:52:48,284 INFO 50 Warengruppen erzeugt.
+2026-07-06 18:52:48,284 INFO WarengruppenGenerator beendet
+2026-07-06 18:52:48,284 INFO Starte HerstellerGenerator
+2026-07-06 18:52:48,286 INFO 10 Hersteller erzeugt.
+2026-07-06 18:52:48,286 INFO HerstellerGenerator beendet
+2026-07-06 18:52:48,286 INFO Starte LieferantenGenerator
+2026-07-06 18:52:48,300 INFO 100 Lieferanten erzeugt.
+2026-07-06 18:52:48,301 INFO LieferantenGenerator beendet
