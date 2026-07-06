@@ -1,4 +1,5 @@
 from generator.warengruppen import WarengruppenGenerator
+from generator.hersteller import HerstellerGenerator
 
 
 class GeneratorManager:
@@ -16,6 +17,11 @@ class GeneratorManager:
                 self.config,
                 self.logger
             ),
+
+            HerstellerGenerator(
+                self.config,
+                self.logger
+            )
 
         ]
 

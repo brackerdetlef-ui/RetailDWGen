@@ -1,0 +1,11 @@
+hersteller_id;hersteller_code;name;land;aktiv
+1;H0001;Auron;CH;True
+2;H0002;TechNova;JP;True
+3;H0003;BlueChip;KR;True
+4;H0004;FutureIT;DE;True
+5;H0005;PrimeOffice;SE;True
+6;H0006;NetVision;SE;True
+7;H0007;Vertex;DE;True
+8;H0008;DataCore;FR;True
+9;H0009;SolidLink;DE;True
+10;H0010;Innova;US;True
