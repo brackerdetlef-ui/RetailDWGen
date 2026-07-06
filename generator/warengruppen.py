@@ -1,3 +1,4 @@
+import yaml
 from generator.base import BaseGenerator
 from generator.csv_writer import CSVWriter
 
@@ -14,58 +15,15 @@ class WarengruppenGenerator(BaseGenerator):
 
     def generate(self):
 
-        warengruppen = [
-            "Notebooks",
-            "Desktop-PCs",
-            "Monitore",
-            "Drucker",
-            "Scanner",
-            "Tablets",
-            "Smartphones",
-            "Server",
-            "NAS",
-            "Router",
-            "Switches",
-            "Access Points",
-            "USV",
-            "SSD",
-            "Festplatten",
-            "RAM",
-            "Grafikkarten",
-            "Mainboards",
-            "CPUs",
-            "Netzteile",
-            "Gehäuse",
-            "Mäuse",
-            "Tastaturen",
-            "Headsets",
-            "Lautsprecher",
-            "Webcams",
-            "Mikrofone",
-            "Beamer",
-            "Displays",
-            "HDMI-Kabel",
-            "USB-Kabel",
-            "Adapter",
-            "Dockingstations",
-            "Druckerzubehör",
-            "Papier",
-            "Ordner",
-            "Schreibwaren",
-            "Bürostühle",
-            "Schreibtische",
-            "Aktenschränke",
-            "Software",
-            "Antivirus",
-            "Backup",
-            "Smart Home",
-            "Überwachung",
-            "Werkzeug",
-            "Reinigung",
-            "Verpackung",
-            "Batterien",
-            "Sonstiges"
-        ]
+        with open(
+            "config/warengruppen.yaml",
+            "r",
+            encoding="utf-8"
+        ) as file:
+
+             daten = yaml.safe_load(file)
+
+        warengruppen = daten["warengruppen"]
 
         rows = []
 
