@@ -3,6 +3,8 @@ import random
 
 from generator.base import BaseGenerator
 from generator.infrastructure.csv_writer import CSVWriter
+from generator.utils import create_email
+from generator.utils import create_website
 
 
 class LieferantenGenerator(BaseGenerator):
@@ -51,24 +53,9 @@ class LieferantenGenerator(BaseGenerator):
 
             firma = self.faker.company()
 
-            email = (
-                firma.lower()
-                .replace(" ", "")
-                .replace(".", "")
-                .replace(",", "")
-                .replace("-", "")
-                + "@example.com"
-            )
+            email = create_email(firma)
 
-            webseite = (
-                "www."
-                + firma.lower()
-                .replace(" ", "")
-                .replace(".", "")
-                .replace(",", "")
-                .replace("-", "")
-                + ".de"
-            )
+            webseite = create_website(firma)
 
             rows.append([
 
