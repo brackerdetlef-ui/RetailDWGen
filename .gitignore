@@ -1,13 +1,46 @@
+# Python
+
+**pycache**/
+*.py[cod]
+*$py.class
+
+# Virtuelle Umgebung
+
 .venv/
+venv/
+env/
 
-__pycache__/
+# Distribution
 
-*.pyc
+build/
+dist/
+*.egg-info/
 
-logs/*.log
+# IDE
+
+.vscode/
+.idea/
+
+# Betriebssystem
+
+.DS_Store
+Thumbs.db
+
+# Log-Dateien
+
+*.log
+
+# Generierte Testdaten
 
 output/
 
-.idea/
+# Python Cache
 
-.vscode/
+.pytest_cache/
+.mypy_cache/
+
+# Sonstiges
+
+*.swp
+*~
+
