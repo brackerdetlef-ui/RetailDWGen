@@ -1,0 +1,373 @@
+organisation:
+
+# ==========================================================
+# Hauptverwaltung
+# ==========================================================
+
+  - code: "000"
+    kuerzel: "HV"
+    bezeichnung: "Hauptverwaltung"
+    parent: null
+    typ: "hauptverwaltung"
+
+# ==========================================================
+# Verkauf
+# ==========================================================
+
+  - code: "010"
+    kuerzel: "V"
+    bezeichnung: "Verkauf"
+    parent: "000"
+    typ: "abteilung"
+
+  - code: "011"
+    kuerzel: "VF"
+    bezeichnung: "Filialvertrieb"
+    parent: "010"
+    typ: "gruppe"
+
+  - code: "012"
+    kuerzel: "VO"
+    bezeichnung: "Online-Vertrieb"
+    parent: "010"
+    typ: "gruppe"
+
+  - code: "013"
+    kuerzel: "VG"
+    bezeichnung: "Vertriebssteuerung"
+    parent: "010"
+    typ: "gruppe"
+
+  - code: "014"
+    kuerzel: "VK"
+    bezeichnung: "Key-Account / Großkunden"
+    parent: "010"
+    typ: "gruppe"
+
+# ==========================================================
+# Einkauf
+# ==========================================================
+
+  - code: "020"
+    kuerzel: "E"
+    bezeichnung: "Einkauf"
+    parent: "000"
+    typ: "abteilung"
+
+  - code: "021"
+    kuerzel: "EB"
+    bezeichnung: "Beschaffung"
+    parent: "020"
+    typ: "gruppe"
+
+  - code: "022"
+    kuerzel: "EL"
+    bezeichnung: "Lieferantenmanagement"
+    parent: "020"
+    typ: "gruppe"
+
+  - code: "023"
+    kuerzel: "EK"
+    bezeichnung: "Einkaufskalkulation"
+    parent: "020"
+    typ: "gruppe"
+
+  - code: "024"
+    kuerzel: "EV"
+    bezeichnung: "Vertragsmanagement"
+    parent: "020"
+    typ: "gruppe"
+
+  - code: "025"
+    kuerzel: "ER"
+    bezeichnung: "Rechnungsprüfung"
+    parent: "020"
+    typ: "gruppe"
+
+# ==========================================================
+# Materialwirtschaft
+# ==========================================================
+
+  - code: "030"
+    kuerzel: "M"
+    bezeichnung: "Materialwirtschaft"
+    parent: "000"
+    typ: "abteilung"
+
+  - code: "031"
+    kuerzel: "MD"
+    bezeichnung: "Disposition"
+    parent: "030"
+    typ: "gruppe"
+
+  - code: "032"
+    kuerzel: "ML"
+    bezeichnung: "Lagersteuerung"
+    parent: "030"
+    typ: "gruppe"
+
+  - code: "033"
+    kuerzel: "MW"
+    bezeichnung: "Wareneingang"
+    parent: "030"
+    typ: "gruppe"
+
+  - code: "034"
+    kuerzel: "MU"
+    bezeichnung: "Umlagerungen"
+    parent: "030"
+    typ: "gruppe"
+
+  - code: "035"
+    kuerzel: "MB"
+    bezeichnung: "Materialbuchhaltung"
+    parent: "030"
+    typ: "gruppe"
+
+  - code: "036"
+    kuerzel: "MI"
+    bezeichnung: "Inventur"
+    parent: "030"
+    typ: "gruppe"
+
+  - code: "037"
+    kuerzel: "MK"
+    bezeichnung: "Kommissionierung"
+    parent: "030"
+    typ: "gruppe"
+
+  - code: "038"
+    kuerzel: "MV"
+    bezeichnung: "Versand"
+    parent: "030"
+    typ: "gruppe"
+
+  - code: "039"
+    kuerzel: "MR"
+    bezeichnung: "Retourenmanagement"
+    parent: "030"
+    typ: "gruppe"
+
+# ==========================================================
+# Anlagen und Gebäude
+# ==========================================================
+
+  - code: "040"
+    kuerzel: "A"
+    bezeichnung: "Anlagen und Gebäude"
+    parent: "000"
+    typ: "abteilung"
+
+  - code: "041"
+    kuerzel: "AG"
+    bezeichnung: "Gebäudeverwaltung"
+    parent: "040"
+    typ: "gruppe"
+
+  - code: "042"
+    kuerzel: "AH"
+    bezeichnung: "Haustechnik"
+    parent: "040"
+    typ: "gruppe"
+
+  - code: "043"
+    kuerzel: "AS"
+    bezeichnung: "Sicherheit"
+    parent: "040"
+    typ: "gruppe"
+
+  - code: "044"
+    kuerzel: "AI"
+    bezeichnung: "Inventarverwaltung"
+    parent: "040"
+    typ: "gruppe"
+
+  - code: "045"
+    kuerzel: "AB"
+    bezeichnung: "Anlagenbuchhaltung"
+    parent: "040"
+    typ: "gruppe"
+
+# ==========================================================
+# Finanzwesen
+# ==========================================================
+
+  - code: "050"
+    kuerzel: "F"
+    bezeichnung: "Finanzwesen"
+    parent: "000"
+    typ: "abteilung"
+
+  - code: "051"
+    kuerzel: "FC"
+    bezeichnung: "Controlling"
+    parent: "050"
+    typ: "gruppe"
+
+  - code: "052"
+    kuerzel: "FK"
+    bezeichnung: "Kasse"
+    parent: "050"
+    typ: "gruppe"
+
+  - code: "053"
+    kuerzel: "FL"
+    bezeichnung: "Liquiditätsplanung"
+    parent: "050"
+    typ: "gruppe"
+
+  - code: "054"
+    kuerzel: "FS"
+    bezeichnung: "Steuern"
+    parent: "050"
+    typ: "gruppe"
+
+  - code: "055"
+    kuerzel: "FB"
+    bezeichnung: "Finanzbuchhaltung"
+    parent: "050"
+    typ: "gruppe"
+
+# ==========================================================
+# Personalwesen
+# ==========================================================
+
+  - code: "060"
+    kuerzel: "P"
+    bezeichnung: "Personalwesen"
+    parent: "000"
+    typ: "abteilung"
+
+  - code: "061"
+    kuerzel: "PPA"
+    bezeichnung: "Personalabteilung"
+    parent: "060"
+    typ: "gruppe"
+
+  - code: "065"
+    kuerzel: "PEA"
+    bezeichnung: "Entgeltabrechnung"
+    parent: "060"
+    typ: "gruppe"
+
+  - code: "066"
+    kuerzel: "PMK"
+    bezeichnung: "Mitarbeiter-Kantine und Bewirtung"
+    parent: "060"
+    typ: "gruppe"
+
+  - code: "067"
+    kuerzel: "PME"
+    bezeichnung: "Mitarbeiter-Essen"
+    parent: "060"
+    typ: "gruppe"
+
+  - code: "068"
+    kuerzel: "PMU"
+    bezeichnung: "Mitarbeiter-Urlaubsplanung und Ferienheime"
+    parent: "060"
+    typ: "gruppe"
+
+  - code: "069"
+    kuerzel: "PMZ"
+    bezeichnung: "Mitarbeiter-Zeiterfassung"
+    parent: "060"
+    typ: "gruppe"
+
+  - code: "070"
+    kuerzel: "PMV"
+    bezeichnung: "Mitarbeiter-Vorschlagswesen"
+    parent: "060"
+    typ: "gruppe"
+
+# ==========================================================
+# Organisation
+# ==========================================================
+
+  - code: "080"
+    kuerzel: "O"
+    bezeichnung: "Organisation"
+    parent: "000"
+    typ: "abteilung"
+
+  - code: "085"
+    kuerzel: "OW"
+    bezeichnung: "Werbung"
+    parent: "080"
+    typ: "gruppe"
+
+  - code: "088"
+    kuerzel: "OV"
+    bezeichnung: "Videostudio"
+    parent: "080"
+    typ: "gruppe"
+
+  - code: "089"
+    kuerzel: "OM"
+    bezeichnung: "Dokumentenarchiv und Digitalisierung"
+    parent: "080"
+    typ: "gruppe"
+
+# ==========================================================
+# Datenverarbeitung
+# ==========================================================
+
+  - code: "090"
+    kuerzel: "DV"
+    bezeichnung: "Datenverarbeitung"
+    parent: "000"
+    typ: "abteilung"
+
+  - code: "091"
+    kuerzel: "DVI"
+    bezeichnung: "Infrastruktur"
+    parent: "090"
+    typ: "gruppe"
+
+  - code: "092"
+    kuerzel: "DVS"
+    bezeichnung: "Systembetrieb"
+    parent: "090"
+    typ: "gruppe"
+
+  - code: "093"
+    kuerzel: "DVA"
+    bezeichnung: "Anwendungsentwicklung"
+    parent: "090"
+    typ: "gruppe"
+
+  - code: "094"
+    kuerzel: "DVD"
+    bezeichnung: "Datenbanken"
+    parent: "090"
+    typ: "gruppe"
+
+  - code: "095"
+    kuerzel: "DVN"
+    bezeichnung: "Netzwerk"
+    parent: "090"
+    typ: "gruppe"
+
+  - code: "096"
+    kuerzel: "DVC"
+    bezeichnung: "Cloud"
+    parent: "090"
+    typ: "gruppe"
+
+  - code: "097"
+    kuerzel: "DWH"
+    bezeichnung: "Data Warehouse / Business Intelligence"
+    parent: "090"
+    typ: "gruppe"
+
+  - code: "098"
+    kuerzel: "DVSI"
+    bezeichnung: "IT-Sicherheit"
+    parent: "090"
+    typ: "gruppe"
+
+  - code: "099"
+    kuerzel: "DVHD"
+    bezeichnung: "Helpdesk"
+    parent: "090"
+    typ: "gruppe"

@@ -4,6 +4,7 @@ from faker import Faker
 
 from generator.base import BaseGenerator
 from generator.infrastructure.csv_writer import CSVWriter
+from generator.infrastructure.personalnummer import PersonalnummerGenerator
 
 
 class MitarbeiterGenerator(BaseGenerator):
@@ -17,6 +18,8 @@ class MitarbeiterGenerator(BaseGenerator):
         )
 
         self.fake = Faker("de_DE")
+
+        self.personalnummer = PersonalnummerGenerator()
 
     def generate(self):
 
@@ -44,17 +47,40 @@ class MitarbeiterGenerator(BaseGenerator):
             "filialen"
         )
 
-        abteilungen = [
+        anzahl_lager = self.config.get(
+            "generator",
+            "lager"
+        )
 
-            "Verkauf",
-            "Kasse",
+        zentrale_abteilungen = [
+
+            "Geschäftsführung",
+            "Controlling",
             "Einkauf",
-            "Lager",
-            "Logistik",
-            "Verwaltung",
+            "Finanzen",
             "IT",
             "Marketing",
             "Personal"
+
+        ]
+
+        filial_abteilungen = [
+
+            "Verkauf",
+            "Kasse",
+            "Information",
+            "Service",
+            "Marktleitung"
+
+        ]
+
+        lager_abteilungen = [
+
+            "Wareneingang",
+            "Kommissionierung",
+            "Versand",
+            "Inventur",
+            "Logistik"
 
         ]
 
@@ -66,35 +92,87 @@ class MitarbeiterGenerator(BaseGenerator):
         ):
 
             vorname = self.fake.first_name()
+
             nachname = self.fake.last_name()
+
+            personalnummer = self.personalnummer.generate(
+                vorname,
+                nachname
+            )
+
+            email = (
+                f"{vorname}.{nachname}"
+                .lower()
+                .replace(" ", "")
+                .replace("ä", "ae")
+                .replace("ö", "oe")
+                .replace("ü", "ue")
+                .replace("ß", "ss")
+                + "@retaildwgen.local"
+            )
+
+            zufall = random.random()
+
+            if zufall < 0.10:
+
+                einsatzort_typ = "ZENTRALE"
+
+                einsatzort_id = 0
+
+                abteilung = random.choice(
+                    zentrale_abteilungen
+                )
+
+            elif zufall < 0.80:
+
+                einsatzort_typ = "FILIALE"
+
+                einsatzort_id = random.randint(
+                    1,
+                    anzahl_filialen
+                )
+
+                abteilung = random.choice(
+                    filial_abteilungen
+                )
+
+            else:
+
+                einsatzort_typ = "LAGER"
+
+                einsatzort_id = random.randint(
+                    1,
+                    anzahl_lager
+                )
+
+                abteilung = random.choice(
+                    lager_abteilungen
+                )
 
             rows.append([
 
                 nummer,
 
-                f"M{nummer:06d}",
+                personalnummer,
 
                 vorname,
 
                 nachname,
 
-                f"{vorname}.{nachname}".lower().replace(" ", "") + "@retaildwgen.local",
+                email,
 
-                random.choice(
-                    abteilungen
-                ),
+                einsatzort_typ,
 
-                random.randint(
-                    1,
-                    anzahl_filialen
-                ),
+                einsatzort_id,
+
+                abteilung,
+
+                self.fake.phone_number(),
 
                 self.fake.date_between(
                     start_date="-20y",
                     end_date="today"
                 ),
-
-                self.fake.phone_number(),
 
                 True
 
@@ -105,14 +183,15 @@ class MitarbeiterGenerator(BaseGenerator):
             [
 
                 "mitarbeiter_id",
-                "mitarbeiter_code",
+                "personalnummer",
                 "vorname",
                 "nachname",
                 "email",
+                "einsatzort_typ",
+                "einsatzort_id",
                 "abteilung",
-                "filiale_id",
-                "eintrittsdatum",
                 "telefon",
+                "eintrittsdatum",
                 "aktiv"
 
             ],
