@@ -7,6 +7,7 @@ from generator.masterdata.marken import MarkenGenerator
 from generator.masterdata.lager import LagerGenerator
 from generator.masterdata.mitarbeiter import MitarbeiterGenerator
 from generator.masterdata.filialen import FilialenGenerator
+from generator.masterdata.organisation import OrganisationGenerator
 from generator.infrastructure.project_paths import ProjectPaths
 
 
@@ -47,6 +48,11 @@ class GeneratorManager:
             ),
 
             ArtikelGenerator(
+                self.config,
+                self.logger
+            ),
+   
+            OrganisationGenerator(
                 self.config,
                 self.logger
             )
