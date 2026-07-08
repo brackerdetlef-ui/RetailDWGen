@@ -96,3 +96,61 @@
 2026-07-08 10:08:36,149 INFO Starte ArtikelGenerator
 2026-07-08 10:08:36,897 INFO 10000 Artikel erzeugt.
 2026-07-08 10:08:36,901 INFO ArtikelGenerator beendet
+2026-07-08 10:22:11,665 INFO Starte WarengruppenGenerator
+2026-07-08 10:22:11,670 INFO 50 Warengruppen erzeugt.
+2026-07-08 10:22:11,670 INFO WarengruppenGenerator beendet
+2026-07-08 10:22:11,670 INFO Starte HerstellerGenerator
+2026-07-08 10:22:11,678 INFO 100 Hersteller erzeugt.
+2026-07-08 10:22:11,678 INFO HerstellerGenerator beendet
+2026-07-08 10:22:11,678 INFO Starte LieferantenGenerator
+2026-07-08 10:22:11,688 INFO 100 Lieferanten erzeugt.
+2026-07-08 10:22:11,689 INFO LieferantenGenerator beendet
+2026-07-08 10:22:11,689 INFO Starte KundenGenerator
+2026-07-08 10:22:11,847 INFO 1000 Kunden erzeugt.
+2026-07-08 10:22:11,848 INFO KundenGenerator beendet
+2026-07-08 10:22:11,848 INFO Starte MarkenGenerator
+2026-07-08 10:22:11,882 WARNING Hersteller 'LEGO' nicht gefunden.
+2026-07-08 10:22:11,883 WARNING Hersteller 'Playmobil' nicht gefunden.
+2026-07-08 10:22:11,883 WARNING Hersteller 'Ravensburger' nicht gefunden.
+2026-07-08 10:22:11,883 WARNING Hersteller 'Mattel' nicht gefunden.
+2026-07-08 10:22:11,883 WARNING Hersteller 'Mattel' nicht gefunden.
+2026-07-08 10:22:11,883 WARNING Hersteller 'Hasbro' nicht gefunden.
+2026-07-08 10:22:11,883 WARNING Hersteller 'Hasbro' nicht gefunden.
+2026-07-08 10:22:11,883 WARNING Hersteller 'Hasbro' nicht gefunden.
+2026-07-08 10:22:11,883 WARNING Hersteller 'Kärcher' nicht gefunden.
+2026-07-08 10:22:11,883 WARNING Hersteller 'Gardena' nicht gefunden.
+2026-07-08 10:22:11,883 WARNING Hersteller 'Fiskars' nicht gefunden.
+2026-07-08 10:22:11,883 INFO 98 Marken erzeugt.
+2026-07-08 10:22:11,883 INFO MarkenGenerator beendet
+2026-07-08 10:22:11,883 INFO Starte ArtikelGenerator
+2026-07-08 10:22:12,242 INFO 10000 Artikel erzeugt.
+2026-07-08 10:22:12,246 INFO ArtikelGenerator beendet
+2026-07-08 10:45:59,689 INFO Starte WarengruppenGenerator
+2026-07-08 10:45:59,694 INFO 50 Warengruppen erzeugt.
+2026-07-08 10:45:59,694 INFO WarengruppenGenerator beendet
+2026-07-08 10:45:59,694 INFO Starte HerstellerGenerator
+2026-07-08 10:45:59,702 INFO 100 Hersteller erzeugt.
+2026-07-08 10:45:59,702 INFO HerstellerGenerator beendet
+2026-07-08 10:45:59,702 INFO Starte LieferantenGenerator
+2026-07-08 10:45:59,713 INFO 100 Lieferanten erzeugt.
+2026-07-08 10:45:59,713 INFO LieferantenGenerator beendet
+2026-07-08 10:45:59,713 INFO Starte KundenGenerator
+2026-07-08 10:45:59,859 INFO 1000 Kunden erzeugt.
+2026-07-08 10:45:59,859 INFO KundenGenerator beendet
+2026-07-08 10:45:59,859 INFO Starte MarkenGenerator
+2026-07-08 10:45:59,891 WARNING Hersteller 'LEGO' nicht gefunden.
+2026-07-08 10:45:59,891 WARNING Hersteller 'Playmobil' nicht gefunden.
+2026-07-08 10:45:59,891 WARNING Hersteller 'Ravensburger' nicht gefunden.
+2026-07-08 10:45:59,891 WARNING Hersteller 'Mattel' nicht gefunden.
+2026-07-08 10:45:59,891 WARNING Hersteller 'Mattel' nicht gefunden.
+2026-07-08 10:45:59,891 WARNING Hersteller 'Hasbro' nicht gefunden.
+2026-07-08 10:45:59,891 WARNING Hersteller 'Hasbro' nicht gefunden.
+2026-07-08 10:45:59,891 WARNING Hersteller 'Hasbro' nicht gefunden.
+2026-07-08 10:45:59,891 WARNING Hersteller 'Kärcher' nicht gefunden.
+2026-07-08 10:45:59,891 WARNING Hersteller 'Gardena' nicht gefunden.
+2026-07-08 10:45:59,892 WARNING Hersteller 'Fiskars' nicht gefunden.
+2026-07-08 10:45:59,892 INFO 98 Marken erzeugt.
+2026-07-08 10:45:59,892 INFO MarkenGenerator beendet
+2026-07-08 10:45:59,892 INFO Starte ArtikelGenerator
+2026-07-08 10:46:00,244 INFO 10000 Artikel erzeugt.
+2026-07-08 10:46:00,248 INFO ArtikelGenerator beendet

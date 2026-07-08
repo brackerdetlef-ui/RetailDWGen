@@ -1,4 +1,4 @@
-import random
+import csv
 import yaml
 
 from generator.base import BaseGenerator
@@ -17,13 +17,6 @@ class MarkenGenerator(BaseGenerator):
 
     def generate(self):
 
-        random.seed(
-            self.config.get(
-                "general",
-                "seed"
-            )
-        )
-
         with open(
             "config/marken.yaml",
             "r",
@@ -32,48 +25,86 @@ class MarkenGenerator(BaseGenerator):
 
             daten = yaml.safe_load(file)
 
-        marken = daten["marken"]
+        hersteller = {}
+
+        with open(
+            "output/stammdaten/hersteller.csv",
+            "r",
+            encoding="utf-8"
+        ) as file:
+
+            reader = csv.DictReader(
+                file,
+                delimiter=self.config.get(
+                    "general",
+                    "delimiter"
+                )
+            )
+
+            for row in reader:
+
+                hersteller[
+                    row["name"]
+                ] = int(
+                    row["hersteller_id"]
+                )
 
         anzahl = min(
             self.config.get(
                 "generator",
                 "marken"
             ),
-            len(marken)
-        )
-
-        anzahl_hersteller = self.config.get(
-            "generator",
-            "hersteller"
+            len(daten["marken"])
         )
 
         rows = []
 
-        for nummer, name in enumerate(
-            marken[:anzahl],
+        for nummer, marke in enumerate(
+            daten["marken"][:anzahl],
             start=1
         ):
 
+            hersteller_name = marke["hersteller"]
+
+            if hersteller_name not in hersteller:
+
+                self.logger.warning(
+                    "Hersteller '%s' nicht gefunden.",
+                    hersteller_name
+                )
+
+                continue
+
             rows.append([
+
                 nummer,
+
                 f"M{nummer:04d}",
-                name,
-                random.randint(
-                    1,
-                    anzahl_hersteller
-                ),
+
+                marke["name"],
+
+                hersteller[
+                    hersteller_name
+                ],
+
                 True
+
             ])
 
         self.writer.write(
+
             [
+
                 "marke_id",
                 "marke_code",
                 "bezeichnung",
                 "hersteller_id",
                 "aktiv"
+
             ],
+
             rows
+
         )
 
         self.logger.info(

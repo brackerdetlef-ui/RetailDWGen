@@ -1,43 +1,347 @@
 marken:
 
-  - Bosch
-  - Siemens
-  - Neff
-  - Gaggenau
-  - Philips
-  - Sony
-  - Samsung
-  - LG
-  - Panasonic
-  - Apple
-  - Lenovo
-  - Dell
-  - HP
-  - Asus
-  - Acer
-  - Canon
-  - Nikon
-  - Epson
-  - Brother
-  - Adidas
-  - Nike
-  - Puma
-  - Levi's
-  - Esprit
-  - Tommy Hilfiger
-  - Nivea
-  - Dove
-  - Persil
-  - Ariel
-  - Dr. Oetker
-  - Haribo
-  - Milka
-  - Lindt
-  - Ritter Sport
-  - Maggi
-  - Knorr
-  - Kellogg's
-  - Ferrero
-  - Kinder
-  - Coca-Cola
-  - Pepsi
+  # Bosch-Gruppe
+  - name: Bosch
+    hersteller: Bosch
+  - name: Siemens
+    hersteller: Bosch
+  - name: Neff
+    hersteller: Bosch
+  - name: Gaggenau
+    hersteller: Bosch
+
+  # Electrolux
+  - name: AEG
+    hersteller: Electrolux
+  - name: Electrolux
+    hersteller: Electrolux
+
+  # Whirlpool
+  - name: Whirlpool
+    hersteller: Whirlpool
+  - name: Bauknecht
+    hersteller: Whirlpool
+
+  # Beko
+  - name: Beko
+    hersteller: Beko
+  - name: Grundig
+    hersteller: Beko
+
+  # Miele
+  - name: Miele
+    hersteller: Miele
+
+  # Liebherr
+  - name: Liebherr
+    hersteller: Liebherr
+
+  # Sony
+  - name: Sony
+    hersteller: Sony
+
+  # Samsung
+  - name: Samsung
+    hersteller: Samsung
+
+  # LG
+  - name: LG
+    hersteller: LG
+
+  # Panasonic
+  - name: Panasonic
+    hersteller: Panasonic
+
+  # Philips
+  - name: Philips
+    hersteller: Philips
+
+  # Apple
+  - name: Apple
+    hersteller: Apple
+
+  # Lenovo
+  - name: Lenovo
+    hersteller: Lenovo
+
+  # Dell
+  - name: Dell
+    hersteller: Dell
+
+  # HP
+  - name: HP
+    hersteller: HP
+
+  # Asus
+  - name: Asus
+    hersteller: Asus
+
+  # Acer
+  - name: Acer
+    hersteller: Acer
+
+  # Canon
+  - name: Canon
+    hersteller: Canon
+
+  # Epson
+  - name: Epson
+    hersteller: Epson
+
+  # Brother
+  - name: Brother
+    hersteller: Brother
+
+  # Xerox
+  - name: Xerox
+    hersteller: Xerox
+
+  # Cisco
+  - name: Cisco
+    hersteller: Cisco
+
+  # TP-Link
+  - name: TP-Link
+    hersteller: TP-Link
+
+  # AVM
+  - name: FRITZ!
+    hersteller: AVM
+
+  # Google
+  - name: Pixel
+    hersteller: Google
+
+  # Motorola
+  - name: Motorola
+    hersteller: Motorola
+
+  # Nokia
+  - name: Nokia
+    hersteller: Nokia
+
+  # Xiaomi
+  - name: Xiaomi
+    hersteller: Xiaomi
+  - name: Redmi
+    hersteller: Xiaomi
+  - name: Poco
+    hersteller: Xiaomi
+
+  # Huawei
+  - name: Huawei
+    hersteller: Huawei
+
+  # Oppo
+  - name: Oppo
+    hersteller: Oppo
+
+  # Vivo
+  - name: Vivo
+    hersteller: Vivo
+
+  # Nestlé
+  - name: Maggi
+    hersteller: Nestlé
+  - name: Nescafé
+    hersteller: Nestlé
+  - name: KitKat
+    hersteller: Nestlé
+  - name: Nesquik
+    hersteller: Nestlé
+
+  # Ferrero
+  - name: Ferrero
+    hersteller: Ferrero
+  - name: Kinder
+    hersteller: Ferrero
+  - name: Nutella
+    hersteller: Ferrero
+  - name: Mon Chéri
+    hersteller: Ferrero
+
+  # Haribo
+  - name: Haribo
+    hersteller: Haribo
+
+  # Dr. Oetker
+  - name: Dr. Oetker
+    hersteller: Dr. Oetker
+
+  # Storck
+  - name: Merci
+    hersteller: Storck
+  - name: Toffifee
+    hersteller: Storck
+  - name: nimm2
+    hersteller: Storck
+
+  # Ritter Sport
+  - name: Ritter Sport
+    hersteller: Ritter Sport
+
+  # Lindt
+  - name: Lindt
+    hersteller: Lindt
+  - name: Lindor
+    hersteller: Lindt
+
+  # Mondelez
+  - name: Milka
+    hersteller: Mondelez
+  - name: Oreo
+    hersteller: Mondelez
+  - name: Tuc
+    hersteller: Mondelez
+
+  # Kellogg's
+  - name: Kellogg's
+    hersteller: Kellogg's
+  - name: Pringles
+    hersteller: Kellogg's
+
+  # Coca-Cola
+  - name: Coca-Cola
+    hersteller: Coca-Cola
+  - name: Fanta
+    hersteller: Coca-Cola
+  - name: Sprite
+    hersteller: Coca-Cola
+  - name: Mezzo Mix
+    hersteller: Coca-Cola
+
+  # PepsiCo
+  - name: Pepsi
+    hersteller: PepsiCo
+  - name: 7UP
+    hersteller: PepsiCo
+  - name: Mirinda
+    hersteller: PepsiCo
+  - name: Lay's
+    hersteller: PepsiCo
+
+  # Beiersdorf
+  - name: Nivea
+    hersteller: Beiersdorf
+  - name: Eucerin
+    hersteller: Beiersdorf
+  - name: Labello
+    hersteller: Beiersdorf
+
+  # Henkel
+  - name: Persil
+    hersteller: Henkel
+  - name: Schwarzkopf
+    hersteller: Henkel
+  - name: Pritt
+    hersteller: Henkel
+  - name: Pattex
+    hersteller: Henkel
+
+  # Unilever
+  - name: Dove
+    hersteller: Unilever
+  - name: Axe
+    hersteller: Unilever
+  - name: Rexona
+    hersteller: Unilever
+  - name: Knorr
+    hersteller: Unilever
+  - name: Lipton
+    hersteller: Unilever
+
+  # Procter & Gamble
+  - name: Ariel
+    hersteller: Procter & Gamble
+  - name: Gillette
+    hersteller: Procter & Gamble
+  - name: Pampers
+    hersteller: Procter & Gamble
+  - name: Oral-B
+    hersteller: Procter & Gamble
+  - name: Braun
+    hersteller: Procter & Gamble
+
+  # L'Oréal
+  - name: L'Oréal Paris
+    hersteller: L'Oréal
+  - name: Garnier
+    hersteller: L'Oréal
+  - name: Maybelline
+    hersteller: L'Oréal
+
+  # Adidas
+  - name: Adidas
+    hersteller: Adidas
+
+  # Puma
+  - name: Puma
+    hersteller: Puma
+
+  # Nike
+  - name: Nike
+    hersteller: Nike
+
+  # Levi Strauss
+  - name: Levi's
+    hersteller: Levi Strauss
+
+  # Hugo Boss
+  - name: BOSS
+    hersteller: Hugo Boss
+  - name: HUGO
+    hersteller: Hugo Boss
+
+  # LEGO
+  - name: LEGO
+    hersteller: LEGO
+
+  # Playmobil
+  - name: Playmobil
+    hersteller: Playmobil
+
+  # Ravensburger
+  - name: Ravensburger
+    hersteller: Ravensburger
+
+  # Mattel
+  - name: Barbie
+    hersteller: Mattel
+  - name: Hot Wheels
+    hersteller: Mattel
+
+  # Hasbro
+  - name: Nerf
+    hersteller: Hasbro
+  - name: Monopoly
+    hersteller: Hasbro
+  - name: Play-Doh
+    hersteller: Hasbro
+
+  # Kärcher
+  - name: Kärcher
+    hersteller: Kärcher
+
+  # Gardena
+  - name: Gardena
+    hersteller: Gardena
+
+  # Fiskars
+  - name: Fiskars
+    hersteller: Fiskars
+
+  # Makita
+  - name: Makita
+    hersteller: Makita
+
+  # DeWalt
+  - name: DeWalt
+    hersteller: DeWalt
+
+  # Festool
+  - name: Festool
+    hersteller: Festool
+
+  # Hilti
+  - name: Hilti
+    hersteller: Hilti

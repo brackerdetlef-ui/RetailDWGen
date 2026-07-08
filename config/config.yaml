@@ -24,3 +24,5 @@ generator:
   marken: 250
   filialen: 50
   artikel: 10000
+  mitarbeiter: 500
+  lager: 25

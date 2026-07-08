@@ -1,12 +1,163 @@
 hersteller:
 
-  - Auron
-  - TechNova
-  - BlueChip
-  - FutureIT
-  - PrimeOffice
-  - NetVision
-  - Vertex
-  - DataCore
-  - SolidLink
-  - Innova
+  # Haushaltsgeräte
+  - Bosch
+  - Siemens
+  - Miele
+  - AEG
+  - Electrolux
+  - Gorenje
+  - Liebherr
+  - Neff
+  - Gaggenau
+  - Bauknecht
+  - Beko
+  - Grundig
+  - Whirlpool
+
+  # Unterhaltungselektronik
+  - Sony
+  - Samsung
+  - LG
+  - Panasonic
+  - Philips
+  - Sharp
+  - TCL
+  - Hisense
+
+  # Computer
+  - Apple
+  - Dell
+  - HP
+  - Lenovo
+  - Asus
+  - Acer
+  - MSI
+  - Fujitsu
+  - Intel
+  - AMD
+  - NVIDIA
+
+  # Drucker
+  - Canon
+  - Epson
+  - Brother
+  - Lexmark
+  - Xerox
+  - Ricoh
+  - Kyocera
+
+  # Netzwerk
+  - Cisco
+  - TP-Link
+  - AVM
+  - Netgear
+  - D-Link
+  - Ubiquiti
+
+  # Smartphones
+  - Nokia
+  - Motorola
+  - Xiaomi
+  - Huawei
+  - OnePlus
+  - Oppo
+  - Vivo
+  - Google
+
+  # Lebensmittel
+  - Nestlé
+  - Ferrero
+  - Haribo
+  - Dr. Oetker
+  - Bahlsen
+  - Storck
+  - Ritter Sport
+  - Lindt
+  - Mars
+  - Mondelez
+  - Kellogg's
+  - Krombacher
+  - Bitburger
+  - Coca-Cola
+  - PepsiCo
+
+  # Drogerie
+  - Beiersdorf
+  - Henkel
+  - Unilever
+  - Procter & Gamble
+  - Colgate-Palmolive
+  - L'Oréal
+  - Schwarzkopf
+  - Johnson & Johnson
+
+  # Kleidung
+  - Adidas
+  - Puma
+  - Nike
+  - Levi Strauss
+  - Hugo Boss
+  - Esprit
+  - Tommy Hilfiger
+  - Levi's
+  - Jack & Jones
+  - s.Oliver
+
+  # Möbel
+  - IKEA
+  - Hülsta
+  - Musterring
+  - Stressless
+  - Vitra
+
+  # Werkzeuge
+  - Makita
+  - Bosch Professional
+  - DeWalt
+  - Metabo
+  - Einhell
+  - Hilti
+  - Festool
+  - Stihl
+
+  # Automobil
+  - Bosch Automotive
+  - Continental
+  - Michelin
+  - Goodyear
+  - Pirelli
+  - Bridgestone
+  - ZF
+  - Mahle
+  - Valeo
+
+  # Spielwaren
+  - LEGO
+  - Playmobil
+  - Ravensburger
+  - Mattel
+  - Hasbro
+  - Simba
+  - Schleich
+
+  # Sport
+  - Wilson
+  - Head
+  - Salomon
+  - Fischer
+  - Atomic
+  - Rossignol
+
+  # Uhren & Schmuck
+  - Casio
+  - Seiko
+  - Citizen
+  - Swatch
+  - Fossil
+
+  # Baumarkt
+  - Gardena
+  - Kärcher
+  - Wolf-Garten
+  - Fiskars

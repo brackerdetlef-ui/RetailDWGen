@@ -4,6 +4,9 @@ from generator.masterdata.lieferanten import LieferantenGenerator
 from generator.masterdata.kunden import KundenGenerator
 from generator.masterdata.artikel import ArtikelGenerator
 from generator.masterdata.marken import MarkenGenerator
+from generator.masterdata.lager import LagerGenerator
+from generator.masterdata.mitarbeiter import MitarbeiterGenerator
+from generator.masterdata.filialen import FilialenGenerator
 from generator.infrastructure.project_paths import ProjectPaths
 
 
