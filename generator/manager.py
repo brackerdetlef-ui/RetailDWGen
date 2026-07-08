@@ -2,6 +2,8 @@ from generator.masterdata.warengruppen import WarengruppenGenerator
 from generator.masterdata.hersteller import HerstellerGenerator
 from generator.masterdata.lieferanten import LieferantenGenerator
 from generator.masterdata.kunden import KundenGenerator
+from generator.masterdata.artikel import ArtikelGenerator
+from generator.masterdata.marken import MarkenGenerator
 from generator.infrastructure.project_paths import ProjectPaths
 
 
@@ -32,6 +34,16 @@ class GeneratorManager:
             ),
  
             KundenGenerator(
+                self.config,
+                self.logger
+            ),
+
+            MarkenGenerator(
+                self.config,
+                self.logger
+            ),
+
+            ArtikelGenerator(
                 self.config,
                 self.logger
             )

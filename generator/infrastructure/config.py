@@ -1,4 +1,3 @@
-from pathlib import Path
 import yaml
 
 
@@ -14,6 +13,12 @@ class Config:
         value = self.data
 
         for key in keys:
+
+            if key not in value:
+                raise KeyError(
+                    f"Konfigurationsschlüssel '{'.'.join(keys)}' nicht gefunden."
+                )
+
             value = value[key]
 
         return value

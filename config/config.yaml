@@ -16,5 +16,11 @@ output:
 
 generator:
 
+  warengruppen: 50
+  hersteller: 100
   lieferanten: 100
   kunden: 1000
+
+  marken: 250
+  filialen: 50
+  artikel: 10000

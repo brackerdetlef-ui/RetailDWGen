@@ -5,74 +5,78 @@ from generator.base import BaseGenerator
 from generator.infrastructure.csv_writer import CSVWriter
 
 
-class HerstellerGenerator(BaseGenerator):
+class MarkenGenerator(BaseGenerator):
 
     def __init__(self, config, logger):
 
         super().__init__(config, logger)
 
         self.writer = CSVWriter(
-            "output/stammdaten/hersteller.csv"
+            "output/stammdaten/marken.csv"
         )
 
     def generate(self):
 
         random.seed(
-            self.config.get("general", "seed")
+            self.config.get(
+                "general",
+                "seed"
+            )
         )
 
         with open(
-            "config/hersteller.yaml",
+            "config/marken.yaml",
             "r",
             encoding="utf-8"
         ) as file:
 
             daten = yaml.safe_load(file)
 
-        anzahl = self.config.get(
+        marken = daten["marken"]
+
+        anzahl = min(
+            self.config.get(
+                "generator",
+                "marken"
+            ),
+            len(marken)
+        )
+
+        anzahl_hersteller = self.config.get(
             "generator",
             "hersteller"
         )
 
-        laender = [
-            "DE",
-            "AT",
-            "CH",
-            "NL",
-            "FR",
-            "SE",
-            "US",
-            "JP",
-            "KR",
-            "TW"
-        ]
-
         rows = []
 
         for nummer, name in enumerate(
-                daten["hersteller"][:anzahl],
-                start=1):
+            marken[:anzahl],
+            start=1
+        ):
 
             rows.append([
                 nummer,
-                f"H{nummer:04d}",
+                f"M{nummer:04d}",
                 name,
-                random.choice(laender),
+                random.randint(
+                    1,
+                    anzahl_hersteller
+                ),
                 True
             ])
 
         self.writer.write(
             [
+                "marke_id",
+                "marke_code",
+                "bezeichnung",
                 "hersteller_id",
-                "hersteller_code",
-                "name",
-                "land",
                 "aktiv"
             ],
             rows
         )
 
         self.logger.info(
-            "%d Hersteller erzeugt.",
+            "%d Marken erzeugt.",
             len(rows)
         )

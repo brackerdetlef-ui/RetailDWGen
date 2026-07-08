@@ -1,4 +1,5 @@
 import yaml
+
 from generator.base import BaseGenerator
 from generator.infrastructure.csv_writer import CSVWriter
 
@@ -21,13 +22,21 @@ class WarengruppenGenerator(BaseGenerator):
             encoding="utf-8"
         ) as file:
 
-             daten = yaml.safe_load(file)
+            daten = yaml.safe_load(file)
 
         warengruppen = daten["warengruppen"]
 
+        anzahl = self.config.get(
+            "generator",
+            "warengruppen"
+        )
+
         rows = []
 
-        for nummer, name in enumerate(warengruppen, start=1):
+        for nummer, name in enumerate(
+            warengruppen[:anzahl],
+            start=1
+        ):
 
             rows.append(
                 [
