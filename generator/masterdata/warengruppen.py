@@ -26,23 +26,18 @@ class WarengruppenGenerator(BaseGenerator):
 
         warengruppen = daten["warengruppen"]
 
-        anzahl = self.config.get(
-            "generator",
-            "warengruppen"
-        )
-
         rows = []
 
-        for nummer, name in enumerate(
-            warengruppen[:anzahl],
-            start=1
-        ):
+        for nummer, eintrag in enumerate(
+                warengruppen,
+                start=1):
 
             rows.append(
                 [
                     nummer,
                     f"WG{nummer:03d}",
-                    name,
+                    eintrag["code"],
+                    eintrag["name"],
                     "",
                     True
                 ]
@@ -52,6 +47,7 @@ class WarengruppenGenerator(BaseGenerator):
             [
                 "wg_id",
                 "wg_code",
+                "wg_kurzcode",
                 "bezeichnung",
                 "parent_id",
                 "aktiv"

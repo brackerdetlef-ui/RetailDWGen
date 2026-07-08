@@ -1,52 +1,61 @@
 warengruppen:
 
-  - Notebooks
-  - Desktop-PCs
-  - Monitore
-  - Drucker
-  - Scanner
-  - Tablets
-  - Smartphones
-  - Server
-  - NAS
-  - Router
-  - Switches
-  - Access Points
-  - USV
-  - SSD
-  - Festplatten
-  - RAM
-  - Grafikkarten
-  - Mainboards
-  - CPUs
-  - Netzteile
-  - Gehäuse
-  - Mäuse
-  - Tastaturen
-  - Headsets
-  - Lautsprecher
-  - Webcams
-  - Mikrofone
-  - Beamer
-  - Displays
-  - HDMI-Kabel
-  - USB-Kabel
-  - Adapter
-  - Dockingstations
-  - Druckerzubehör
-  - Papier
-  - Ordner
-  - Schreibwaren
-  - Bürostühle
-  - Schreibtische
-  - Aktenschränke
-  - Software
-  - Antivirus
-  - Backup
-  - Smart Home
-  - Überwachung
-  - Werkzeug
-  - Reinigung
-  - Verpackung
-  - Batterien
-  - Sonstiges
+  - code: C
+    name: Computer
+
+  - code: N
+    name: Notebooks
+
+  - code: T
+    name: Tablets
+
+  - code: S
+    name: Smartphones
+
+  - code: F
+    name: Fernseher
+
+  - code: M
+    name: Monitore
+
+  - code: D
+    name: Drucker
+
+  - code: K
+    name: Kameras
+
+  - code: H
+    name: Haushaltsgeräte
+
+  - code: W
+    name: Weiße Ware
+
+  - code: A
+    name: Audio
+
+  - code: G
+    name: Gaming
+
+  - code: P
+    name: Peripherie
+
+  - code: Z
+    name: Zubehör
+
+  - code: L
+    name: Netzwerktechnik
+
+  - code: R
+    name: Router
+
+  - code: O
+    name: Software
+
+  - code: B
+    name: Bürobedarf
+
+  - code: I
+    name: Smart Home
+
+  - code: X
+    name: Wearables

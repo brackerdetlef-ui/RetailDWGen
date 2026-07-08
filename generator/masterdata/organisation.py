@@ -16,6 +16,10 @@ class OrganisationGenerator(BaseGenerator):
 
     def generate(self):
 
+        # ----------------------------------------------------
+        # Organisation laden
+        # ----------------------------------------------------
+
         with open(
             "config/organisation.yaml",
             "r",
@@ -28,19 +32,95 @@ class OrganisationGenerator(BaseGenerator):
 
         rows = []
 
-        for nummer, eintrag in enumerate(
-                organisation,
-                start=1):
+        nummer = 1
 
-            rows.append([
-                nummer,
-                eintrag["code"],
-                eintrag["kuerzel"],
-                eintrag["bezeichnung"],
-                eintrag["parent"] if eintrag["parent"] else "",
-                eintrag["typ"],
-                True
-            ])
+        # ----------------------------------------------------
+        # Feste Organisationseinheiten
+        # ----------------------------------------------------
+
+        for eintrag in organisation:
+
+            rows.append(
+                [
+                    nummer,
+                    eintrag["code"],
+                    eintrag["kuerzel"],
+                    eintrag["bezeichnung"],
+                    eintrag["parent"] or "",
+                    eintrag["typ"],
+                    True
+                ]
+            )
+
+            nummer += 1
+
+        # ----------------------------------------------------
+        # Warengruppen laden
+        # ----------------------------------------------------
+
+        with open(
+            "config/warengruppen.yaml",
+            "r",
+            encoding="utf-8"
+        ) as file:
+
+            daten = yaml.safe_load(file)
+
+        warengruppen = daten["warengruppen"]
+
+        # ----------------------------------------------------
+        # Verkaufsgruppen erzeugen
+        # ----------------------------------------------------
+
+        org_code = 510
+
+        for wg in warengruppen:
+
+            kuerzel = "VG" + wg["code"]
+
+            rows.append(
+                [
+                    nummer,
+                    f"{org_code}",
+                    kuerzel,
+                    f"Verkaufsgruppe {wg['name']}",
+                    "010",
+                    "verkaufsgruppe",
+                    True
+                ]
+            )
+
+            nummer += 1
+            org_code += 1
+
+        # ----------------------------------------------------
+        # Einkaufsgruppen erzeugen
+        # ----------------------------------------------------
+
+        org_code = 610
+
+        for wg in warengruppen:
+
+            kuerzel = "EG" + wg["code"]
+
+            rows.append(
+                [
+                   nummer,
+                   f"{org_code}",
+                   kuerzel,
+                   f"Einkaufsgruppe {wg['name']}",
+                   "020",
+                   "einkaufsgruppe",
+                   True
+                ]
+            )
+
+            nummer += 1
+            org_code += 1
+
+        # ----------------------------------------------------
+        # CSV schreiben
+        # ----------------------------------------------------
 
         self.writer.write(
             [
