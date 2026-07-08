@@ -28,21 +28,41 @@ class WarengruppenGenerator(BaseGenerator):
 
         rows = []
 
+        #
+        # Für den DataContext
+        #
+        context_rows = []
+
         for nummer, eintrag in enumerate(
                 warengruppen,
                 start=1):
 
-            rows.append(
-                [
-                    nummer,
-                    f"WG{nummer:03d}",
-                    eintrag["code"],
-                    eintrag["name"],
-                    "",
-                    True
-                ]
-            )
+            row = [
+                nummer,
+                f"WG{nummer:03d}",
+                eintrag["code"],
+                eintrag["name"],
+                "",
+                True
+            ]
 
+            rows.append(row)
+
+            #
+            # Im DataContext speichern
+            #
+            context_rows.append({
+                "wg_id": nummer,
+                "wg_code": f"WG{nummer:03d}",
+                "wg_kurzcode": eintrag["code"],
+                "bezeichnung": eintrag["name"],
+                "parent_id": "",
+                "aktiv": True
+            })
+
+        #
+        # CSV schreiben
+        #
         self.writer.write(
             [
                 "wg_id",
@@ -54,6 +74,12 @@ class WarengruppenGenerator(BaseGenerator):
             ],
             rows
         )
+
+        #
+        # Context befüllen (falls vorhanden)
+        #
+        if hasattr(self, "context"):
+            self.context.warengruppen = context_rows
 
         self.logger.info(
             "%d Warengruppen erzeugt.",

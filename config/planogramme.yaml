@@ -1,0 +1,25 @@
+planogramme:
+
+  - code: STANDARD
+    bezeichnung: Standard-Regalplan
+    gaenge: 5
+    regalmeter: 50
+    regalebenen: 5
+
+  - code: KLEIN
+    bezeichnung: Kleinmarkt
+    gaenge: 4
+    regalmeter: 40
+    regalebenen: 5
+
+  - code: GROSS
+    bezeichnung: Großmarkt
+    gaenge: 7
+    regalmeter: 60
+    regalebenen: 6
+
+  - code: XL
+    bezeichnung: Verbrauchermarkt XL
+    gaenge: 10
+    regalmeter: 80
+    regalebenen: 6

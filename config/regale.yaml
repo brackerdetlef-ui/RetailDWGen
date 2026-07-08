@@ -1,0 +1,175 @@
+regale:
+
+  - code: REG-OBST
+    bezeichnung: Obst und Gemüse
+    typ: OBST
+    temperatur: NORMAL
+    gang: 1
+    seite: L
+    meter_von: 1
+    meter_bis: 20
+    regalebenen: 4
+
+    eigenschaften:
+      warentraeger: OBSTINSEL
+      hauptlaufzone: true
+      impulszone: false
+      endkappe: false
+      aktionsflaeche: false
+      sichtbarkeit: 9
+
+  - code: REG-BACK
+    bezeichnung: Backshop
+    typ: BAECKEREI
+    temperatur: NORMAL
+    gang: 1
+    seite: R
+    meter_von: 1
+    meter_bis: 15
+    regalebenen: 5
+
+    eigenschaften:
+      warentraeger: BACKSHOP
+      hauptlaufzone: true
+      impulszone: true
+      endkappe: false
+      aktionsflaeche: false
+      sichtbarkeit: 10
+
+  - code: REG-MILCH
+    bezeichnung: Molkereiprodukte
+    typ: KUEHLREGAL
+    temperatur: KUEHL
+    gang: 2
+    seite: L
+    meter_von: 1
+    meter_bis: 30
+    regalebenen: 5
+
+    eigenschaften:
+      warentraeger: KUEHLREGAL
+      temperatur_min: 2
+      temperatur_max: 7
+      hauptlaufzone: true
+      impulszone: false
+      max_gewicht_je_boden: 30
+
+  - code: REG-WURST
+    bezeichnung: Fleisch und Wurst
+    typ: KUEHLREGAL
+    temperatur: KUEHL
+    gang: 2
+    seite: R
+    meter_von: 1
+    meter_bis: 30
+    regalebenen: 5
+
+    eigenschaften:
+      warentraeger: KUEHLREGAL
+      temperatur_min: 2
+      temperatur_max: 7
+      hauptlaufzone: true
+      impulszone: false
+
+  - code: REG-TK
+    bezeichnung: Tiefkühlkost
+    typ: TIEFKUEHL
+    temperatur: TIEFKUEHL
+    gang: 3
+    seite: L
+    meter_von: 1
+    meter_bis: 20
+    regalebenen: 4
+
+    eigenschaften:
+      warentraeger: TIEFKUEHLTRUHE
+      temperatur_min: -24
+      temperatur_max: -18
+      hauptlaufzone: false
+      impulszone: false
+
+  - code: REG-KONS
+    bezeichnung: Konserven
+    typ: STANDARD
+    temperatur: NORMAL
+    gang: 3
+    seite: R
+    meter_von: 1
+    meter_bis: 40
+    regalebenen: 5
+
+    eigenschaften:
+      warentraeger: GONDELREGAL
+      hauptlaufzone: false
+      impulszone: false
+
+  - code: REG-SUESS
+    bezeichnung: Süßwaren
+    typ: STANDARD
+    temperatur: NORMAL
+    gang: 4
+    seite: L
+    meter_von: 1
+    meter_bis: 40
+    regalebenen: 5
+
+    eigenschaften:
+      warentraeger: GONDELREGAL
+      impulszone: true
+      sichtbarkeit: 9
+
+  - code: REG-DROG
+    bezeichnung: Drogerie
+    typ: STANDARD
+    temperatur: NORMAL
+    gang: 4
+    seite: R
+    meter_von: 1
+    meter_bis: 40
+    regalebenen: 5
+
+    eigenschaften:
+      warentraeger: GONDELREGAL
+
+  - code: REG-GETR
+    bezeichnung: Getränke
+    typ: SCHWERLAST
+    temperatur: NORMAL
+    gang: 5
+    seite: L
+    meter_von: 1
+    meter_bis: 50
+    regalebenen: 4
+
+    eigenschaften:
+      warentraeger: SCHWERLASTREGAL
+      max_gewicht_je_boden: 250
+
+  - code: REG-HAUS
+    bezeichnung: Haushaltswaren
+    typ: STANDARD
+    temperatur: NORMAL
+    gang: 5
+    seite: R
+    meter_von: 1
+    meter_bis: 50
+    regalebenen: 5
+
+    eigenschaften:
+      warentraeger: GONDELREGAL
+
+  - code: REG-KASSE
+    bezeichnung: Kassenzone
+    typ: IMPULS
+    temperatur: NORMAL
+    gang: 0
+    seite: K
+    meter_von: 1
+    meter_bis: 10
+    regalebenen: 4
+
+    eigenschaften:
+      warentraeger: KASSENREGAL
+      kassenzone: true
+      impulszone: true
+      sichtbarkeit: 10

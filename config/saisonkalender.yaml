@@ -1,0 +1,71 @@
+saisons:
+
+  - code: GJ
+    bezeichnung: Ganzjährig
+    beginn: "01-01"
+    ende: "12-31"
+
+  - code: FRS
+    bezeichnung: Frühjahr
+    beginn: "03-01"
+    ende: "05-31"
+
+  - code: SOM
+    bezeichnung: Sommer
+    beginn: "06-01"
+    ende: "08-31"
+
+  - code: HER
+    bezeichnung: Herbst
+    beginn: "09-01"
+    ende: "11-30"
+
+  - code: WIN
+    bezeichnung: Winter
+    beginn: "12-01"
+    ende: "02-28"
+
+  - code: OST
+    bezeichnung: Ostern
+    beginn: "03-15"
+    ende: "04-15"
+
+  - code: MUT
+    bezeichnung: Muttertag
+    beginn: "04-20"
+    ende: "05-15"
+
+  - code: URL
+    bezeichnung: Urlaub
+    beginn: "06-15"
+    ende: "08-31"
+
+  - code: SBA
+    bezeichnung: Schulanfang
+    beginn: "07-15"
+    ende: "09-15"
+
+  - code: HAL
+    bezeichnung: Halloween
+    beginn: "10-01"
+    ende: "10-31"
+
+  - code: BF
+    bezeichnung: Black Friday
+    beginn: "11-20"
+    ende: "11-30"
+
+  - code: ADV
+    bezeichnung: Advent
+    beginn: "11-27"
+    ende: "12-24"
+
+  - code: XMAS
+    bezeichnung: Weihnachten
+    beginn: "12-01"
+    ende: "12-26"
+
+  - code: SIL
+    bezeichnung: Silvester
+    beginn: "12-27"
+    ende: "12-31"

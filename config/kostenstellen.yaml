@@ -1,0 +1,37 @@
+kostenstellen:
+
+  - nummer: K1000
+    bezeichnung: Geschäftsführung
+    bereich: VERWALTUNG
+
+  - nummer: K1100
+    bezeichnung: Finanzbuchhaltung
+    bereich: VERWALTUNG
+
+  - nummer: K1200
+    bezeichnung: Controlling
+    bereich: VERWALTUNG
+
+  - nummer: K2000
+    bezeichnung: Einkauf
+    bereich: WARENWIRTSCHAFT
+
+  - nummer: K2100
+    bezeichnung: Disposition
+    bereich: WARENWIRTSCHAFT
+
+  - nummer: K3000
+    bezeichnung: Zentrallager
+    bereich: LOGISTIK
+
+  - nummer: K4000
+    bezeichnung: Marketing
+    bereich: VERTRIEB
+
+  - nummer: K5000
+    bezeichnung: IT
+    bereich: SERVICE
+
+  - nummer: K6000
+    bezeichnung: Personalwesen
+    bereich: VERWALTUNG

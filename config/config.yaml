@@ -27,3 +27,5 @@ generator:
   mitarbeiter: 500
   lager: 25
   organisation: 100
+  saisonkalender: 12
+  regale: 11

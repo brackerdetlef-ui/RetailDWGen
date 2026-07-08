@@ -1,0 +1,122 @@
+regaltypen:
+
+  OBST:
+
+    ebenen:
+
+      - nummer: 1
+        name: Boden
+
+      - nummer: 2
+        name: Griffzone unten
+
+      - nummer: 3
+        name: Greifzone
+
+      - nummer: 4
+        name: Sichtzone
+
+  BAECKEREI:
+
+    ebenen:
+
+      - nummer: 1
+        name: Brotkorb
+
+      - nummer: 2
+        name: Greifzone
+
+      - nummer: 3
+        name: Sichtzone
+
+      - nummer: 4
+        name: Oberboden
+
+      - nummer: 5
+        name: Reserve
+
+  KUEHLREGAL:
+
+    ebenen:
+
+      - nummer: 1
+        name: Boden
+
+      - nummer: 2
+        name: Untere Zone
+
+      - nummer: 3
+        name: Greifzone
+
+      - nummer: 4
+        name: Sichtzone
+
+      - nummer: 5
+        name: Oberboden
+
+  TIEFKUEHL:
+
+    ebenen:
+
+      - nummer: 1
+        name: Tief unten
+
+      - nummer: 2
+        name: Tief Mitte
+
+      - nummer: 3
+        name: Tief oben
+
+      - nummer: 4
+        name: Deckel
+
+  STANDARD:
+
+    ebenen:
+
+      - nummer: 1
+        name: Boden
+
+      - nummer: 2
+        name: Untere Greifzone
+
+      - nummer: 3
+        name: Greifzone
+
+      - nummer: 4
+        name: Sichtzone
+
+      - nummer: 5
+        name: Oberboden
+
+  SCHWERLAST:
+
+    ebenen:
+
+      - nummer: 1
+        name: Palette
+
+      - nummer: 2
+        name: Unterboden
+
+      - nummer: 3
+        name: Greifzone
+
+      - nummer: 4
+        name: Oberboden
+
+  IMPULS:
+
+    ebenen:
+
+      - nummer: 1
+        name: Kinderhöhe
+
+      - nummer: 2
+        name: Griffhöhe
+
+      - nummer: 3
+        name: Sichtzone
+
+      - nummer: 4
+        name: Premium

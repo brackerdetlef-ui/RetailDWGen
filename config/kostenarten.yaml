@@ -1,0 +1,89 @@
+kostenarten:
+
+  - nummer: 4000
+    bezeichnung: Umsatzerlöse
+    gruppe: ERTRAG
+
+  - nummer: 5000
+    bezeichnung: Wareneinsatz
+    gruppe: AUFWAND
+
+  - nummer: 5100
+    bezeichnung: Gehälter
+    gruppe: PERSONAL
+
+  - nummer: 5110
+    bezeichnung: Löhne
+    gruppe: PERSONAL
+
+  - nummer: 5120
+    bezeichnung: Sozialversicherungsbeiträge
+    gruppe: PERSONAL
+
+  - nummer: 5130
+    bezeichnung: Altersvorsorge
+    gruppe: PERSONAL
+
+  - nummer: 5200
+    bezeichnung: Miete
+    gruppe: BETRIEBSKOSTEN
+
+  - nummer: 5210
+    bezeichnung: Nebenkosten
+    gruppe: BETRIEBSKOSTEN
+
+  - nummer: 5220
+    bezeichnung: Energie
+    gruppe: BETRIEBSKOSTEN
+
+  - nummer: 5230
+    bezeichnung: Reinigung
+    gruppe: BETRIEBSKOSTEN
+
+  - nummer: 5300
+    bezeichnung: Werbung
+    gruppe: VERTRIEB
+
+  - nummer: 5310
+    bezeichnung: Marketing
+    gruppe: VERTRIEB
+
+  - nummer: 5400
+    bezeichnung: IT-Kosten
+    gruppe: VERWALTUNG
+
+  - nummer: 5410
+    bezeichnung: Telekommunikation
+    gruppe: VERWALTUNG
+
+  - nummer: 5420
+    bezeichnung: Bürobedarf
+    gruppe: VERWALTUNG
+
+  - nummer: 5500
+    bezeichnung: Versicherungen
+    gruppe: VERWALTUNG
+
+  - nummer: 5600
+    bezeichnung: Fahrzeugkosten
+    gruppe: LOGISTIK
+
+  - nummer: 5700
+    bezeichnung: Frachtkosten
+    gruppe: LOGISTIK
+
+  - nummer: 5800
+    bezeichnung: Abschreibungen
+    gruppe: ABSCHREIBUNG
+
+  - nummer: 5900
+    bezeichnung: Sonstige betriebliche Aufwendungen
+    gruppe: SONSTIGE
+
+  - nummer: 5950
+    bezeichnung: Zinsaufwendungen
+    gruppe: FINANZEN
+
+  - nummer: 5960
+    bezeichnung: Steueraufwendungen
+    gruppe: STEUERN
