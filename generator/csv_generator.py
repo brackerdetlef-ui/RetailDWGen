@@ -1,6 +1,6 @@
 from abc import abstractmethod
 
-from generator.infrastructure.csv_writer import CSVWriter
+from generator.infrastruktur.csv_writer import CSVWriter
 from generator.yaml_generator import YAMLGenerator
 
 

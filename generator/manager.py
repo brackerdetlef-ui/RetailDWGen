@@ -1,21 +1,24 @@
 from generator.context import DataContext
 
-from generator.masterdata.warengruppen import WarengruppenGenerator
-from generator.masterdata.hersteller import HerstellerGenerator
-from generator.masterdata.lieferanten import LieferantenGenerator
-from generator.masterdata.kunden import KundenGenerator
-from generator.masterdata.artikel import ArtikelGenerator
-from generator.masterdata.marken import MarkenGenerator
-from generator.masterdata.lager import LagerGenerator
-from generator.masterdata.mitarbeiter import MitarbeiterGenerator
-from generator.masterdata.filialen import FilialenGenerator
-from generator.masterdata.kostenstellen import KostenstellenGenerator
-from generator.masterdata.kostenarten import KostenartenGenerator
-from generator.masterdata.organisation import OrganisationGenerator
-from generator.masterdata.saisonkalender import SaisonkalenderGenerator
-from generator.masterdata.regale import RegaleGenerator
-from generator.masterdata.regalplaetze import RegalplaetzeGenerator
-
+from generator.stammdaten.warengruppen import WarengruppenGenerator
+from generator.stammdaten.hersteller import HerstellerGenerator
+from generator.stammdaten.lieferanten import LieferantenGenerator
+from generator.stammdaten.kunden import KundenGenerator
+from generator.stammdaten.artikel import ArtikelGenerator
+from generator.stammdaten.marken import MarkenGenerator
+from generator.stammdaten.lager import LagerGenerator
+from generator.stammdaten.mitarbeiter import MitarbeiterGenerator
+from generator.stammdaten.filialen import FilialenGenerator
+from generator.stammdaten.kostenstellen import KostenstellenGenerator
+from generator.stammdaten.kostenarten import KostenartenGenerator
+from generator.stammdaten.organisation import OrganisationGenerator
+from generator.stammdaten.saisonkalender import SaisonkalenderGenerator
+from generator.stammdaten.regale import RegaleGenerator
+from generator.stammdaten.regalplaetze import RegalplaetzeGenerator
+from generator.transaktionen.verkaeufe.verkaeufe_sequence import VerkaeufeSequence
+from generator.transaktionen.verkaeufe.verkaeufe_writer import VerkaeufeWriter
+from generator.transaktionen.verkaeufe.verkaeufe_check_writer import VerkaeufeCheckWriter
+from generator.transaktionen.verkaeufe.verkaeufe_generator import VerkaeufeGenerator
 
 class GeneratorManager:
 
@@ -89,7 +92,14 @@ class GeneratorManager:
             KostenartenGenerator(
                 self.config,
                 self.logger
+            ),
+
+            VerkaeufeGenerator(
+                self.config,
+                self.logger
             )
+
+            
 
         ]
 

@@ -2,7 +2,7 @@ import json
 import yaml
 
 from generator.base import BaseGenerator
-from generator.infrastructure.csv_writer import CSVWriter
+from generator.infrastruktur.csv_writer import CSVWriter
 
 
 class RegalplaetzeGenerator(BaseGenerator):

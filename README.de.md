@@ -73,8 +73,8 @@ RetailDWGen/
 │
 ├── config/
 ├── generator/
-│   ├── infrastructure/
-│   └── masterdata/
+│   ├── infrastuktur/
+│   └── stammdaten/
 ├── output/
 ├── generate.py
 ├── requirements.txt

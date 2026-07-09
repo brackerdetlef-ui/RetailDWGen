@@ -1,7 +1,7 @@
 from pathlib import Path
 
-from generator.infrastructure.config import Config
-from generator.infrastructure.logger import setup_logger
+from generator.infrastruktur.config import Config
+from generator.infrastruktur.logger import setup_logger
 from generator.manager import GeneratorManager
 
 

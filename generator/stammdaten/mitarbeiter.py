@@ -3,8 +3,8 @@ import random
 from faker import Faker
 
 from generator.base import BaseGenerator
-from generator.infrastructure.csv_writer import CSVWriter
-from generator.infrastructure.personalnummer import PersonalnummerGenerator
+from generator.infrastruktur.csv_writer import CSVWriter
+from generator.infrastruktur.personalnummer import PersonalnummerGenerator
 
 
 class MitarbeiterGenerator(BaseGenerator):

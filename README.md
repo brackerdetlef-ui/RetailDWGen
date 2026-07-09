@@ -83,8 +83,8 @@ RetailDWGen/
 
 config/
 generator/
-generator/masterdata/
-generator/infrastructure/
+generator/stammdaten/
+generator/infrastruktur/
 output/
 
 generate.py
