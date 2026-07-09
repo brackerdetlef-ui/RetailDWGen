@@ -1,61 +1,75 @@
-import random
-
 from faker import Faker
 
-from generator.base import BaseGenerator
-from generator.infrastructure.csv_writer import CSVWriter
+from generator.csv_generator import CSVGenerator
+from generator.registry import register_generator
 
 
-class ArtikelGenerator(BaseGenerator):
+@register_generator
+class ArtikelGenerator(CSVGenerator):
+    """
+    Generator für Artikel.
+
+    Version 1.7
+    """
+
+    output_file = "output/stammdaten/artikel.csv"
+
+    yaml_file = None
+
+    header = [
+        "artikel_id",
+        "artikel_code",
+        "ean",
+        "bezeichnung",
+        "hersteller_id",
+        "marke_id",
+        "warengruppe_id",
+        "uvp",
+        "einkaufspreis",
+        "verkaufspreis",
+        "aktiv"
+    ]
+
+    depends_on = [
+        "WarengruppenGenerator",
+        "HerstellerGenerator",
+        "MarkenGenerator"
+    ]
+
+    # ------------------------------------------------------------------
 
     def __init__(self, config, logger):
 
         super().__init__(config, logger)
 
-        self.writer = CSVWriter(
-            "output/stammdaten/artikel.csv"
-        )
-
         self.fake = Faker("de_DE")
 
-    def generate(self):
+    # ------------------------------------------------------------------
 
-        random.seed(
-            self.config.get(
-                "general",
-                "seed"
-            )
+    def initialize(self):
+
+        seed = self.config.get(
+            "general",
+            "seed"
         )
 
-        Faker.seed(
-            self.config.get(
-                "general",
-                "seed"
-            )
-        )
+        self.random.seed(seed)
+        Faker.seed(seed)
+
+    # ------------------------------------------------------------------
+
+    def build_rows(self):
 
         anzahl = self.config.get(
             "generator",
             "artikel"
         )
 
-        anzahl_warengruppen = self.config.get(
-            "generator",
-            "warengruppen"
-        )
-
-        anzahl_hersteller = self.config.get(
-            "generator",
-            "hersteller"
-        )
-
-        anzahl_marken = self.config.get(
-            "generator",
-            "marken"
-        )
+        hersteller = self.context.hersteller
+        marken = self.context.marken
+        warengruppen = self.context.warengruppen
 
         adjektive = [
-
             "Premium",
             "Classic",
             "Comfort",
@@ -63,11 +77,9 @@ class ArtikelGenerator(BaseGenerator):
             "Smart",
             "Professional",
             "Ultra"
-
         ]
 
         produkte = [
-
             "Kaffeemaschine",
             "Notebook",
             "Fernseher",
@@ -83,46 +95,56 @@ class ArtikelGenerator(BaseGenerator):
             "Kopfhörer",
             "Smartphone",
             "Tablet"
-
         ]
 
         varianten = [
-
             "",
             "XL",
             "Mini",
             "Plus",
             "Pro",
             "Max"
-
         ]
 
         rows = []
+        context_rows = []
 
         for nummer in range(1, anzahl + 1):
 
             einkauf = round(
-                random.uniform(5.00, 500.00),
+                self.random.uniform(5.00, 500.00),
                 2
             )
 
             uvp = round(
-                einkauf * random.uniform(1.20, 2.20),
+                einkauf * self.random.uniform(1.20, 2.20),
                 2
             )
 
             verkauf = round(
-                random.uniform(einkauf, uvp),
+                self.random.uniform(einkauf, uvp),
                 2
             )
 
             bezeichnung = (
-                f"{random.choice(adjektive)} "
-                f"{random.choice(produkte)} "
-                f"{random.choice(varianten)}"
+                f"{self.random.choice(adjektive)} "
+                f"{self.random.choice(produkte)} "
+                f"{self.random.choice(varianten)}"
             ).strip()
 
-            rows.append([
+            hersteller_id = self.random.choice(
+                hersteller
+            )["hersteller_id"]
+
+            marke_id = self.random.choice(
+                marken
+            )["marke_id"]
+
+            warengruppe_id = self.random.choice(
+                warengruppen
+            )["wg_id"]
+
+            row = [
 
                 nummer,
 
@@ -132,20 +154,11 @@ class ArtikelGenerator(BaseGenerator):
 
                 bezeichnung,
 
-                random.randint(
-                    1,
-                    anzahl_hersteller
-                ),
+                hersteller_id,
 
-                random.randint(
-                    1,
-                    anzahl_marken
-                ),
+                marke_id,
 
-                random.randint(
-                    1,
-                    anzahl_warengruppen
-                ),
+                warengruppe_id,
 
                 uvp,
 
@@ -155,31 +168,31 @@ class ArtikelGenerator(BaseGenerator):
 
                 True
 
-            ])
+            ]
 
-        self.writer.write(
+            rows.append(row)
 
-            [
+            context_rows.append({
 
-                "artikel_id",
-                "artikel_code",
-                "ean",
-                "bezeichnung",
-                "hersteller_id",
-                "marke_id",
-                "warengruppe_id",
-                "uvp",
-                "einkaufspreis",
-                "verkaufspreis",
-                "aktiv"
+                "artikel_id": nummer,
+                "artikel_code": row[1],
+                "ean": row[2],
+                "bezeichnung": bezeichnung,
+                "hersteller_id": hersteller_id,
+                "marke_id": marke_id,
+                "warengruppe_id": warengruppe_id,
+                "uvp": uvp,
+                "einkaufspreis": einkauf,
+                "verkaufspreis": verkauf,
+                "aktiv": True
 
-            ],
+            })
 
-            rows
+        return rows, context_rows
 
-        )
+    # ------------------------------------------------------------------
 
-        self.logger.info(
-            "%d Artikel erzeugt.",
-            len(rows)
-        )
+    def update_context(self, context_rows):
+
+        if self.context is not None:
+            self.context.artikel = context_rows

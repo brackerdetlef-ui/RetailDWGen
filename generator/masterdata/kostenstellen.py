@@ -1,59 +1,65 @@
-import yaml
-
-from generator.base import BaseGenerator
-from generator.infrastructure.csv_writer import CSVWriter
+from generator.csv_generator import CSVGenerator
+from generator.registry import register_generator
 
 
-class KostenstellenGenerator(BaseGenerator):
+@register_generator
+class KostenstellenGenerator(CSVGenerator):
+    """
+    Generator für Kostenstellen.
 
-    def __init__(self, config, logger):
+    Version 1.7
+    """
 
-        super().__init__(config, logger)
+    yaml_file = "config/kostenstellen.yaml"
 
-        self.writer = CSVWriter(
-            "output/stammdaten/kostenstellen.csv"
-        )
+    output_file = "output/stammdaten/kostenstellen.csv"
 
-    def generate(self):
+    header = [
+        "kst_id",
+        "kst_nr",
+        "bezeichnung",
+        "bereich",
+        "aktiv"
+    ]
 
-        with open(
-            "config/kostenstellen.yaml",
-            "r",
-            encoding="utf-8"
-        ) as file:
+    depends_on = []
 
-            daten = yaml.safe_load(file)
+    # ------------------------------------------------------------------
 
-        kostenstellen = daten["kostenstellen"]
+    def build_rows(self):
+
+        kostenstellen = self.section("kostenstellen")
 
         rows = []
+        context_rows = []
 
         for nummer, eintrag in enumerate(
                 kostenstellen,
                 start=1):
 
-            rows.append(
-                [
-                    nummer,
-                    eintrag["nummer"],
-                    eintrag["bezeichnung"],
-                    eintrag["bereich"],
-                    True
-                ]
-            )
+            row = [
+                nummer,
+                eintrag["nummer"],
+                eintrag["bezeichnung"],
+                eintrag["bereich"],
+                True
+            ]
 
-        self.writer.write(
-            [
-                "kst_id",
-                "kst_nr",
-                "bezeichnung",
-                "bereich",
-                "aktiv"
-            ],
-            rows
-        )
+            rows.append(row)
 
-        self.logger.info(
-            "%d Kostenstellen erzeugt.",
-            len(rows)
-        )
+            context_rows.append({
+                "kst_id": nummer,
+                "kst_nr": eintrag["nummer"],
+                "bezeichnung": eintrag["bezeichnung"],
+                "bereich": eintrag["bereich"],
+                "aktiv": True
+            })
+
+        return rows, context_rows
+
+    # ------------------------------------------------------------------
+
+    def update_context(self, context_rows):
+
+        if self.context is not None:
+            self.context.kostenstellen = context_rows

@@ -1,87 +1,70 @@
 import yaml
 
-from generator.base import BaseGenerator
-from generator.infrastructure.csv_writer import CSVWriter
+from generator.csv_generator import CSVGenerator
+from generator.registry import register_generator
 
 
-class WarengruppenGenerator(BaseGenerator):
+@register_generator
+class WarengruppenGenerator(CSVGenerator):
+    """
+    Generator für Warengruppen.
 
-    def __init__(self, config, logger):
+    Version 1.7
+    """
 
-        super().__init__(config, logger)
+    output_file = "output/stammdaten/warengruppen.csv"
 
-        self.writer = CSVWriter(
-            "output/stammdaten/warengruppen.csv"
-        )
+    yaml_file = "config/warengruppen.yaml"
 
-    def generate(self):
+    header = [
+        "wg_id",
+        "wg_code",
+        "wg_kurzcode",
+        "bezeichnung",
+        "parent_id",
+        "aktiv"
+    ]
 
-        with open(
-            "config/warengruppen.yaml",
-            "r",
-            encoding="utf-8"
-        ) as file:
+    depends_on = []
 
-            daten = yaml.safe_load(file)
+    # ------------------------------------------------------------------
 
-        warengruppen = daten["warengruppen"]
+    def build_rows(self):
+
+        warengruppen = self.section("warengruppen")
 
         rows = []
-
-        #
-        # Für den DataContext
-        #
         context_rows = []
 
         for nummer, eintrag in enumerate(
                 warengruppen,
                 start=1):
 
-            row = [
+            code = f"WG{nummer:03d}"
+
+            rows.append([
                 nummer,
-                f"WG{nummer:03d}",
+                code,
                 eintrag["code"],
                 eintrag["name"],
                 "",
                 True
-            ]
+            ])
 
-            rows.append(row)
-
-            #
-            # Im DataContext speichern
-            #
             context_rows.append({
                 "wg_id": nummer,
-                "wg_code": f"WG{nummer:03d}",
+                "wg_code": code,
                 "wg_kurzcode": eintrag["code"],
                 "bezeichnung": eintrag["name"],
                 "parent_id": "",
                 "aktiv": True
             })
 
-        #
-        # CSV schreiben
-        #
-        self.writer.write(
-            [
-                "wg_id",
-                "wg_code",
-                "wg_kurzcode",
-                "bezeichnung",
-                "parent_id",
-                "aktiv"
-            ],
-            rows
-        )
+        return rows, context_rows
 
-        #
-        # Context befüllen (falls vorhanden)
-        #
-        if hasattr(self, "context"):
+    # ------------------------------------------------------------------
+
+    def update_context(self, context_rows):
+
+        if self.context is not None:
             self.context.warengruppen = context_rows
-
-        self.logger.info(
-            "%d Warengruppen erzeugt.",
-            len(rows)
-        )

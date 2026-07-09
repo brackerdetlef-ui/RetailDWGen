@@ -23,13 +23,13 @@ class GeneratorManager:
 
         self.config = config
         self.logger = logger
-
-        # Neu für Version 1.6
         self.context = DataContext()
 
-    def run(self):
+    # -----------------------------------------------------------------
 
-        generatoren = [
+    def _create_generators(self):
+
+        return [
 
             WarengruppenGenerator(
                 self.config,
@@ -66,11 +66,11 @@ class GeneratorManager:
                 self.logger
             ),
 
-            SaisonkalenderGenerator( 
+            SaisonkalenderGenerator(
                 self.config,
                 self.logger
-            ), 
-   
+            ),
+
             RegaleGenerator(
                 self.config,
                 self.logger
@@ -93,22 +93,85 @@ class GeneratorManager:
 
         ]
 
-        for generator in generatoren:
+    # -----------------------------------------------------------------
 
-            #
-            # Vorbereitung auf Version 1.6
-            #
-            if hasattr(generator, "context"):
-                generator.context = self.context
+    def _sort_generators(self, generators):
+        """
+        Sortiert Generatoren anhand ihrer depends_on-Definition.
 
+        Für Generatoren ohne Abhängigkeiten bleibt die ursprüngliche
+        Reihenfolge erhalten.
+        """
+
+        result = []
+        completed = set()
+
+        remaining = list(generators)
+
+        while remaining:
+
+            progress = False
+
+            for generator in remaining[:]:
+
+                deps = getattr(generator, "depends_on", [])
+
+                if all(dep in completed for dep in deps):
+
+                    result.append(generator)
+                    completed.add(generator.__class__.__name__)
+
+                    remaining.remove(generator)
+                    progress = True
+
+            if not progress:
+                raise RuntimeError(
+                    "Zyklische oder nicht erfüllbare Generator-Abhängigkeit gefunden."
+                )
+
+        return result
+
+    # -----------------------------------------------------------------
+
+    def run(self):
+
+        generators = self._create_generators()
+        generators = self._sort_generators(generators)
+
+        self.logger.info("")
+        self.logger.info("=== RetailDWGen V1.7 gestartet ===")
+        self.logger.info("")
+
+        for generator in generators:
+
+            generator.context = self.context
+
+            self.logger.info("----------------------------------------")
             self.logger.info(
                 "Starte %s",
                 generator.__class__.__name__
             )
 
-            generator.generate()
+            try:
+
+                if hasattr(generator, "run"):
+                    generator.run()
+                else:
+                    generator.generate()
+
+            except Exception:
+
+                self.logger.exception(
+                    "%s wurde mit einem Fehler beendet.",
+                    generator.__class__.__name__
+                )
+                raise
 
             self.logger.info(
-                "%s beendet",
+                "%s erfolgreich beendet.",
                 generator.__class__.__name__
             )
+
+        self.logger.info("")
+        self.logger.info("=== Alle Generatoren erfolgreich beendet ===")
+        self.logger.info("")

@@ -1,33 +1,64 @@
 from faker import Faker
-import random
 
-from generator.base import BaseGenerator
-from generator.infrastructure.csv_writer import CSVWriter
+from generator.csv_generator import CSVGenerator
+from generator.registry import register_generator
 from generator.utils import create_email
 from generator.utils import create_website
 
 
-class LieferantenGenerator(BaseGenerator):
+@register_generator
+class LieferantenGenerator(CSVGenerator):
+    """
+    Generator für Lieferanten.
+
+    Version 1.7
+    """
+
+    output_file = "output/stammdaten/lieferanten.csv"
+
+    header = [
+        "lieferant_id",
+        "lieferant_code",
+        "firmenname",
+        "strasse",
+        "plz",
+        "ort",
+        "land",
+        "telefon",
+        "email",
+        "webseite",
+        "zahlungsziel",
+        "aktiv"
+    ]
+
+    depends_on = []
+
+    # YAML wird hier nicht benötigt
+    yaml_file = None
+
+    # ------------------------------------------------------------------
 
     def __init__(self, config, logger):
 
         super().__init__(config, logger)
 
-        self.writer = CSVWriter(
-            "output/stammdaten/lieferanten.csv"
-        )
-
         self.faker = Faker("de_DE")
 
-    def generate(self):
+    # ------------------------------------------------------------------
 
-        random.seed(
-            self.config.get("general", "seed")
+    def initialize(self):
+
+        seed = self.config.get(
+            "general",
+            "seed"
         )
 
-        Faker.seed(
-            self.config.get("general", "seed")
-        )
+        self.random.seed(seed)
+        Faker.seed(seed)
+
+    # ------------------------------------------------------------------
+
+    def build_rows(self):
 
         anzahl = self.config.get(
             "generator",
@@ -45,81 +76,64 @@ class LieferantenGenerator(BaseGenerator):
             "CZ"
         ]
 
-        zahlungsziele = [14, 30, 60]
+        zahlungsziele = [
+            14,
+            30,
+            60
+        ]
 
         rows = []
+        context_rows = []
 
         for nummer in range(1, anzahl + 1):
 
             firma = self.faker.company()
 
             email = create_email(firma)
-
             webseite = create_website(firma)
 
-            rows.append([
+            land = self.random.choice(laender)
+            zahlungsziel = self.random.choice(zahlungsziele)
 
+            code = f"L{nummer:06d}"
+
+            row = [
                 nummer,
-
-                f"L{nummer:06d}",
-
+                code,
                 firma,
-
                 self.faker.street_address(),
-
                 self.faker.postcode(),
-
                 self.faker.city(),
-
-                random.choice(laender),
-
+                land,
                 self.faker.phone_number(),
-
                 email,
-
                 webseite,
-
-                random.choice(zahlungsziele),
-
+                zahlungsziel,
                 True
+            ]
 
-            ])
+            rows.append(row)
 
-        self.writer.write(
+            context_rows.append({
+                "lieferant_id": nummer,
+                "lieferant_code": code,
+                "firmenname": firma,
+                "strasse": row[3],
+                "plz": row[4],
+                "ort": row[5],
+                "land": land,
+                "telefon": row[7],
+                "email": email,
+                "webseite": webseite,
+                "zahlungsziel": zahlungsziel,
+                "aktiv": True
+            })
 
-            [
+        return rows, context_rows
 
-                "lieferant_id",
+    # ------------------------------------------------------------------
 
-                "lieferant_code",
+    def update_context(self, context_rows):
 
-                "firmenname",
-
-                "strasse",
-
-                "plz",
-
-                "ort",
-
-                "land",
-
-                "telefon",
-
-                "email",
-
-                "webseite",
-
-                "zahlungsziel",
-
-                "aktiv"
-
-            ],
-
-            rows
-
-        )
-
-        self.logger.info(
-            "%d Lieferanten erzeugt.",
-            anzahl
-        )
+        if self.context is not None:
+            self.context.lieferanten = context_rows

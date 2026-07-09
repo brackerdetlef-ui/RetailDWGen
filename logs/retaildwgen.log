@@ -446,3 +446,822 @@
 2026-07-08 20:51:25,943 INFO Starte KostenartenGenerator
 2026-07-08 20:51:25,954 INFO 22 Kostenarten erzeugt.
 2026-07-08 20:51:25,954 INFO KostenartenGenerator beendet
+2026-07-09 10:33:58,252 INFO 
+2026-07-09 10:33:58,253 INFO === RetailDWGen V1.7 gestartet ===
+2026-07-09 10:33:58,253 INFO 
+2026-07-09 10:33:58,253 INFO ----------------------------------------
+2026-07-09 10:33:58,253 INFO Starte WarengruppenGenerator
+2026-07-09 10:33:58,258 INFO 20 Datensätze geschrieben.
+2026-07-09 10:33:58,258 INFO WarengruppenGenerator erfolgreich beendet.
+2026-07-09 10:33:58,258 INFO ----------------------------------------
+2026-07-09 10:33:58,258 INFO Starte HerstellerGenerator
+2026-07-09 10:33:58,266 INFO 100 Hersteller erzeugt.
+2026-07-09 10:33:58,266 INFO HerstellerGenerator erfolgreich beendet.
+2026-07-09 10:33:58,266 INFO ----------------------------------------
+2026-07-09 10:33:58,266 INFO Starte LieferantenGenerator
+2026-07-09 10:33:58,278 INFO 100 Lieferanten erzeugt.
+2026-07-09 10:33:58,278 INFO LieferantenGenerator erfolgreich beendet.
+2026-07-09 10:33:58,278 INFO ----------------------------------------
+2026-07-09 10:33:58,278 INFO Starte KundenGenerator
+2026-07-09 10:33:58,429 INFO 1000 Kunden erzeugt.
+2026-07-09 10:33:58,429 INFO KundenGenerator erfolgreich beendet.
+2026-07-09 10:33:58,429 INFO ----------------------------------------
+2026-07-09 10:33:58,429 INFO Starte MarkenGenerator
+2026-07-09 10:33:58,457 WARNING Hersteller 'LEGO' nicht gefunden.
+2026-07-09 10:33:58,457 WARNING Hersteller 'Playmobil' nicht gefunden.
+2026-07-09 10:33:58,457 WARNING Hersteller 'Ravensburger' nicht gefunden.
+2026-07-09 10:33:58,457 WARNING Hersteller 'Mattel' nicht gefunden.
+2026-07-09 10:33:58,457 WARNING Hersteller 'Mattel' nicht gefunden.
+2026-07-09 10:33:58,457 WARNING Hersteller 'Hasbro' nicht gefunden.
+2026-07-09 10:33:58,457 WARNING Hersteller 'Hasbro' nicht gefunden.
+2026-07-09 10:33:58,457 WARNING Hersteller 'Hasbro' nicht gefunden.
+2026-07-09 10:33:58,457 WARNING Hersteller 'Kärcher' nicht gefunden.
+2026-07-09 10:33:58,457 WARNING Hersteller 'Gardena' nicht gefunden.
+2026-07-09 10:33:58,457 WARNING Hersteller 'Fiskars' nicht gefunden.
+2026-07-09 10:33:58,457 INFO 98 Marken erzeugt.
+2026-07-09 10:33:58,457 INFO MarkenGenerator erfolgreich beendet.
+2026-07-09 10:33:58,457 INFO ----------------------------------------
+2026-07-09 10:33:58,457 INFO Starte ArtikelGenerator
+2026-07-09 10:33:58,824 INFO 10000 Artikel erzeugt.
+2026-07-09 10:33:58,826 INFO ArtikelGenerator erfolgreich beendet.
+2026-07-09 10:33:58,826 INFO ----------------------------------------
+2026-07-09 10:33:58,826 INFO Starte OrganisationGenerator
+2026-07-09 10:33:58,865 INFO 96 Organisationseinheiten erzeugt.
+2026-07-09 10:33:58,865 INFO OrganisationGenerator erfolgreich beendet.
+2026-07-09 10:33:58,865 INFO ----------------------------------------
+2026-07-09 10:33:58,865 INFO Starte SaisonkalenderGenerator
+2026-07-09 10:33:58,872 INFO 14 Saisons erzeugt.
+2026-07-09 10:33:58,872 INFO SaisonkalenderGenerator erfolgreich beendet.
+2026-07-09 10:33:58,872 INFO ----------------------------------------
+2026-07-09 10:33:58,872 INFO Starte RegaleGenerator
+2026-07-09 10:33:58,889 INFO 11 Regale erzeugt.
+2026-07-09 10:33:58,889 INFO RegaleGenerator erfolgreich beendet.
+2026-07-09 10:33:58,889 INFO ----------------------------------------
+2026-07-09 10:33:58,889 INFO Starte RegalplaetzeGenerator
+2026-07-09 10:33:58,931 INFO 1625 Regalplätze erzeugt.
+2026-07-09 10:33:58,932 INFO RegalplaetzeGenerator erfolgreich beendet.
+2026-07-09 10:33:58,932 INFO ----------------------------------------
+2026-07-09 10:33:58,932 INFO Starte KostenstellenGenerator
+2026-07-09 10:33:58,935 INFO 9 Kostenstellen erzeugt.
+2026-07-09 10:33:58,935 INFO KostenstellenGenerator erfolgreich beendet.
+2026-07-09 10:33:58,935 INFO ----------------------------------------
+2026-07-09 10:33:58,935 INFO Starte KostenartenGenerator
+2026-07-09 10:33:58,943 INFO 22 Kostenarten erzeugt.
+2026-07-09 10:33:58,944 INFO KostenartenGenerator erfolgreich beendet.
+2026-07-09 10:33:58,944 INFO 
+2026-07-09 10:33:58,944 INFO === Alle Generatoren erfolgreich beendet ===
+2026-07-09 10:33:58,944 INFO 
+2026-07-09 10:52:10,604 INFO 
+2026-07-09 10:52:10,604 INFO === RetailDWGen V1.7 gestartet ===
+2026-07-09 10:52:10,604 INFO 
+2026-07-09 10:52:10,604 INFO ----------------------------------------
+2026-07-09 10:52:10,604 INFO Starte WarengruppenGenerator
+2026-07-09 10:52:10,609 ERROR WarengruppenGenerator wurde mit einem Fehler beendet.
+Traceback (most recent call last):
+  File "/home/geri/Projekte/RetailDWGen/generator/manager.py", line 160, in run
+    generator.generate()
+  File "/home/geri/Projekte/RetailDWGen/generator/csv_generator.py", line 53, in generate
+    self.log(
+AttributeError: 'WarengruppenGenerator' object has no attribute 'log'
+2026-07-09 11:00:22,410 INFO 
+2026-07-09 11:00:22,411 INFO === RetailDWGen V1.7 gestartet ===
+2026-07-09 11:00:22,411 INFO 
+2026-07-09 11:00:22,411 INFO ----------------------------------------
+2026-07-09 11:00:22,411 INFO Starte WarengruppenGenerator
+2026-07-09 11:00:22,411 INFO [WarengruppenGenerator] Starte
+2026-07-09 11:00:22,411 ERROR WarengruppenGenerator wurde mit einem Fehler beendet.
+Traceback (most recent call last):
+  File "/home/geri/Projekte/RetailDWGen/generator/manager.py", line 158, in run
+    generator.run()
+  File "/home/geri/Projekte/RetailDWGen/generator/base.py", line 59, in run
+    self.initialize()
+  File "/home/geri/Projekte/RetailDWGen/generator/yaml_generator.py", line 20, in initialize
+    raise ValueError(
+ValueError: WarengruppenGenerator: yaml_file wurde nicht definiert.
+2026-07-09 11:03:40,531 INFO 
+2026-07-09 11:03:40,531 INFO === RetailDWGen V1.7 gestartet ===
+2026-07-09 11:03:40,531 INFO 
+2026-07-09 11:03:40,531 INFO ----------------------------------------
+2026-07-09 11:03:40,531 INFO Starte WarengruppenGenerator
+2026-07-09 11:03:40,531 INFO [WarengruppenGenerator] Starte
+2026-07-09 11:03:40,531 ERROR WarengruppenGenerator wurde mit einem Fehler beendet.
+Traceback (most recent call last):
+  File "/home/geri/Projekte/RetailDWGen/generator/manager.py", line 158, in run
+    generator.run()
+  File "/home/geri/Projekte/RetailDWGen/generator/base.py", line 59, in run
+    self.initialize()
+  File "/home/geri/Projekte/RetailDWGen/generator/yaml_generator.py", line 20, in initialize
+    raise ValueError(
+ValueError: WarengruppenGenerator: yaml_file wurde nicht definiert.
+2026-07-09 11:07:12,985 INFO 
+2026-07-09 11:07:12,985 INFO === RetailDWGen V1.7 gestartet ===
+2026-07-09 11:07:12,985 INFO 
+2026-07-09 11:07:12,985 INFO ----------------------------------------
+2026-07-09 11:07:12,985 INFO Starte WarengruppenGenerator
+2026-07-09 11:07:12,985 INFO [WarengruppenGenerator] Starte
+2026-07-09 11:07:12,990 INFO [WarengruppenGenerator] 20 Datensätze geschrieben.
+2026-07-09 11:07:12,990 INFO [WarengruppenGenerator] 20 Datensätze erzeugt.
+2026-07-09 11:07:12,990 INFO WarengruppenGenerator erfolgreich beendet.
+2026-07-09 11:07:12,990 INFO ----------------------------------------
+2026-07-09 11:07:12,990 INFO Starte HerstellerGenerator
+2026-07-09 11:07:12,990 INFO [HerstellerGenerator] Starte
+2026-07-09 11:07:12,999 INFO [HerstellerGenerator] 100 Datensätze geschrieben.
+2026-07-09 11:07:12,999 INFO [HerstellerGenerator] 100 Datensätze erzeugt.
+2026-07-09 11:07:12,999 INFO HerstellerGenerator erfolgreich beendet.
+2026-07-09 11:07:12,999 INFO ----------------------------------------
+2026-07-09 11:07:12,999 INFO Starte LieferantenGenerator
+2026-07-09 11:07:12,999 INFO [LieferantenGenerator] Starte
+2026-07-09 11:07:13,017 INFO [LieferantenGenerator] 100 Datensätze geschrieben.
+2026-07-09 11:07:13,017 INFO [LieferantenGenerator] 100 Datensätze erzeugt.
+2026-07-09 11:07:13,017 INFO LieferantenGenerator erfolgreich beendet.
+2026-07-09 11:07:13,017 INFO ----------------------------------------
+2026-07-09 11:07:13,017 INFO Starte KundenGenerator
+2026-07-09 11:07:13,017 INFO [KundenGenerator] Starte
+2026-07-09 11:07:13,216 INFO 1000 Kunden erzeugt.
+2026-07-09 11:07:13,217 INFO [KundenGenerator] 0 Datensätze erzeugt.
+2026-07-09 11:07:13,217 INFO KundenGenerator erfolgreich beendet.
+2026-07-09 11:07:13,217 INFO ----------------------------------------
+2026-07-09 11:07:13,217 INFO Starte MarkenGenerator
+2026-07-09 11:07:13,217 INFO [MarkenGenerator] Starte
+2026-07-09 11:07:13,245 WARNING Hersteller 'LEGO' nicht gefunden.
+2026-07-09 11:07:13,246 WARNING Hersteller 'Playmobil' nicht gefunden.
+2026-07-09 11:07:13,246 WARNING Hersteller 'Ravensburger' nicht gefunden.
+2026-07-09 11:07:13,246 WARNING Hersteller 'Mattel' nicht gefunden.
+2026-07-09 11:07:13,246 WARNING Hersteller 'Mattel' nicht gefunden.
+2026-07-09 11:07:13,246 WARNING Hersteller 'Hasbro' nicht gefunden.
+2026-07-09 11:07:13,246 WARNING Hersteller 'Hasbro' nicht gefunden.
+2026-07-09 11:07:13,246 WARNING Hersteller 'Hasbro' nicht gefunden.
+2026-07-09 11:07:13,246 WARNING Hersteller 'Kärcher' nicht gefunden.
+2026-07-09 11:07:13,246 WARNING Hersteller 'Gardena' nicht gefunden.
+2026-07-09 11:07:13,246 WARNING Hersteller 'Fiskars' nicht gefunden.
+2026-07-09 11:07:13,247 INFO [MarkenGenerator] 98 Datensätze geschrieben.
+2026-07-09 11:07:13,247 INFO [MarkenGenerator] 98 Datensätze erzeugt.
+2026-07-09 11:07:13,247 INFO MarkenGenerator erfolgreich beendet.
+2026-07-09 11:07:13,247 INFO ----------------------------------------
+2026-07-09 11:07:13,247 INFO Starte ArtikelGenerator
+2026-07-09 11:07:13,247 INFO [ArtikelGenerator] Starte
+2026-07-09 11:07:13,659 INFO 10000 Artikel erzeugt.
+2026-07-09 11:07:13,663 INFO [ArtikelGenerator] 0 Datensätze erzeugt.
+2026-07-09 11:07:13,664 INFO ArtikelGenerator erfolgreich beendet.
+2026-07-09 11:07:13,664 INFO ----------------------------------------
+2026-07-09 11:07:13,664 INFO Starte OrganisationGenerator
+2026-07-09 11:07:13,664 INFO [OrganisationGenerator] Starte
+2026-07-09 11:07:13,709 INFO 96 Organisationseinheiten erzeugt.
+2026-07-09 11:07:13,710 INFO [OrganisationGenerator] 0 Datensätze erzeugt.
+2026-07-09 11:07:13,710 INFO OrganisationGenerator erfolgreich beendet.
+2026-07-09 11:07:13,710 INFO ----------------------------------------
+2026-07-09 11:07:13,710 INFO Starte SaisonkalenderGenerator
+2026-07-09 11:07:13,710 INFO [SaisonkalenderGenerator] Starte
+2026-07-09 11:07:13,719 INFO 14 Saisons erzeugt.
+2026-07-09 11:07:13,719 INFO [SaisonkalenderGenerator] 0 Datensätze erzeugt.
+2026-07-09 11:07:13,720 INFO SaisonkalenderGenerator erfolgreich beendet.
+2026-07-09 11:07:13,720 INFO ----------------------------------------
+2026-07-09 11:07:13,720 INFO Starte RegaleGenerator
+2026-07-09 11:07:13,720 INFO [RegaleGenerator] Starte
+2026-07-09 11:07:13,736 INFO 11 Regale erzeugt.
+2026-07-09 11:07:13,736 INFO [RegaleGenerator] 0 Datensätze erzeugt.
+2026-07-09 11:07:13,736 INFO RegaleGenerator erfolgreich beendet.
+2026-07-09 11:07:13,736 INFO ----------------------------------------
+2026-07-09 11:07:13,736 INFO Starte RegalplaetzeGenerator
+2026-07-09 11:07:13,736 INFO [RegalplaetzeGenerator] Starte
+2026-07-09 11:07:13,781 INFO 1625 Regalplätze erzeugt.
+2026-07-09 11:07:13,782 INFO [RegalplaetzeGenerator] 0 Datensätze erzeugt.
+2026-07-09 11:07:13,782 INFO RegalplaetzeGenerator erfolgreich beendet.
+2026-07-09 11:07:13,782 INFO ----------------------------------------
+2026-07-09 11:07:13,782 INFO Starte KostenstellenGenerator
+2026-07-09 11:07:13,782 INFO [KostenstellenGenerator] Starte
+2026-07-09 11:07:13,787 INFO 9 Kostenstellen erzeugt.
+2026-07-09 11:07:13,787 INFO [KostenstellenGenerator] 0 Datensätze erzeugt.
+2026-07-09 11:07:13,787 INFO KostenstellenGenerator erfolgreich beendet.
+2026-07-09 11:07:13,787 INFO ----------------------------------------
+2026-07-09 11:07:13,787 INFO Starte KostenartenGenerator
+2026-07-09 11:07:13,787 INFO [KostenartenGenerator] Starte
+2026-07-09 11:07:13,800 INFO 22 Kostenarten erzeugt.
+2026-07-09 11:07:13,800 INFO [KostenartenGenerator] 0 Datensätze erzeugt.
+2026-07-09 11:07:13,800 INFO KostenartenGenerator erfolgreich beendet.
+2026-07-09 11:07:13,800 INFO 
+2026-07-09 11:07:13,800 INFO === Alle Generatoren erfolgreich beendet ===
+2026-07-09 11:07:13,800 INFO 
+2026-07-09 11:13:35,189 INFO 
+2026-07-09 11:13:35,189 INFO === RetailDWGen V1.7 gestartet ===
+2026-07-09 11:13:35,189 INFO 
+2026-07-09 11:13:35,189 INFO ----------------------------------------
+2026-07-09 11:13:35,189 INFO Starte WarengruppenGenerator
+2026-07-09 11:13:35,189 INFO [WarengruppenGenerator] Starte
+2026-07-09 11:13:35,195 INFO [WarengruppenGenerator] 20 Datensätze geschrieben.
+2026-07-09 11:13:35,195 INFO [WarengruppenGenerator] 20 Datensätze erzeugt.
+2026-07-09 11:13:35,195 INFO WarengruppenGenerator erfolgreich beendet.
+2026-07-09 11:13:35,195 INFO ----------------------------------------
+2026-07-09 11:13:35,195 INFO Starte HerstellerGenerator
+2026-07-09 11:13:35,195 INFO [HerstellerGenerator] Starte
+2026-07-09 11:13:35,204 INFO [HerstellerGenerator] 100 Datensätze geschrieben.
+2026-07-09 11:13:35,204 INFO [HerstellerGenerator] 100 Datensätze erzeugt.
+2026-07-09 11:13:35,204 INFO HerstellerGenerator erfolgreich beendet.
+2026-07-09 11:13:35,204 INFO ----------------------------------------
+2026-07-09 11:13:35,204 INFO Starte LieferantenGenerator
+2026-07-09 11:13:35,204 INFO [LieferantenGenerator] Starte
+2026-07-09 11:13:35,215 INFO [LieferantenGenerator] 100 Datensätze geschrieben.
+2026-07-09 11:13:35,215 INFO [LieferantenGenerator] 100 Datensätze erzeugt.
+2026-07-09 11:13:35,215 INFO LieferantenGenerator erfolgreich beendet.
+2026-07-09 11:13:35,215 INFO ----------------------------------------
+2026-07-09 11:13:35,215 INFO Starte KundenGenerator
+2026-07-09 11:13:35,215 INFO [KundenGenerator] Starte
+2026-07-09 11:13:35,357 INFO 1000 Kunden erzeugt.
+2026-07-09 11:13:35,357 INFO [KundenGenerator] 0 Datensätze erzeugt.
+2026-07-09 11:13:35,357 INFO KundenGenerator erfolgreich beendet.
+2026-07-09 11:13:35,357 INFO ----------------------------------------
+2026-07-09 11:13:35,357 INFO Starte MarkenGenerator
+2026-07-09 11:13:35,357 INFO [MarkenGenerator] Starte
+2026-07-09 11:13:35,386 WARNING Hersteller 'LEGO' nicht gefunden.
+2026-07-09 11:13:35,386 WARNING Hersteller 'Playmobil' nicht gefunden.
+2026-07-09 11:13:35,386 WARNING Hersteller 'Ravensburger' nicht gefunden.
+2026-07-09 11:13:35,386 WARNING Hersteller 'Mattel' nicht gefunden.
+2026-07-09 11:13:35,386 WARNING Hersteller 'Mattel' nicht gefunden.
+2026-07-09 11:13:35,386 WARNING Hersteller 'Hasbro' nicht gefunden.
+2026-07-09 11:13:35,386 WARNING Hersteller 'Hasbro' nicht gefunden.
+2026-07-09 11:13:35,386 WARNING Hersteller 'Hasbro' nicht gefunden.
+2026-07-09 11:13:35,386 WARNING Hersteller 'Kärcher' nicht gefunden.
+2026-07-09 11:13:35,386 WARNING Hersteller 'Gardena' nicht gefunden.
+2026-07-09 11:13:35,386 WARNING Hersteller 'Fiskars' nicht gefunden.
+2026-07-09 11:13:35,386 INFO [MarkenGenerator] 98 Datensätze geschrieben.
+2026-07-09 11:13:35,387 INFO [MarkenGenerator] 98 Datensätze erzeugt.
+2026-07-09 11:13:35,387 INFO MarkenGenerator erfolgreich beendet.
+2026-07-09 11:13:35,387 INFO ----------------------------------------
+2026-07-09 11:13:35,387 INFO Starte ArtikelGenerator
+2026-07-09 11:13:35,387 INFO [ArtikelGenerator] Starte
+2026-07-09 11:13:35,739 INFO 10000 Artikel erzeugt.
+2026-07-09 11:13:35,743 INFO [ArtikelGenerator] 0 Datensätze erzeugt.
+2026-07-09 11:13:35,743 INFO ArtikelGenerator erfolgreich beendet.
+2026-07-09 11:13:35,743 INFO ----------------------------------------
+2026-07-09 11:13:35,743 INFO Starte OrganisationGenerator
+2026-07-09 11:13:35,743 INFO [OrganisationGenerator] Starte
+2026-07-09 11:13:35,779 INFO [OrganisationGenerator] 96 Datensätze geschrieben.
+2026-07-09 11:13:35,779 INFO [OrganisationGenerator] 96 Datensätze erzeugt.
+2026-07-09 11:13:35,779 INFO OrganisationGenerator erfolgreich beendet.
+2026-07-09 11:13:35,779 INFO ----------------------------------------
+2026-07-09 11:13:35,779 INFO Starte SaisonkalenderGenerator
+2026-07-09 11:13:35,779 INFO [SaisonkalenderGenerator] Starte
+2026-07-09 11:13:35,785 INFO 14 Saisons erzeugt.
+2026-07-09 11:13:35,785 INFO [SaisonkalenderGenerator] 0 Datensätze erzeugt.
+2026-07-09 11:13:35,785 INFO SaisonkalenderGenerator erfolgreich beendet.
+2026-07-09 11:13:35,785 INFO ----------------------------------------
+2026-07-09 11:13:35,785 INFO Starte RegaleGenerator
+2026-07-09 11:13:35,785 INFO [RegaleGenerator] Starte
+2026-07-09 11:13:35,800 INFO 11 Regale erzeugt.
+2026-07-09 11:13:35,800 INFO [RegaleGenerator] 0 Datensätze erzeugt.
+2026-07-09 11:13:35,800 INFO RegaleGenerator erfolgreich beendet.
+2026-07-09 11:13:35,800 INFO ----------------------------------------
+2026-07-09 11:13:35,800 INFO Starte RegalplaetzeGenerator
+2026-07-09 11:13:35,800 INFO [RegalplaetzeGenerator] Starte
+2026-07-09 11:13:35,836 INFO 1625 Regalplätze erzeugt.
+2026-07-09 11:13:35,837 INFO [RegalplaetzeGenerator] 0 Datensätze erzeugt.
+2026-07-09 11:13:35,837 INFO RegalplaetzeGenerator erfolgreich beendet.
+2026-07-09 11:13:35,837 INFO ----------------------------------------
+2026-07-09 11:13:35,837 INFO Starte KostenstellenGenerator
+2026-07-09 11:13:35,837 INFO [KostenstellenGenerator] Starte
+2026-07-09 11:13:35,840 INFO 9 Kostenstellen erzeugt.
+2026-07-09 11:13:35,841 INFO [KostenstellenGenerator] 0 Datensätze erzeugt.
+2026-07-09 11:13:35,841 INFO KostenstellenGenerator erfolgreich beendet.
+2026-07-09 11:13:35,841 INFO ----------------------------------------
+2026-07-09 11:13:35,841 INFO Starte KostenartenGenerator
+2026-07-09 11:13:35,841 INFO [KostenartenGenerator] Starte
+2026-07-09 11:13:35,854 INFO 22 Kostenarten erzeugt.
+2026-07-09 11:13:35,854 INFO [KostenartenGenerator] 0 Datensätze erzeugt.
+2026-07-09 11:13:35,854 INFO KostenartenGenerator erfolgreich beendet.
+2026-07-09 11:13:35,854 INFO 
+2026-07-09 11:13:35,854 INFO === Alle Generatoren erfolgreich beendet ===
+2026-07-09 11:13:35,854 INFO 
+2026-07-09 11:19:28,183 INFO 
+2026-07-09 11:19:28,183 INFO === RetailDWGen V1.7 gestartet ===
+2026-07-09 11:19:28,183 INFO 
+2026-07-09 11:19:28,183 INFO ----------------------------------------
+2026-07-09 11:19:28,183 INFO Starte WarengruppenGenerator
+2026-07-09 11:19:28,183 INFO [WarengruppenGenerator] Starte
+2026-07-09 11:19:28,189 INFO [WarengruppenGenerator] 20 Datensätze geschrieben.
+2026-07-09 11:19:28,189 INFO [WarengruppenGenerator] 20 Datensätze erzeugt.
+2026-07-09 11:19:28,189 INFO WarengruppenGenerator erfolgreich beendet.
+2026-07-09 11:19:28,189 INFO ----------------------------------------
+2026-07-09 11:19:28,189 INFO Starte HerstellerGenerator
+2026-07-09 11:19:28,189 INFO [HerstellerGenerator] Starte
+2026-07-09 11:19:28,202 INFO [HerstellerGenerator] 100 Datensätze geschrieben.
+2026-07-09 11:19:28,202 INFO [HerstellerGenerator] 100 Datensätze erzeugt.
+2026-07-09 11:19:28,202 INFO HerstellerGenerator erfolgreich beendet.
+2026-07-09 11:19:28,202 INFO ----------------------------------------
+2026-07-09 11:19:28,202 INFO Starte LieferantenGenerator
+2026-07-09 11:19:28,202 INFO [LieferantenGenerator] Starte
+2026-07-09 11:19:28,213 INFO [LieferantenGenerator] 100 Datensätze geschrieben.
+2026-07-09 11:19:28,214 INFO [LieferantenGenerator] 100 Datensätze erzeugt.
+2026-07-09 11:19:28,214 INFO LieferantenGenerator erfolgreich beendet.
+2026-07-09 11:19:28,214 INFO ----------------------------------------
+2026-07-09 11:19:28,214 INFO Starte KundenGenerator
+2026-07-09 11:19:28,214 INFO [KundenGenerator] Starte
+2026-07-09 11:19:28,362 INFO 1000 Kunden erzeugt.
+2026-07-09 11:19:28,362 INFO [KundenGenerator] 0 Datensätze erzeugt.
+2026-07-09 11:19:28,362 INFO KundenGenerator erfolgreich beendet.
+2026-07-09 11:19:28,362 INFO ----------------------------------------
+2026-07-09 11:19:28,362 INFO Starte MarkenGenerator
+2026-07-09 11:19:28,362 INFO [MarkenGenerator] Starte
+2026-07-09 11:19:28,398 WARNING Hersteller 'LEGO' nicht gefunden.
+2026-07-09 11:19:28,398 WARNING Hersteller 'Playmobil' nicht gefunden.
+2026-07-09 11:19:28,398 WARNING Hersteller 'Ravensburger' nicht gefunden.
+2026-07-09 11:19:28,398 WARNING Hersteller 'Mattel' nicht gefunden.
+2026-07-09 11:19:28,398 WARNING Hersteller 'Mattel' nicht gefunden.
+2026-07-09 11:19:28,398 WARNING Hersteller 'Hasbro' nicht gefunden.
+2026-07-09 11:19:28,399 WARNING Hersteller 'Hasbro' nicht gefunden.
+2026-07-09 11:19:28,399 WARNING Hersteller 'Hasbro' nicht gefunden.
+2026-07-09 11:19:28,399 WARNING Hersteller 'Kärcher' nicht gefunden.
+2026-07-09 11:19:28,399 WARNING Hersteller 'Gardena' nicht gefunden.
+2026-07-09 11:19:28,399 WARNING Hersteller 'Fiskars' nicht gefunden.
+2026-07-09 11:19:28,399 INFO [MarkenGenerator] 98 Datensätze geschrieben.
+2026-07-09 11:19:28,399 INFO [MarkenGenerator] 98 Datensätze erzeugt.
+2026-07-09 11:19:28,399 INFO MarkenGenerator erfolgreich beendet.
+2026-07-09 11:19:28,399 INFO ----------------------------------------
+2026-07-09 11:19:28,399 INFO Starte ArtikelGenerator
+2026-07-09 11:19:28,399 INFO [ArtikelGenerator] Starte
+2026-07-09 11:19:28,755 INFO 10000 Artikel erzeugt.
+2026-07-09 11:19:28,758 INFO [ArtikelGenerator] 0 Datensätze erzeugt.
+2026-07-09 11:19:28,758 INFO ArtikelGenerator erfolgreich beendet.
+2026-07-09 11:19:28,758 INFO ----------------------------------------
+2026-07-09 11:19:28,758 INFO Starte OrganisationGenerator
+2026-07-09 11:19:28,758 INFO [OrganisationGenerator] Starte
+2026-07-09 11:19:28,789 INFO [OrganisationGenerator] 96 Datensätze geschrieben.
+2026-07-09 11:19:28,789 INFO [OrganisationGenerator] 96 Datensätze erzeugt.
+2026-07-09 11:19:28,789 INFO OrganisationGenerator erfolgreich beendet.
+2026-07-09 11:19:28,789 INFO ----------------------------------------
+2026-07-09 11:19:28,789 INFO Starte SaisonkalenderGenerator
+2026-07-09 11:19:28,789 INFO [SaisonkalenderGenerator] Starte
+2026-07-09 11:19:28,795 INFO [SaisonkalenderGenerator] 14 Datensätze geschrieben.
+2026-07-09 11:19:28,795 INFO [SaisonkalenderGenerator] 14 Datensätze erzeugt.
+2026-07-09 11:19:28,795 INFO SaisonkalenderGenerator erfolgreich beendet.
+2026-07-09 11:19:28,795 INFO ----------------------------------------
+2026-07-09 11:19:28,795 INFO Starte RegaleGenerator
+2026-07-09 11:19:28,795 INFO [RegaleGenerator] Starte
+2026-07-09 11:19:28,811 INFO 11 Regale erzeugt.
+2026-07-09 11:19:28,811 INFO [RegaleGenerator] 0 Datensätze erzeugt.
+2026-07-09 11:19:28,811 INFO RegaleGenerator erfolgreich beendet.
+2026-07-09 11:19:28,811 INFO ----------------------------------------
+2026-07-09 11:19:28,811 INFO Starte RegalplaetzeGenerator
+2026-07-09 11:19:28,811 INFO [RegalplaetzeGenerator] Starte
+2026-07-09 11:19:28,851 INFO 1625 Regalplätze erzeugt.
+2026-07-09 11:19:28,852 INFO [RegalplaetzeGenerator] 0 Datensätze erzeugt.
+2026-07-09 11:19:28,852 INFO RegalplaetzeGenerator erfolgreich beendet.
+2026-07-09 11:19:28,852 INFO ----------------------------------------
+2026-07-09 11:19:28,852 INFO Starte KostenstellenGenerator
+2026-07-09 11:19:28,852 INFO [KostenstellenGenerator] Starte
+2026-07-09 11:19:28,857 INFO [KostenstellenGenerator] 9 Datensätze geschrieben.
+2026-07-09 11:19:28,858 INFO [KostenstellenGenerator] 9 Datensätze erzeugt.
+2026-07-09 11:19:28,858 INFO KostenstellenGenerator erfolgreich beendet.
+2026-07-09 11:19:28,858 INFO ----------------------------------------
+2026-07-09 11:19:28,858 INFO Starte KostenartenGenerator
+2026-07-09 11:19:28,858 INFO [KostenartenGenerator] Starte
+2026-07-09 11:19:28,865 INFO [KostenartenGenerator] 22 Datensätze geschrieben.
+2026-07-09 11:19:28,865 INFO [KostenartenGenerator] 22 Datensätze erzeugt.
+2026-07-09 11:19:28,865 INFO KostenartenGenerator erfolgreich beendet.
+2026-07-09 11:19:28,865 INFO 
+2026-07-09 11:19:28,865 INFO === Alle Generatoren erfolgreich beendet ===
+2026-07-09 11:19:28,865 INFO 
+2026-07-09 11:22:17,280 INFO 
+2026-07-09 11:22:17,280 INFO === RetailDWGen V1.7 gestartet ===
+2026-07-09 11:22:17,280 INFO 
+2026-07-09 11:22:17,280 INFO ----------------------------------------
+2026-07-09 11:22:17,280 INFO Starte WarengruppenGenerator
+2026-07-09 11:22:17,280 INFO [WarengruppenGenerator] Starte
+2026-07-09 11:22:17,285 INFO [WarengruppenGenerator] 20 Datensätze geschrieben.
+2026-07-09 11:22:17,285 INFO [WarengruppenGenerator] 20 Datensätze erzeugt.
+2026-07-09 11:22:17,285 INFO WarengruppenGenerator erfolgreich beendet.
+2026-07-09 11:22:17,285 INFO ----------------------------------------
+2026-07-09 11:22:17,285 INFO Starte HerstellerGenerator
+2026-07-09 11:22:17,285 INFO [HerstellerGenerator] Starte
+2026-07-09 11:22:17,294 INFO [HerstellerGenerator] 100 Datensätze geschrieben.
+2026-07-09 11:22:17,295 INFO [HerstellerGenerator] 100 Datensätze erzeugt.
+2026-07-09 11:22:17,295 INFO HerstellerGenerator erfolgreich beendet.
+2026-07-09 11:22:17,295 INFO ----------------------------------------
+2026-07-09 11:22:17,295 INFO Starte LieferantenGenerator
+2026-07-09 11:22:17,295 INFO [LieferantenGenerator] Starte
+2026-07-09 11:22:17,311 INFO [LieferantenGenerator] 100 Datensätze geschrieben.
+2026-07-09 11:22:17,311 INFO [LieferantenGenerator] 100 Datensätze erzeugt.
+2026-07-09 11:22:17,311 INFO LieferantenGenerator erfolgreich beendet.
+2026-07-09 11:22:17,311 INFO ----------------------------------------
+2026-07-09 11:22:17,311 INFO Starte KundenGenerator
+2026-07-09 11:22:17,311 INFO [KundenGenerator] Starte
+2026-07-09 11:22:17,462 INFO [KundenGenerator] 1000 Datensätze geschrieben.
+2026-07-09 11:22:17,462 INFO [KundenGenerator] 1000 Datensätze erzeugt.
+2026-07-09 11:22:17,462 INFO KundenGenerator erfolgreich beendet.
+2026-07-09 11:22:17,462 INFO ----------------------------------------
+2026-07-09 11:22:17,462 INFO Starte MarkenGenerator
+2026-07-09 11:22:17,462 INFO [MarkenGenerator] Starte
+2026-07-09 11:22:17,497 WARNING Hersteller 'LEGO' nicht gefunden.
+2026-07-09 11:22:17,497 WARNING Hersteller 'Playmobil' nicht gefunden.
+2026-07-09 11:22:17,497 WARNING Hersteller 'Ravensburger' nicht gefunden.
+2026-07-09 11:22:17,497 WARNING Hersteller 'Mattel' nicht gefunden.
+2026-07-09 11:22:17,497 WARNING Hersteller 'Mattel' nicht gefunden.
+2026-07-09 11:22:17,497 WARNING Hersteller 'Hasbro' nicht gefunden.
+2026-07-09 11:22:17,497 WARNING Hersteller 'Hasbro' nicht gefunden.
+2026-07-09 11:22:17,497 WARNING Hersteller 'Hasbro' nicht gefunden.
+2026-07-09 11:22:17,497 WARNING Hersteller 'Kärcher' nicht gefunden.
+2026-07-09 11:22:17,497 WARNING Hersteller 'Gardena' nicht gefunden.
+2026-07-09 11:22:17,498 WARNING Hersteller 'Fiskars' nicht gefunden.
+2026-07-09 11:22:17,498 INFO [MarkenGenerator] 98 Datensätze geschrieben.
+2026-07-09 11:22:17,498 INFO [MarkenGenerator] 98 Datensätze erzeugt.
+2026-07-09 11:22:17,498 INFO MarkenGenerator erfolgreich beendet.
+2026-07-09 11:22:17,498 INFO ----------------------------------------
+2026-07-09 11:22:17,498 INFO Starte ArtikelGenerator
+2026-07-09 11:22:17,498 INFO [ArtikelGenerator] Starte
+2026-07-09 11:22:17,851 INFO 10000 Artikel erzeugt.
+2026-07-09 11:22:17,855 INFO [ArtikelGenerator] 0 Datensätze erzeugt.
+2026-07-09 11:22:17,855 INFO ArtikelGenerator erfolgreich beendet.
+2026-07-09 11:22:17,855 INFO ----------------------------------------
+2026-07-09 11:22:17,855 INFO Starte OrganisationGenerator
+2026-07-09 11:22:17,855 INFO [OrganisationGenerator] Starte
+2026-07-09 11:22:17,888 INFO [OrganisationGenerator] 96 Datensätze geschrieben.
+2026-07-09 11:22:17,889 INFO [OrganisationGenerator] 96 Datensätze erzeugt.
+2026-07-09 11:22:17,889 INFO OrganisationGenerator erfolgreich beendet.
+2026-07-09 11:22:17,889 INFO ----------------------------------------
+2026-07-09 11:22:17,889 INFO Starte SaisonkalenderGenerator
+2026-07-09 11:22:17,889 INFO [SaisonkalenderGenerator] Starte
+2026-07-09 11:22:17,894 INFO [SaisonkalenderGenerator] 14 Datensätze geschrieben.
+2026-07-09 11:22:17,894 INFO [SaisonkalenderGenerator] 14 Datensätze erzeugt.
+2026-07-09 11:22:17,894 INFO SaisonkalenderGenerator erfolgreich beendet.
+2026-07-09 11:22:17,894 INFO ----------------------------------------
+2026-07-09 11:22:17,895 INFO Starte RegaleGenerator
+2026-07-09 11:22:17,895 INFO [RegaleGenerator] Starte
+2026-07-09 11:22:17,910 INFO 11 Regale erzeugt.
+2026-07-09 11:22:17,910 INFO [RegaleGenerator] 0 Datensätze erzeugt.
+2026-07-09 11:22:17,910 INFO RegaleGenerator erfolgreich beendet.
+2026-07-09 11:22:17,910 INFO ----------------------------------------
+2026-07-09 11:22:17,910 INFO Starte RegalplaetzeGenerator
+2026-07-09 11:22:17,910 INFO [RegalplaetzeGenerator] Starte
+2026-07-09 11:22:17,948 INFO 1625 Regalplätze erzeugt.
+2026-07-09 11:22:17,948 INFO [RegalplaetzeGenerator] 0 Datensätze erzeugt.
+2026-07-09 11:22:17,948 INFO RegalplaetzeGenerator erfolgreich beendet.
+2026-07-09 11:22:17,948 INFO ----------------------------------------
+2026-07-09 11:22:17,948 INFO Starte KostenstellenGenerator
+2026-07-09 11:22:17,948 INFO [KostenstellenGenerator] Starte
+2026-07-09 11:22:17,953 INFO [KostenstellenGenerator] 9 Datensätze geschrieben.
+2026-07-09 11:22:17,953 INFO [KostenstellenGenerator] 9 Datensätze erzeugt.
+2026-07-09 11:22:17,953 INFO KostenstellenGenerator erfolgreich beendet.
+2026-07-09 11:22:17,953 INFO ----------------------------------------
+2026-07-09 11:22:17,953 INFO Starte KostenartenGenerator
+2026-07-09 11:22:17,953 INFO [KostenartenGenerator] Starte
+2026-07-09 11:22:17,964 INFO [KostenartenGenerator] 22 Datensätze geschrieben.
+2026-07-09 11:22:17,964 INFO [KostenartenGenerator] 22 Datensätze erzeugt.
+2026-07-09 11:22:17,964 INFO KostenartenGenerator erfolgreich beendet.
+2026-07-09 11:22:17,964 INFO 
+2026-07-09 11:22:17,964 INFO === Alle Generatoren erfolgreich beendet ===
+2026-07-09 11:22:17,964 INFO 
+2026-07-09 11:24:57,881 INFO 
+2026-07-09 11:24:57,881 INFO === RetailDWGen V1.7 gestartet ===
+2026-07-09 11:24:57,881 INFO 
+2026-07-09 11:24:57,881 INFO ----------------------------------------
+2026-07-09 11:24:57,881 INFO Starte WarengruppenGenerator
+2026-07-09 11:24:57,881 INFO [WarengruppenGenerator] Starte
+2026-07-09 11:24:57,890 INFO [WarengruppenGenerator] 20 Datensätze geschrieben.
+2026-07-09 11:24:57,890 INFO [WarengruppenGenerator] 20 Datensätze erzeugt.
+2026-07-09 11:24:57,890 INFO WarengruppenGenerator erfolgreich beendet.
+2026-07-09 11:24:57,890 INFO ----------------------------------------
+2026-07-09 11:24:57,890 INFO Starte HerstellerGenerator
+2026-07-09 11:24:57,890 INFO [HerstellerGenerator] Starte
+2026-07-09 11:24:57,898 INFO [HerstellerGenerator] 100 Datensätze geschrieben.
+2026-07-09 11:24:57,898 INFO [HerstellerGenerator] 100 Datensätze erzeugt.
+2026-07-09 11:24:57,898 INFO HerstellerGenerator erfolgreich beendet.
+2026-07-09 11:24:57,898 INFO ----------------------------------------
+2026-07-09 11:24:57,898 INFO Starte LieferantenGenerator
+2026-07-09 11:24:57,898 INFO [LieferantenGenerator] Starte
+2026-07-09 11:24:57,910 INFO [LieferantenGenerator] 100 Datensätze geschrieben.
+2026-07-09 11:24:57,910 INFO [LieferantenGenerator] 100 Datensätze erzeugt.
+2026-07-09 11:24:57,910 INFO LieferantenGenerator erfolgreich beendet.
+2026-07-09 11:24:57,910 INFO ----------------------------------------
+2026-07-09 11:24:57,910 INFO Starte KundenGenerator
+2026-07-09 11:24:57,910 INFO [KundenGenerator] Starte
+2026-07-09 11:24:58,065 INFO [KundenGenerator] 1000 Datensätze geschrieben.
+2026-07-09 11:24:58,066 INFO [KundenGenerator] 1000 Datensätze erzeugt.
+2026-07-09 11:24:58,066 INFO KundenGenerator erfolgreich beendet.
+2026-07-09 11:24:58,066 INFO ----------------------------------------
+2026-07-09 11:24:58,066 INFO Starte MarkenGenerator
+2026-07-09 11:24:58,066 INFO [MarkenGenerator] Starte
+2026-07-09 11:24:58,097 WARNING Hersteller 'LEGO' nicht gefunden.
+2026-07-09 11:24:58,097 WARNING Hersteller 'Playmobil' nicht gefunden.
+2026-07-09 11:24:58,097 WARNING Hersteller 'Ravensburger' nicht gefunden.
+2026-07-09 11:24:58,097 WARNING Hersteller 'Mattel' nicht gefunden.
+2026-07-09 11:24:58,097 WARNING Hersteller 'Mattel' nicht gefunden.
+2026-07-09 11:24:58,097 WARNING Hersteller 'Hasbro' nicht gefunden.
+2026-07-09 11:24:58,097 WARNING Hersteller 'Hasbro' nicht gefunden.
+2026-07-09 11:24:58,097 WARNING Hersteller 'Hasbro' nicht gefunden.
+2026-07-09 11:24:58,097 WARNING Hersteller 'Kärcher' nicht gefunden.
+2026-07-09 11:24:58,097 WARNING Hersteller 'Gardena' nicht gefunden.
+2026-07-09 11:24:58,097 WARNING Hersteller 'Fiskars' nicht gefunden.
+2026-07-09 11:24:58,097 INFO [MarkenGenerator] 98 Datensätze geschrieben.
+2026-07-09 11:24:58,097 INFO [MarkenGenerator] 98 Datensätze erzeugt.
+2026-07-09 11:24:58,097 INFO MarkenGenerator erfolgreich beendet.
+2026-07-09 11:24:58,097 INFO ----------------------------------------
+2026-07-09 11:24:58,098 INFO Starte ArtikelGenerator
+2026-07-09 11:24:58,098 INFO [ArtikelGenerator] Starte
+2026-07-09 11:24:58,459 INFO 10000 Artikel erzeugt.
+2026-07-09 11:24:58,461 INFO [ArtikelGenerator] 0 Datensätze erzeugt.
+2026-07-09 11:24:58,461 INFO ArtikelGenerator erfolgreich beendet.
+2026-07-09 11:24:58,461 INFO ----------------------------------------
+2026-07-09 11:24:58,461 INFO Starte OrganisationGenerator
+2026-07-09 11:24:58,461 INFO [OrganisationGenerator] Starte
+2026-07-09 11:24:58,491 INFO [OrganisationGenerator] 96 Datensätze geschrieben.
+2026-07-09 11:24:58,491 INFO [OrganisationGenerator] 96 Datensätze erzeugt.
+2026-07-09 11:24:58,491 INFO OrganisationGenerator erfolgreich beendet.
+2026-07-09 11:24:58,491 INFO ----------------------------------------
+2026-07-09 11:24:58,491 INFO Starte SaisonkalenderGenerator
+2026-07-09 11:24:58,491 INFO [SaisonkalenderGenerator] Starte
+2026-07-09 11:24:58,496 INFO [SaisonkalenderGenerator] 14 Datensätze geschrieben.
+2026-07-09 11:24:58,497 INFO [SaisonkalenderGenerator] 14 Datensätze erzeugt.
+2026-07-09 11:24:58,497 INFO SaisonkalenderGenerator erfolgreich beendet.
+2026-07-09 11:24:58,497 INFO ----------------------------------------
+2026-07-09 11:24:58,497 INFO Starte RegaleGenerator
+2026-07-09 11:24:58,497 INFO [RegaleGenerator] Starte
+2026-07-09 11:24:58,513 INFO 11 Regale erzeugt.
+2026-07-09 11:24:58,513 INFO [RegaleGenerator] 0 Datensätze erzeugt.
+2026-07-09 11:24:58,513 INFO RegaleGenerator erfolgreich beendet.
+2026-07-09 11:24:58,513 INFO ----------------------------------------
+2026-07-09 11:24:58,513 INFO Starte RegalplaetzeGenerator
+2026-07-09 11:24:58,513 INFO [RegalplaetzeGenerator] Starte
+2026-07-09 11:24:58,558 INFO 1625 Regalplätze erzeugt.
+2026-07-09 11:24:58,558 INFO [RegalplaetzeGenerator] 0 Datensätze erzeugt.
+2026-07-09 11:24:58,558 INFO RegalplaetzeGenerator erfolgreich beendet.
+2026-07-09 11:24:58,558 INFO ----------------------------------------
+2026-07-09 11:24:58,558 INFO Starte KostenstellenGenerator
+2026-07-09 11:24:58,559 INFO [KostenstellenGenerator] Starte
+2026-07-09 11:24:58,562 INFO [KostenstellenGenerator] 9 Datensätze geschrieben.
+2026-07-09 11:24:58,562 INFO [KostenstellenGenerator] 9 Datensätze erzeugt.
+2026-07-09 11:24:58,562 INFO KostenstellenGenerator erfolgreich beendet.
+2026-07-09 11:24:58,562 INFO ----------------------------------------
+2026-07-09 11:24:58,562 INFO Starte KostenartenGenerator
+2026-07-09 11:24:58,562 INFO [KostenartenGenerator] Starte
+2026-07-09 11:24:58,569 INFO [KostenartenGenerator] 22 Datensätze geschrieben.
+2026-07-09 11:24:58,569 INFO [KostenartenGenerator] 22 Datensätze erzeugt.
+2026-07-09 11:24:58,569 INFO KostenartenGenerator erfolgreich beendet.
+2026-07-09 11:24:58,569 INFO 
+2026-07-09 11:24:58,569 INFO === Alle Generatoren erfolgreich beendet ===
+2026-07-09 11:24:58,569 INFO 
+2026-07-09 11:27:06,666 INFO 
+2026-07-09 11:27:06,666 INFO === RetailDWGen V1.7 gestartet ===
+2026-07-09 11:27:06,667 INFO 
+2026-07-09 11:27:06,667 INFO ----------------------------------------
+2026-07-09 11:27:06,667 INFO Starte WarengruppenGenerator
+2026-07-09 11:27:06,667 INFO [WarengruppenGenerator] Starte
+2026-07-09 11:27:06,672 INFO [WarengruppenGenerator] 20 Datensätze geschrieben.
+2026-07-09 11:27:06,672 INFO [WarengruppenGenerator] 20 Datensätze erzeugt.
+2026-07-09 11:27:06,672 INFO WarengruppenGenerator erfolgreich beendet.
+2026-07-09 11:27:06,672 INFO ----------------------------------------
+2026-07-09 11:27:06,672 INFO Starte HerstellerGenerator
+2026-07-09 11:27:06,672 INFO [HerstellerGenerator] Starte
+2026-07-09 11:27:06,682 INFO [HerstellerGenerator] 100 Datensätze geschrieben.
+2026-07-09 11:27:06,682 INFO [HerstellerGenerator] 100 Datensätze erzeugt.
+2026-07-09 11:27:06,682 INFO HerstellerGenerator erfolgreich beendet.
+2026-07-09 11:27:06,682 INFO ----------------------------------------
+2026-07-09 11:27:06,682 INFO Starte LieferantenGenerator
+2026-07-09 11:27:06,682 INFO [LieferantenGenerator] Starte
+2026-07-09 11:27:06,699 INFO [LieferantenGenerator] 100 Datensätze geschrieben.
+2026-07-09 11:27:06,699 INFO [LieferantenGenerator] 100 Datensätze erzeugt.
+2026-07-09 11:27:06,699 INFO LieferantenGenerator erfolgreich beendet.
+2026-07-09 11:27:06,699 INFO ----------------------------------------
+2026-07-09 11:27:06,699 INFO Starte KundenGenerator
+2026-07-09 11:27:06,699 INFO [KundenGenerator] Starte
+2026-07-09 11:27:06,851 INFO [KundenGenerator] 1000 Datensätze geschrieben.
+2026-07-09 11:27:06,852 INFO [KundenGenerator] 1000 Datensätze erzeugt.
+2026-07-09 11:27:06,852 INFO KundenGenerator erfolgreich beendet.
+2026-07-09 11:27:06,852 INFO ----------------------------------------
+2026-07-09 11:27:06,852 INFO Starte MarkenGenerator
+2026-07-09 11:27:06,852 INFO [MarkenGenerator] Starte
+2026-07-09 11:27:06,888 WARNING Hersteller 'LEGO' nicht gefunden.
+2026-07-09 11:27:06,888 WARNING Hersteller 'Playmobil' nicht gefunden.
+2026-07-09 11:27:06,888 WARNING Hersteller 'Ravensburger' nicht gefunden.
+2026-07-09 11:27:06,888 WARNING Hersteller 'Mattel' nicht gefunden.
+2026-07-09 11:27:06,889 WARNING Hersteller 'Mattel' nicht gefunden.
+2026-07-09 11:27:06,889 WARNING Hersteller 'Hasbro' nicht gefunden.
+2026-07-09 11:27:06,889 WARNING Hersteller 'Hasbro' nicht gefunden.
+2026-07-09 11:27:06,889 WARNING Hersteller 'Hasbro' nicht gefunden.
+2026-07-09 11:27:06,889 WARNING Hersteller 'Kärcher' nicht gefunden.
+2026-07-09 11:27:06,889 WARNING Hersteller 'Gardena' nicht gefunden.
+2026-07-09 11:27:06,889 WARNING Hersteller 'Fiskars' nicht gefunden.
+2026-07-09 11:27:06,889 INFO [MarkenGenerator] 98 Datensätze geschrieben.
+2026-07-09 11:27:06,889 INFO [MarkenGenerator] 98 Datensätze erzeugt.
+2026-07-09 11:27:06,889 INFO MarkenGenerator erfolgreich beendet.
+2026-07-09 11:27:06,889 INFO ----------------------------------------
+2026-07-09 11:27:06,889 INFO Starte ArtikelGenerator
+2026-07-09 11:27:06,890 INFO [ArtikelGenerator] Starte
+2026-07-09 11:27:07,246 INFO 10000 Artikel erzeugt.
+2026-07-09 11:27:07,250 INFO [ArtikelGenerator] 0 Datensätze erzeugt.
+2026-07-09 11:27:07,250 INFO ArtikelGenerator erfolgreich beendet.
+2026-07-09 11:27:07,250 INFO ----------------------------------------
+2026-07-09 11:27:07,250 INFO Starte OrganisationGenerator
+2026-07-09 11:27:07,250 INFO [OrganisationGenerator] Starte
+2026-07-09 11:27:07,285 INFO [OrganisationGenerator] 96 Datensätze geschrieben.
+2026-07-09 11:27:07,285 INFO [OrganisationGenerator] 96 Datensätze erzeugt.
+2026-07-09 11:27:07,285 INFO OrganisationGenerator erfolgreich beendet.
+2026-07-09 11:27:07,285 INFO ----------------------------------------
+2026-07-09 11:27:07,285 INFO Starte SaisonkalenderGenerator
+2026-07-09 11:27:07,285 INFO [SaisonkalenderGenerator] Starte
+2026-07-09 11:27:07,291 INFO [SaisonkalenderGenerator] 14 Datensätze geschrieben.
+2026-07-09 11:27:07,291 INFO [SaisonkalenderGenerator] 14 Datensätze erzeugt.
+2026-07-09 11:27:07,291 INFO SaisonkalenderGenerator erfolgreich beendet.
+2026-07-09 11:27:07,291 INFO ----------------------------------------
+2026-07-09 11:27:07,291 INFO Starte RegaleGenerator
+2026-07-09 11:27:07,291 INFO [RegaleGenerator] Starte
+2026-07-09 11:27:07,305 INFO 11 Regale erzeugt.
+2026-07-09 11:27:07,305 INFO [RegaleGenerator] 0 Datensätze erzeugt.
+2026-07-09 11:27:07,305 INFO RegaleGenerator erfolgreich beendet.
+2026-07-09 11:27:07,305 INFO ----------------------------------------
+2026-07-09 11:27:07,305 INFO Starte RegalplaetzeGenerator
+2026-07-09 11:27:07,305 INFO [RegalplaetzeGenerator] Starte
+2026-07-09 11:27:07,344 INFO 1625 Regalplätze erzeugt.
+2026-07-09 11:27:07,345 INFO [RegalplaetzeGenerator] 0 Datensätze erzeugt.
+2026-07-09 11:27:07,345 INFO RegalplaetzeGenerator erfolgreich beendet.
+2026-07-09 11:27:07,345 INFO ----------------------------------------
+2026-07-09 11:27:07,345 INFO Starte KostenstellenGenerator
+2026-07-09 11:27:07,345 INFO [KostenstellenGenerator] Starte
+2026-07-09 11:27:07,348 INFO [KostenstellenGenerator] 9 Datensätze geschrieben.
+2026-07-09 11:27:07,348 INFO [KostenstellenGenerator] 9 Datensätze erzeugt.
+2026-07-09 11:27:07,349 INFO KostenstellenGenerator erfolgreich beendet.
+2026-07-09 11:27:07,349 INFO ----------------------------------------
+2026-07-09 11:27:07,349 INFO Starte KostenartenGenerator
+2026-07-09 11:27:07,349 INFO [KostenartenGenerator] Starte
+2026-07-09 11:27:07,356 INFO [KostenartenGenerator] 22 Datensätze geschrieben.
+2026-07-09 11:27:07,356 INFO [KostenartenGenerator] 22 Datensätze erzeugt.
+2026-07-09 11:27:07,357 INFO KostenartenGenerator erfolgreich beendet.
+2026-07-09 11:27:07,357 INFO 
+2026-07-09 11:27:07,357 INFO === Alle Generatoren erfolgreich beendet ===
+2026-07-09 11:27:07,357 INFO 
+2026-07-09 11:31:28,443 INFO 
+2026-07-09 11:31:28,443 INFO === RetailDWGen V1.7 gestartet ===
+2026-07-09 11:31:28,443 INFO 
+2026-07-09 11:31:28,443 INFO ----------------------------------------
+2026-07-09 11:31:28,443 INFO Starte WarengruppenGenerator
+2026-07-09 11:31:28,443 INFO [WarengruppenGenerator] Starte
+2026-07-09 11:31:28,448 INFO [WarengruppenGenerator] 20 Datensätze geschrieben.
+2026-07-09 11:31:28,448 INFO [WarengruppenGenerator] 20 Datensätze erzeugt.
+2026-07-09 11:31:28,448 INFO WarengruppenGenerator erfolgreich beendet.
+2026-07-09 11:31:28,448 INFO ----------------------------------------
+2026-07-09 11:31:28,448 INFO Starte HerstellerGenerator
+2026-07-09 11:31:28,448 INFO [HerstellerGenerator] Starte
+2026-07-09 11:31:28,459 INFO [HerstellerGenerator] 100 Datensätze geschrieben.
+2026-07-09 11:31:28,459 INFO [HerstellerGenerator] 100 Datensätze erzeugt.
+2026-07-09 11:31:28,459 INFO HerstellerGenerator erfolgreich beendet.
+2026-07-09 11:31:28,459 INFO ----------------------------------------
+2026-07-09 11:31:28,459 INFO Starte LieferantenGenerator
+2026-07-09 11:31:28,459 INFO [LieferantenGenerator] Starte
+2026-07-09 11:31:28,472 INFO [LieferantenGenerator] 100 Datensätze geschrieben.
+2026-07-09 11:31:28,472 INFO [LieferantenGenerator] 100 Datensätze erzeugt.
+2026-07-09 11:31:28,472 INFO LieferantenGenerator erfolgreich beendet.
+2026-07-09 11:31:28,472 INFO ----------------------------------------
+2026-07-09 11:31:28,472 INFO Starte KundenGenerator
+2026-07-09 11:31:28,472 INFO [KundenGenerator] Starte
+2026-07-09 11:31:28,641 INFO [KundenGenerator] 1000 Datensätze geschrieben.
+2026-07-09 11:31:28,642 INFO [KundenGenerator] 1000 Datensätze erzeugt.
+2026-07-09 11:31:28,642 INFO KundenGenerator erfolgreich beendet.
+2026-07-09 11:31:28,642 INFO ----------------------------------------
+2026-07-09 11:31:28,642 INFO Starte MarkenGenerator
+2026-07-09 11:31:28,642 INFO [MarkenGenerator] Starte
+2026-07-09 11:31:28,669 WARNING Hersteller 'LEGO' nicht gefunden.
+2026-07-09 11:31:28,669 WARNING Hersteller 'Playmobil' nicht gefunden.
+2026-07-09 11:31:28,669 WARNING Hersteller 'Ravensburger' nicht gefunden.
+2026-07-09 11:31:28,669 WARNING Hersteller 'Mattel' nicht gefunden.
+2026-07-09 11:31:28,669 WARNING Hersteller 'Mattel' nicht gefunden.
+2026-07-09 11:31:28,669 WARNING Hersteller 'Hasbro' nicht gefunden.
+2026-07-09 11:31:28,669 WARNING Hersteller 'Hasbro' nicht gefunden.
+2026-07-09 11:31:28,669 WARNING Hersteller 'Hasbro' nicht gefunden.
+2026-07-09 11:31:28,669 WARNING Hersteller 'Kärcher' nicht gefunden.
+2026-07-09 11:31:28,669 WARNING Hersteller 'Gardena' nicht gefunden.
+2026-07-09 11:31:28,669 WARNING Hersteller 'Fiskars' nicht gefunden.
+2026-07-09 11:31:28,669 INFO [MarkenGenerator] 98 Datensätze geschrieben.
+2026-07-09 11:31:28,670 INFO [MarkenGenerator] 98 Datensätze erzeugt.
+2026-07-09 11:31:28,670 INFO MarkenGenerator erfolgreich beendet.
+2026-07-09 11:31:28,670 INFO ----------------------------------------
+2026-07-09 11:31:28,670 INFO Starte ArtikelGenerator
+2026-07-09 11:31:28,670 INFO [ArtikelGenerator] Starte
+2026-07-09 11:31:29,208 INFO 10000 Artikel erzeugt.
+2026-07-09 11:31:29,213 INFO [ArtikelGenerator] 0 Datensätze erzeugt.
+2026-07-09 11:31:29,213 INFO ArtikelGenerator erfolgreich beendet.
+2026-07-09 11:31:29,213 INFO ----------------------------------------
+2026-07-09 11:31:29,213 INFO Starte OrganisationGenerator
+2026-07-09 11:31:29,213 INFO [OrganisationGenerator] Starte
+2026-07-09 11:31:29,249 INFO [OrganisationGenerator] 96 Datensätze geschrieben.
+2026-07-09 11:31:29,249 INFO [OrganisationGenerator] 96 Datensätze erzeugt.
+2026-07-09 11:31:29,249 INFO OrganisationGenerator erfolgreich beendet.
+2026-07-09 11:31:29,249 INFO ----------------------------------------
+2026-07-09 11:31:29,249 INFO Starte SaisonkalenderGenerator
+2026-07-09 11:31:29,249 INFO [SaisonkalenderGenerator] Starte
+2026-07-09 11:31:29,255 INFO [SaisonkalenderGenerator] 14 Datensätze geschrieben.
+2026-07-09 11:31:29,255 INFO [SaisonkalenderGenerator] 14 Datensätze erzeugt.
+2026-07-09 11:31:29,255 INFO SaisonkalenderGenerator erfolgreich beendet.
+2026-07-09 11:31:29,255 INFO ----------------------------------------
+2026-07-09 11:31:29,255 INFO Starte RegaleGenerator
+2026-07-09 11:31:29,255 INFO [RegaleGenerator] Starte
+2026-07-09 11:31:29,269 INFO [RegaleGenerator] 11 Datensätze geschrieben.
+2026-07-09 11:31:29,269 INFO [RegaleGenerator] 11 Datensätze erzeugt.
+2026-07-09 11:31:29,269 INFO RegaleGenerator erfolgreich beendet.
+2026-07-09 11:31:29,269 INFO ----------------------------------------
+2026-07-09 11:31:29,269 INFO Starte RegalplaetzeGenerator
+2026-07-09 11:31:29,269 INFO [RegalplaetzeGenerator] Starte
+2026-07-09 11:31:29,312 INFO 1625 Regalplätze erzeugt.
+2026-07-09 11:31:29,312 INFO [RegalplaetzeGenerator] 0 Datensätze erzeugt.
+2026-07-09 11:31:29,312 INFO RegalplaetzeGenerator erfolgreich beendet.
+2026-07-09 11:31:29,313 INFO ----------------------------------------
+2026-07-09 11:31:29,313 INFO Starte KostenstellenGenerator
+2026-07-09 11:31:29,313 INFO [KostenstellenGenerator] Starte
+2026-07-09 11:31:29,316 INFO [KostenstellenGenerator] 9 Datensätze geschrieben.
+2026-07-09 11:31:29,316 INFO [KostenstellenGenerator] 9 Datensätze erzeugt.
+2026-07-09 11:31:29,316 INFO KostenstellenGenerator erfolgreich beendet.
+2026-07-09 11:31:29,316 INFO ----------------------------------------
+2026-07-09 11:31:29,317 INFO Starte KostenartenGenerator
+2026-07-09 11:31:29,317 INFO [KostenartenGenerator] Starte
+2026-07-09 11:31:29,328 INFO [KostenartenGenerator] 22 Datensätze geschrieben.
+2026-07-09 11:31:29,328 INFO [KostenartenGenerator] 22 Datensätze erzeugt.
+2026-07-09 11:31:29,328 INFO KostenartenGenerator erfolgreich beendet.
+2026-07-09 11:31:29,328 INFO 
+2026-07-09 11:31:29,328 INFO === Alle Generatoren erfolgreich beendet ===
+2026-07-09 11:31:29,328 INFO 
+2026-07-09 11:37:36,606 INFO 
+2026-07-09 11:37:36,606 INFO === RetailDWGen V1.7 gestartet ===
+2026-07-09 11:37:36,606 INFO 
+2026-07-09 11:37:36,606 INFO ----------------------------------------
+2026-07-09 11:37:36,606 INFO Starte WarengruppenGenerator
+2026-07-09 11:37:36,606 INFO [WarengruppenGenerator] Starte
+2026-07-09 11:37:36,612 INFO [WarengruppenGenerator] 20 Datensätze geschrieben.
+2026-07-09 11:37:36,612 INFO [WarengruppenGenerator] 20 Datensätze erzeugt.
+2026-07-09 11:37:36,612 INFO WarengruppenGenerator erfolgreich beendet.
+2026-07-09 11:37:36,612 INFO ----------------------------------------
+2026-07-09 11:37:36,612 INFO Starte HerstellerGenerator
+2026-07-09 11:37:36,612 INFO [HerstellerGenerator] Starte
+2026-07-09 11:37:36,631 INFO [HerstellerGenerator] 100 Datensätze geschrieben.
+2026-07-09 11:37:36,631 INFO [HerstellerGenerator] 100 Datensätze erzeugt.
+2026-07-09 11:37:36,631 INFO HerstellerGenerator erfolgreich beendet.
+2026-07-09 11:37:36,631 INFO ----------------------------------------
+2026-07-09 11:37:36,631 INFO Starte LieferantenGenerator
+2026-07-09 11:37:36,631 INFO [LieferantenGenerator] Starte
+2026-07-09 11:37:36,648 INFO [LieferantenGenerator] 100 Datensätze geschrieben.
+2026-07-09 11:37:36,648 INFO [LieferantenGenerator] 100 Datensätze erzeugt.
+2026-07-09 11:37:36,649 INFO LieferantenGenerator erfolgreich beendet.
+2026-07-09 11:37:36,649 INFO ----------------------------------------
+2026-07-09 11:37:36,649 INFO Starte KundenGenerator
+2026-07-09 11:37:36,649 INFO [KundenGenerator] Starte
+2026-07-09 11:37:36,813 INFO [KundenGenerator] 1000 Datensätze geschrieben.
+2026-07-09 11:37:36,814 INFO [KundenGenerator] 1000 Datensätze erzeugt.
+2026-07-09 11:37:36,814 INFO KundenGenerator erfolgreich beendet.
+2026-07-09 11:37:36,814 INFO ----------------------------------------
+2026-07-09 11:37:36,814 INFO Starte MarkenGenerator
+2026-07-09 11:37:36,814 INFO [MarkenGenerator] Starte
+2026-07-09 11:37:36,841 WARNING Hersteller 'LEGO' nicht gefunden.
+2026-07-09 11:37:36,841 WARNING Hersteller 'Playmobil' nicht gefunden.
+2026-07-09 11:37:36,841 WARNING Hersteller 'Ravensburger' nicht gefunden.
+2026-07-09 11:37:36,841 WARNING Hersteller 'Mattel' nicht gefunden.
+2026-07-09 11:37:36,841 WARNING Hersteller 'Mattel' nicht gefunden.
+2026-07-09 11:37:36,841 WARNING Hersteller 'Hasbro' nicht gefunden.
+2026-07-09 11:37:36,841 WARNING Hersteller 'Hasbro' nicht gefunden.
+2026-07-09 11:37:36,841 WARNING Hersteller 'Hasbro' nicht gefunden.
+2026-07-09 11:37:36,841 WARNING Hersteller 'Kärcher' nicht gefunden.
+2026-07-09 11:37:36,841 WARNING Hersteller 'Gardena' nicht gefunden.
+2026-07-09 11:37:36,841 WARNING Hersteller 'Fiskars' nicht gefunden.
+2026-07-09 11:37:36,842 INFO [MarkenGenerator] 98 Datensätze geschrieben.
+2026-07-09 11:37:36,842 INFO [MarkenGenerator] 98 Datensätze erzeugt.
+2026-07-09 11:37:36,842 INFO MarkenGenerator erfolgreich beendet.
+2026-07-09 11:37:36,842 INFO ----------------------------------------
+2026-07-09 11:37:36,842 INFO Starte ArtikelGenerator
+2026-07-09 11:37:36,842 INFO [ArtikelGenerator] Starte
+2026-07-09 11:37:37,233 INFO [ArtikelGenerator] 10000 Datensätze geschrieben.
+2026-07-09 11:37:37,234 INFO [ArtikelGenerator] 10000 Datensätze erzeugt.
+2026-07-09 11:37:37,234 INFO ArtikelGenerator erfolgreich beendet.
+2026-07-09 11:37:37,234 INFO ----------------------------------------
+2026-07-09 11:37:37,234 INFO Starte OrganisationGenerator
+2026-07-09 11:37:37,234 INFO [OrganisationGenerator] Starte
+2026-07-09 11:37:37,269 INFO [OrganisationGenerator] 96 Datensätze geschrieben.
+2026-07-09 11:37:37,269 INFO [OrganisationGenerator] 96 Datensätze erzeugt.
+2026-07-09 11:37:37,269 INFO OrganisationGenerator erfolgreich beendet.
+2026-07-09 11:37:37,269 INFO ----------------------------------------
+2026-07-09 11:37:37,269 INFO Starte SaisonkalenderGenerator
+2026-07-09 11:37:37,269 INFO [SaisonkalenderGenerator] Starte
+2026-07-09 11:37:37,275 INFO [SaisonkalenderGenerator] 14 Datensätze geschrieben.
+2026-07-09 11:37:37,275 INFO [SaisonkalenderGenerator] 14 Datensätze erzeugt.
+2026-07-09 11:37:37,275 INFO SaisonkalenderGenerator erfolgreich beendet.
+2026-07-09 11:37:37,275 INFO ----------------------------------------
+2026-07-09 11:37:37,275 INFO Starte RegaleGenerator
+2026-07-09 11:37:37,275 INFO [RegaleGenerator] Starte
+2026-07-09 11:37:37,297 INFO [RegaleGenerator] 11 Datensätze geschrieben.
+2026-07-09 11:37:37,297 INFO [RegaleGenerator] 11 Datensätze erzeugt.
+2026-07-09 11:37:37,297 INFO RegaleGenerator erfolgreich beendet.
+2026-07-09 11:37:37,297 INFO ----------------------------------------
+2026-07-09 11:37:37,297 INFO Starte RegalplaetzeGenerator
+2026-07-09 11:37:37,297 INFO [RegalplaetzeGenerator] Starte
+2026-07-09 11:37:37,351 INFO 1625 Regalplätze erzeugt.
+2026-07-09 11:37:37,352 INFO [RegalplaetzeGenerator] 0 Datensätze erzeugt.
+2026-07-09 11:37:37,352 INFO RegalplaetzeGenerator erfolgreich beendet.
+2026-07-09 11:37:37,352 INFO ----------------------------------------
+2026-07-09 11:37:37,352 INFO Starte KostenstellenGenerator
+2026-07-09 11:37:37,352 INFO [KostenstellenGenerator] Starte
+2026-07-09 11:37:37,357 INFO [KostenstellenGenerator] 9 Datensätze geschrieben.
+2026-07-09 11:37:37,357 INFO [KostenstellenGenerator] 9 Datensätze erzeugt.
+2026-07-09 11:37:37,357 INFO KostenstellenGenerator erfolgreich beendet.
+2026-07-09 11:37:37,357 INFO ----------------------------------------
+2026-07-09 11:37:37,357 INFO Starte KostenartenGenerator
+2026-07-09 11:37:37,357 INFO [KostenartenGenerator] Starte
+2026-07-09 11:37:37,364 INFO [KostenartenGenerator] 22 Datensätze geschrieben.
+2026-07-09 11:37:37,364 INFO [KostenartenGenerator] 22 Datensätze erzeugt.
+2026-07-09 11:37:37,364 INFO KostenartenGenerator erfolgreich beendet.
+2026-07-09 11:37:37,364 INFO 
+2026-07-09 11:37:37,364 INFO === Alle Generatoren erfolgreich beendet ===
+2026-07-09 11:37:37,364 INFO 

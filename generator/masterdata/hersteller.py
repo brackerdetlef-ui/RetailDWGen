@@ -1,25 +1,39 @@
-import random
 import yaml
 
-from generator.base import BaseGenerator
-from generator.infrastructure.csv_writer import CSVWriter
+from generator.csv_generator import CSVGenerator
+from generator.registry import register_generator
 
 
-class HerstellerGenerator(BaseGenerator):
+@register_generator
+class HerstellerGenerator(CSVGenerator):
+    """
+    Generator für Hersteller.
 
-    def __init__(self, config, logger):
+    Version 1.7
+    """
 
-        super().__init__(config, logger)
+    output_file = "output/stammdaten/hersteller.csv"
 
-        self.writer = CSVWriter(
-            "output/stammdaten/hersteller.csv"
-        )
+    header = [
+        "hersteller_id",
+        "hersteller_code",
+        "name",
+        "land",
+        "aktiv"
+    ]
 
-    def generate(self):
+    depends_on = []
 
-        random.seed(
-            self.config.get("general", "seed")
-        )
+    # ------------------------------------------------------------------
+
+    def initialize(self):
+
+        seed = self.config.get("general", "seed")
+        self.random.seed(seed)
+
+    # ------------------------------------------------------------------
+
+    def build_rows(self):
 
         with open(
             "config/hersteller.yaml",
@@ -48,31 +62,37 @@ class HerstellerGenerator(BaseGenerator):
         ]
 
         rows = []
+        context_rows = []
 
         for nummer, name in enumerate(
                 daten["hersteller"][:anzahl],
                 start=1):
 
+            code = f"H{nummer:04d}"
+
+            land = self.random.choice(laender)
+
             rows.append([
                 nummer,
-                f"H{nummer:04d}",
+                code,
                 name,
-                random.choice(laender),
+                land,
                 True
             ])
 
-        self.writer.write(
-            [
-                "hersteller_id",
-                "hersteller_code",
-                "name",
-                "land",
-                "aktiv"
-            ],
-            rows
-        )
+            context_rows.append({
+                "hersteller_id": nummer,
+                "hersteller_code": code,
+                "name": name,
+                "land": land,
+                "aktiv": True
+            })
 
-        self.logger.info(
-            "%d Hersteller erzeugt.",
-            len(rows)
-        )
+        return rows, context_rows
+
+    # ------------------------------------------------------------------
+
+    def update_context(self, context_rows):
+
+        if self.context is not None:
+            self.context.hersteller = context_rows

@@ -1,36 +1,43 @@
 import yaml
 
-from generator.base import BaseGenerator
-from generator.infrastructure.csv_writer import CSVWriter
+from generator.csv_generator import CSVGenerator
+from generator.registry import register_generator
 
 
-class OrganisationGenerator(BaseGenerator):
+@register_generator
+class OrganisationGenerator(CSVGenerator):
+    """
+    Generator für Organisationseinheiten.
 
-    def __init__(self, config, logger):
+    Version 1.7
+    """
 
-        super().__init__(config, logger)
+    yaml_file = "config/organisation.yaml"
 
-        self.writer = CSVWriter(
-            "output/stammdaten/organisation.csv"
-        )
+    output_file = "output/stammdaten/organisation.csv"
 
-    def generate(self):
+    header = [
+        "org_id",
+        "org_code",
+        "org_kuerzel",
+        "bezeichnung",
+        "parent_code",
+        "typ",
+        "aktiv"
+    ]
 
-        # ----------------------------------------------------
-        # Organisation laden
-        # ----------------------------------------------------
+    depends_on = [
+        "WarengruppenGenerator"
+    ]
 
-        with open(
-            "config/organisation.yaml",
-            "r",
-            encoding="utf-8"
-        ) as file:
+    # ------------------------------------------------------------------
 
-            daten = yaml.safe_load(file)
+    def build_rows(self):
 
-        organisation = daten["organisation"]
+        organisation = self.section("organisation")
 
         rows = []
+        context_rows = []
 
         nummer = 1
 
@@ -40,102 +47,107 @@ class OrganisationGenerator(BaseGenerator):
 
         for eintrag in organisation:
 
-            rows.append(
-                [
-                    nummer,
-                    eintrag["code"],
-                    eintrag["kuerzel"],
-                    eintrag["bezeichnung"],
-                    eintrag["parent"] or "",
-                    eintrag["typ"],
-                    True
-                ]
-            )
+            row = [
+                nummer,
+                eintrag["code"],
+                eintrag["kuerzel"],
+                eintrag["bezeichnung"],
+                eintrag["parent"] or "",
+                eintrag["typ"],
+                True
+            ]
+
+            rows.append(row)
+
+            context_rows.append({
+                "org_id": nummer,
+                "org_code": eintrag["code"],
+                "org_kuerzel": eintrag["kuerzel"],
+                "bezeichnung": eintrag["bezeichnung"],
+                "parent_code": eintrag["parent"] or "",
+                "typ": eintrag["typ"],
+                "aktiv": True
+            })
 
             nummer += 1
 
         # ----------------------------------------------------
-        # Warengruppen laden
+        # Warengruppen aus dem Context
         # ----------------------------------------------------
 
-        with open(
-            "config/warengruppen.yaml",
-            "r",
-            encoding="utf-8"
-        ) as file:
-
-            daten = yaml.safe_load(file)
-
-        warengruppen = daten["warengruppen"]
+        warengruppen = self.context.warengruppen
 
         # ----------------------------------------------------
-        # Verkaufsgruppen erzeugen
+        # Verkaufsgruppen
         # ----------------------------------------------------
 
         org_code = 510
 
         for wg in warengruppen:
 
-            kuerzel = "VG" + wg["code"]
+            row = [
+                nummer,
+                str(org_code),
+                "VG" + wg["wg_kurzcode"],
+                f"Verkaufsgruppe {wg['bezeichnung']}",
+                "010",
+                "verkaufsgruppe",
+                True
+            ]
 
-            rows.append(
-                [
-                    nummer,
-                    f"{org_code}",
-                    kuerzel,
-                    f"Verkaufsgruppe {wg['name']}",
-                    "010",
-                    "verkaufsgruppe",
-                    True
-                ]
-            )
+            rows.append(row)
+
+            context_rows.append({
+                "org_id": nummer,
+                "org_code": str(org_code),
+                "org_kuerzel": "VG" + wg["wg_kurzcode"],
+                "bezeichnung": f"Verkaufsgruppe {wg['bezeichnung']}",
+                "parent_code": "010",
+                "typ": "verkaufsgruppe",
+                "aktiv": True
+            })
 
             nummer += 1
             org_code += 1
 
         # ----------------------------------------------------
-        # Einkaufsgruppen erzeugen
+        # Einkaufsgruppen
         # ----------------------------------------------------
 
         org_code = 610
 
         for wg in warengruppen:
 
-            kuerzel = "EG" + wg["code"]
+            row = [
+                nummer,
+                str(org_code),
+                "EG" + wg["wg_kurzcode"],
+                f"Einkaufsgruppe {wg['bezeichnung']}",
+                "020",
+                "einkaufsgruppe",
+                True
+            ]
 
-            rows.append(
-                [
-                   nummer,
-                   f"{org_code}",
-                   kuerzel,
-                   f"Einkaufsgruppe {wg['name']}",
-                   "020",
-                   "einkaufsgruppe",
-                   True
-                ]
-            )
+            rows.append(row)
+
+            context_rows.append({
+                "org_id": nummer,
+                "org_code": str(org_code),
+                "org_kuerzel": "EG" + wg["wg_kurzcode"],
+                "bezeichnung": f"Einkaufsgruppe {wg['bezeichnung']}",
+                "parent_code": "020",
+                "typ": "einkaufsgruppe",
+                "aktiv": True
+            })
 
             nummer += 1
             org_code += 1
 
-        # ----------------------------------------------------
-        # CSV schreiben
-        # ----------------------------------------------------
+        return rows, context_rows
 
-        self.writer.write(
-            [
-                "org_id",
-                "org_code",
-                "org_kuerzel",
-                "bezeichnung",
-                "parent_code",
-                "typ",
-                "aktiv"
-            ],
-            rows
-        )
+    # ------------------------------------------------------------------
 
-        self.logger.info(
-            "%d Organisationseinheiten erzeugt.",
-            len(rows)
-        )
+    def update_context(self, context_rows):
+
+        if self.context is not None:
+            self.context.organisation = context_rows

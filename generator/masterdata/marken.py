@@ -1,68 +1,66 @@
-import csv
 import yaml
 
-from generator.base import BaseGenerator
-from generator.infrastructure.csv_writer import CSVWriter
+from generator.csv_generator import CSVGenerator
+from generator.registry import register_generator
 
 
-class MarkenGenerator(BaseGenerator):
+@register_generator
+class MarkenGenerator(CSVGenerator):
+    """
+    Generator für Marken.
 
-    def __init__(self, config, logger):
+    Version 1.7
+    """
 
-        super().__init__(config, logger)
+    yaml_file = "config/marken.yaml"
 
-        self.writer = CSVWriter(
-            "output/stammdaten/marken.csv"
-        )
+    output_file = "output/stammdaten/marken.csv"
 
-    def generate(self):
+    header = [
+        "marke_id",
+        "marke_code",
+        "bezeichnung",
+        "hersteller_id",
+        "aktiv"
+    ]
 
-        with open(
-            "config/marken.yaml",
-            "r",
-            encoding="utf-8"
-        ) as file:
+    depends_on = [
+        "HerstellerGenerator"
+    ]
 
-            daten = yaml.safe_load(file)
+    # ------------------------------------------------------------
 
-        hersteller = {}
+    def build_rows(self):
 
-        with open(
-            "output/stammdaten/hersteller.csv",
-            "r",
-            encoding="utf-8"
-        ) as file:
-
-            reader = csv.DictReader(
-                file,
-                delimiter=self.config.get(
-                    "general",
-                    "delimiter"
-                )
-            )
-
-            for row in reader:
-
-                hersteller[
-                    row["name"]
-                ] = int(
-                    row["hersteller_id"]
-                )
+        daten = self.section("marken")
 
         anzahl = min(
             self.config.get(
                 "generator",
                 "marken"
             ),
-            len(daten["marken"])
+            len(daten)
         )
 
+        #
+        # Hersteller aus dem Context lesen
+        #
+        hersteller = {}
+
+        if self.context is not None:
+
+            for row in self.context.hersteller:
+
+                hersteller[
+                    row["name"]
+                ] = row["hersteller_id"]
+
         rows = []
+        context_rows = []
 
         for nummer, marke in enumerate(
-            daten["marken"][:anzahl],
-            start=1
-        ):
+                daten[:anzahl],
+                start=1):
 
             hersteller_name = marke["hersteller"]
 
@@ -75,11 +73,13 @@ class MarkenGenerator(BaseGenerator):
 
                 continue
 
+            code = f"M{nummer:04d}"
+
             rows.append([
 
                 nummer,
 
-                f"M{nummer:04d}",
+                code,
 
                 marke["name"],
 
@@ -91,23 +91,23 @@ class MarkenGenerator(BaseGenerator):
 
             ])
 
-        self.writer.write(
+            context_rows.append({
 
-            [
+                "marke_id": nummer,
+                "marke_code": code,
+                "bezeichnung": marke["name"],
+                "hersteller_id": hersteller[
+                    hersteller_name
+                ],
+                "aktiv": True
 
-                "marke_id",
-                "marke_code",
-                "bezeichnung",
-                "hersteller_id",
-                "aktiv"
+            })
 
-            ],
+        return rows, context_rows
 
-            rows
+    # ------------------------------------------------------------
 
-        )
+    def update_context(self, context_rows):
 
-        self.logger.info(
-            "%d Marken erzeugt.",
-            len(rows)
-        )
+        if self.context is not None:
+            self.context.marken = context_rows

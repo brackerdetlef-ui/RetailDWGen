@@ -1,34 +1,71 @@
 from datetime import date, timedelta
-import random
 
 from faker import Faker
 
 from generator.base import BaseGenerator
-from generator.infrastructure.csv_writer import CSVWriter
+from generator.csv_generator import CSVGenerator
+from generator.registry import register_generator
 from generator.utils import slugify
 
 
-class KundenGenerator(BaseGenerator):
+@register_generator
+class KundenGenerator(CSVGenerator):
+    """
+    Generator für Kunden.
+
+    Version 1.7
+    """
+
+    output_file = "output/stammdaten/kunden.csv"
+
+    yaml_file = None
+
+    header = [
+        "kunde_id",
+        "kunden_nr",
+        "anrede",
+        "vorname",
+        "nachname",
+        "firma",
+        "strasse",
+        "plz",
+        "ort",
+        "land",
+        "telefon",
+        "mobil",
+        "email",
+        "geburtsdatum",
+        "kunde_seit",
+        "kundengruppe",
+        "bonuspunkte",
+        "aktiv"
+    ]
+
+    depends_on = []
+
+    # ------------------------------------------------------------------
 
     def __init__(self, config, logger):
 
         super().__init__(config, logger)
 
-        self.writer = CSVWriter(
-            "output/stammdaten/kunden.csv"
-        )
-
         self.faker = Faker("de_DE")
 
-    def generate(self):
+    # ------------------------------------------------------------------
+
+    def initialize(self):
 
         seed = self.config.get(
             "general",
             "seed"
         )
 
-        random.seed(seed)
+        self.random.seed(seed)
         Faker.seed(seed)
+
+    # ------------------------------------------------------------------
+
+    def build_rows(self):
 
         anzahl = self.config.get(
             "generator",
@@ -36,84 +73,52 @@ class KundenGenerator(BaseGenerator):
         )
 
         laender = [
-
             "DE",
             "AT",
             "CH",
             "NL",
             "FR"
-
         ]
-
-        header = [
-
-            "kunde_id",
-            "kunden_nr",
-            "anrede",
-            "vorname",
-            "nachname",
-            "firma",
-            "strasse",
-            "plz",
-            "ort",
-            "land",
-            "telefon",
-            "mobil",
-            "email",
-            "geburtsdatum",
-            "kunde_seit",
-            "kundengruppe",
-            "bonuspunkte",
-            "aktiv"
-
-        ]
-
-        rows = []
 
         heute = date.today()
 
+        rows = []
+        context_rows = []
+
         for nummer in range(1, anzahl + 1):
 
-            geschlecht = random.choice(
-                ["m", "w"]
-            )
+            geschlecht = self.random.choice(["m", "w"])
 
             if geschlecht == "m":
 
                 anrede = "Herr"
-
                 vorname = self.faker.first_name_male()
 
             else:
 
                 anrede = "Frau"
-
                 vorname = self.faker.first_name_female()
 
             nachname = self.faker.last_name()
 
-            if random.random() < 0.10:
+            if self.random.random() < 0.10:
 
                 firma = self.faker.company()
-
                 kundengruppe = "GESCHAEFT"
 
             else:
 
                 firma = ""
-
                 kundengruppe = "PRIVAT"
 
             email = (
                 slugify(
-                    vorname
-                    + "."
-                    + nachname
+                    vorname + "." + nachname
                 )
                 + "@example.com"
             )
 
-            alter = random.randint(
+            alter = self.random.randint(
                 18,
                 85
             )
@@ -123,13 +128,19 @@ class KundenGenerator(BaseGenerator):
             )
 
             kunde_seit = heute - timedelta(
-                days=random.randint(
+                days=self.random.randint(
                     0,
                     3650
                 )
             )
 
-            rows.append([
+            land = self.random.choice(laender)
+            bonuspunkte = self.random.randint(
+                0,
+                10000
+            )
+
+            row = [
 
                 nummer,
 
@@ -149,7 +160,7 @@ class KundenGenerator(BaseGenerator):
 
                 self.faker.city(),
 
-                random.choice(laender),
+                land,
 
                 self.faker.phone_number(),
 
@@ -163,24 +174,42 @@ class KundenGenerator(BaseGenerator):
 
                 kundengruppe,
 
-                random.randint(0, 10000),
+                bonuspunkte,
 
                 True
 
-            ])
+            ]
 
-        self.writer.write(
+            rows.append(row)
 
-            header,
+            context_rows.append({
 
-            rows
+                "kunde_id": nummer,
+                "kunden_nr": row[1],
+                "anrede": anrede,
+                "vorname": vorname,
+                "nachname": nachname,
+                "firma": firma,
+                "strasse": row[6],
+                "plz": row[7],
+                "ort": row[8],
+                "land": land,
+                "telefon": row[10],
+                "mobil": row[11],
+                "email": email,
+                "geburtsdatum": geburtsdatum.isoformat(),
+                "kunde_seit": kunde_seit.isoformat(),
+                "kundengruppe": kundengruppe,
+                "bonuspunkte": bonuspunkte,
+                "aktiv": True
 
-        )
+            })
 
-        self.logger.info(
+        return rows, context_rows
 
-            "%d Kunden erzeugt.",
+    # ------------------------------------------------------------------
 
-            anzahl
+    def update_context(self, context_rows):
 
-        )  
+        if self.context is not None:
+            self.context.kunden = context_rows

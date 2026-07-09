@@ -1,61 +1,68 @@
-import yaml
-
-from generator.base import BaseGenerator
-from generator.infrastructure.csv_writer import CSVWriter
+from generator.csv_generator import CSVGenerator
+from generator.registry import register_generator
 
 
-class SaisonkalenderGenerator(BaseGenerator):
+@register_generator
+class SaisonkalenderGenerator(CSVGenerator):
+    """
+    Generator für Saisonkalender.
 
-    def __init__(self, config, logger):
+    Version 1.7
+    """
 
-        super().__init__(config, logger)
+    yaml_file = "config/saisonkalender.yaml"
 
-        self.writer = CSVWriter(
-            "output/stammdaten/saisonkalender.csv"
-        )
+    output_file = "output/stammdaten/saisonkalender.csv"
 
-    def generate(self):
+    header = [
+        "saison_id",
+        "saison_code",
+        "bezeichnung",
+        "beginn",
+        "ende",
+        "aktiv"
+    ]
 
-        with open(
-            "config/saisonkalender.yaml",
-            "r",
-            encoding="utf-8"
-        ) as file:
+    depends_on = []
 
-            daten = yaml.safe_load(file)
+    # ------------------------------------------------------------------
 
-        saisons = daten["saisons"]
+    def build_rows(self):
+
+        saisons = self.section("saisons")
 
         rows = []
+        context_rows = []
 
         for nummer, eintrag in enumerate(
                 saisons,
                 start=1):
 
-            rows.append(
-                [
-                    nummer,
-                    eintrag["code"],
-                    eintrag["bezeichnung"],
-                    eintrag["beginn"],
-                    eintrag["ende"],
-                    True
-                ]
-            )
+            row = [
+                nummer,
+                eintrag["code"],
+                eintrag["bezeichnung"],
+                eintrag["beginn"],
+                eintrag["ende"],
+                True
+            ]
 
-        self.writer.write(
-            [
-                "saison_id",
-                "saison_code",
-                "bezeichnung",
-                "beginn",
-                "ende",
-                "aktiv"
-            ],
-            rows
-        )
+            rows.append(row)
 
-        self.logger.info(
-            "%d Saisons erzeugt.",
-            len(rows)
-        )
+            context_rows.append({
+                "saison_id": nummer,
+                "saison_code": eintrag["code"],
+                "bezeichnung": eintrag["bezeichnung"],
+                "beginn": eintrag["beginn"],
+                "ende": eintrag["ende"],
+                "aktiv": True
+            })
+
+        return rows, context_rows
+
+    # ------------------------------------------------------------------
+
+    def update_context(self, context_rows):
+
+        if self.context is not None:
+            self.context.saisonkalender = context_rows
