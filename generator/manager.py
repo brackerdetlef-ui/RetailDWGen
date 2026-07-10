@@ -19,6 +19,21 @@ from generator.transaktionen.verkaeufe.verkaeufe_sequence import VerkaeufeSequen
 from generator.transaktionen.verkaeufe.verkaeufe_writer import VerkaeufeWriter
 from generator.transaktionen.verkaeufe.verkaeufe_check_writer import VerkaeufeCheckWriter
 from generator.transaktionen.verkaeufe.verkaeufe_generator import VerkaeufeGenerator
+from generator.transaktionen.wareneingaenge.wareneingaenge_sequence import WareneingaengeSequence
+from generator.transaktionen.wareneingaenge.wareneingaenge_writer import WareneingaengeWriter
+from generator.transaktionen.wareneingaenge.wareneingaenge_check_writer import WareneingaengeCheckWriter
+from generator.transaktionen.wareneingaenge.wareneingaenge_generator import WareneingaengeGenerator
+from generator.transaktionen.kunden_retouren.kunden_retouren_sequence import KundenRetourenSequence
+from generator.transaktionen.kunden_retouren.kunden_retouren_writer import KundenRetourenWriter
+from generator.transaktionen.kunden_retouren.kunden_retouren_check_writer import KundenRetourenCheckWriter
+from generator.transaktionen.kunden_retouren.kunden_retouren_generator import KundenRetourenGenerator
+from generator.transaktionen.verloren_vernichtet.verloren_vernichtet_sequence import VerlorenVernichtetSequence
+from generator.transaktionen.verloren_vernichtet.verloren_vernichtet_writer import VerlorenVernichtetWriter
+from generator.transaktionen.verloren_vernichtet.verloren_vernichtet_check_writer import VerlorenVernichtetCheckWriter
+from generator.transaktionen.verloren_vernichtet.verloren_vernichtet_generator import VerlorenVernichtetGenerator
+
+
+
 
 class GeneratorManager:
 
@@ -97,8 +112,22 @@ class GeneratorManager:
             VerkaeufeGenerator(
                 self.config,
                 self.logger
-            )
+            ),
 
+            WareneingaengeGenerator(
+                self.config,
+                self.logger
+            ),
+
+            KundenRetourenGenerator(
+                self.config,
+                self.logger
+            ),
+
+            VerlorenVernichtetGenerator(
+                self.config,
+                self.logger
+            )
             
 
         ]

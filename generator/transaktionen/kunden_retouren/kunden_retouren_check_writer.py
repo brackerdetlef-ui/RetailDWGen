@@ -1,15 +1,18 @@
 """
-Writer fuer die technische Kontroll-Datei eines Verkaufs-Exports.
+Writer fuer die technische Kontroll-Datei eines
+Kundenretouren-Exports.
 
-Die Check-Datei dokumentiert den vom Filial-Kassensystem
-erzeugten Export.
+Die Check-Datei dokumentiert den vom
+Warenwirtschaftssystem erzeugten Export.
 
 Sie dient zur:
+
 - Vollstaendigkeitskontrolle
 - Nachverfolgung von Exporten
 - Analyse technischer Probleme
 
-Die Datei ist nicht Bestandteil des fachlichen DWH-Modells.
+Die Datei ist nicht Bestandteil des
+fachlichen DWH-Modells.
 """
 
 from pathlib import Path
@@ -17,9 +20,10 @@ import csv
 from datetime import datetime
 
 
-class VerkaeufeCheckWriter:
+class KundenRetourenCheckWriter:
     """
-    Schreibt technische Kontroll-Dateien fuer Verkaufsimporte.
+    Schreibt technische Kontroll-Dateien
+    fuer Kundenretouren.
     """
 
     def __init__(
@@ -32,19 +36,20 @@ class VerkaeufeCheckWriter:
         self,
         store_id: str,
         export_timestamp: datetime,
-        sales_date: str,
-        first_sales_id: int | None,
-        last_sales_id: int | None,
+        return_date: str,
+        first_return_id: int | None,
+        last_return_id: int | None,
         record_count: int,
         export_start: datetime,
         export_end: datetime,
-        sales_filename: str
+        return_filename: str
     ) -> str:
         """
         Schreibt die Check-Datei.
 
         Beispiel:
-        verkaeufe_003_2026-07-09_23:58_check.csv
+
+        kunden_retouren_003_2026-07-09_23:58_check.csv
         """
 
         self.output_directory.mkdir(
@@ -57,7 +62,7 @@ class VerkaeufeCheckWriter:
         )
 
         filename = (
-            f"verkaeufe_{store_id}_{timestamp}_check.csv"
+            f"kunden_retouren_{store_id}_{timestamp}_check.csv"
         )
 
         filepath = (
@@ -65,48 +70,58 @@ class VerkaeufeCheckWriter:
         )
 
         check_data = [
+
             (
                 "filial_nummer",
                 store_id
             ),
+
             (
-                "verkaufsdatum",
-                sales_date
+                "retourendatum",
+                return_date
             ),
+
             (
-                "verkaufs_datei",
-                sales_filename
+                "kunden_retouren_datei",
+                return_filename
             ),
+
             (
                 "erzeugt_am",
                 export_timestamp.strftime(
                     "%Y-%m-%d %H:%M:%S"
                 )
             ),
+
             (
-                "erste_verkaufs_id",
-                first_sales_id
+                "erste_retoure_id",
+                first_return_id
             ),
+
             (
-                "letzte_verkaufs_id",
-                last_sales_id
+                "letzte_retoure_id",
+                last_return_id
             ),
+
             (
                 "anzahl_saetze",
                 record_count
             ),
+
             (
                 "export_start",
                 export_start.strftime(
                     "%Y-%m-%d %H:%M:%S"
                 )
             ),
+
             (
                 "export_ende",
                 export_end.strftime(
                     "%Y-%m-%d %H:%M:%S"
                 )
             )
+
         ]
 
         with open(
@@ -132,4 +147,4 @@ class VerkaeufeCheckWriter:
                 check_data
             )
 
-        return str(filepath)
+        return filename

@@ -39,10 +39,13 @@ LAGER
 211     Verkaufslager Filiale 2 - Bereich 1
 212     Verkaufslager Filiale 2 - Bereich 2
 213     Verkaufslager Filiale 2 - Bereich 3
+218     Pfand-Rueckgaben von Kunden - wartet auf Abholung durch Lieferanten
+219     Kunden-Retouren - Entscheidung offen
 
-120     Retourenlager Filiale 1
-121     Retourenlager Bereich 1
-122     Retourenlager Bereich 2
+120     Retourenlager Filiale 1 - wartet auf Abholung zur Zentrale
+121     Retourenlager Bereich 1 - wartet auf Abholung durch Lieferanten
+122     Retourenlager Bereich 2 - wartet auf Abholung druch Lieferanten
+129     Vernichtungs-Retouren (Verdorben)
 
 130     Kommissionierung Filiale 1
 131     Kommissionierung Bereich 1

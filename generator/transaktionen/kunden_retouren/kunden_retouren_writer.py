@@ -1,11 +1,13 @@
 """
-Writer fuer Verkaufs-Tagesdateien.
+Writer fuer Kundenretouren.
 
-Erzeugt die CSV-Datei, die vom Kassensystem einer Filiale
-nach dem Tagesabschluss bereitgestellt wird.
+Erzeugt die CSV-Datei fuer Kundenretouren
+einer Filiale.
 
-Der Writer erzeugt keine Verkaufsdaten und keine IDs.
-Er schreibt nur bereits erzeugte Verkaufsaggregation.
+Der Writer erzeugt keine Datensaetze und
+keine IDs.
+Er schreibt ausschliesslich bereits erzeugte
+Retourendaten.
 """
 
 from pathlib import Path
@@ -13,9 +15,9 @@ import csv
 from datetime import datetime
 
 
-class VerkaeufeWriter:
+class KundenRetourenWriter:
     """
-    Schreibt Verkaufsdateien.
+    Schreibt Kundenretourendateien.
     """
 
     def __init__(
@@ -24,20 +26,21 @@ class VerkaeufeWriter:
     ):
         self.output_directory = Path(output_directory)
 
-    def write_sales_file(
+    def write_customer_returns_file(
         self,
         store_id: str,
         export_timestamp: datetime,
-        sales_records: list[dict]
+        customer_return_records: list[dict]
     ) -> str:
         """
-        Schreibt eine Verkaufsdatei.
+        Schreibt eine Kundenretourendatei.
 
         Beispiel:
-        verkaeufe_003_2026-07-09_23:58.csv
+
+        kunden_retouren_003_2026-07-09_23:58.csv
 
         Rueckgabe:
-        Dateiname der erzeugten Verkaufsdatei.
+        Dateiname der erzeugten Kundenretourendatei.
         """
 
         self.output_directory.mkdir(
@@ -50,7 +53,7 @@ class VerkaeufeWriter:
         )
 
         filename = (
-            f"verkaeufe_{store_id}_{timestamp}.csv"
+            f"kunden_retouren_{store_id}_{timestamp}.csv"
         )
 
         filepath = (
@@ -58,12 +61,27 @@ class VerkaeufeWriter:
         )
 
         fieldnames = [
-            "verkaufs_id",
+
+            "retoure_id",
+
             "filial_nummer",
-            "verkaufsdatum",
+
+            "lager_nummer",
+
+            "retourendatum",
+
+            "verkaufs_id",
+
             "artikel_nummer",
-            "verkaufs_menge",
-            "netto_umsatz"
+
+            "retourenmenge",
+
+            "verkaufspreis",
+
+            "retourenwert",
+
+            "retourengrund"
+
         ]
 
         with open(
@@ -82,10 +100,7 @@ class VerkaeufeWriter:
             writer.writeheader()
 
             writer.writerows(
-                sales_records
+                customer_return_records
             )
 
-        #
-        # Fuer die Check-Datei wird nur der Dateiname benoetigt.
-        #
         return filename
