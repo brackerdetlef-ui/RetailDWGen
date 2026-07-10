@@ -1,113 +1,246 @@
 # RetailDWGen
 
-RetailDWGen is an open-source Python project for generating realistic retail business data.
+🇩🇪 [Deutsch](README.de.md) | 🇬🇧 **English** | 🇪🇸 [Español](README.es.md) | 🇫🇷 [Français](README.fr.md)
 
-The generated CSV files can be imported into virtually any relational database, cloud data platform or analytics environment. The project focuses on providing realistic and reproducible test data for development, education, demonstrations and performance testing.
+---
 
-## Features
+## Realistic Test Data for Retail, Data Warehousing and Business Intelligence
 
-* Generate realistic retail master data
-* UTF-8 encoded CSV output
-* Semicolon separated files
-* Configurable number of generated records
+RetailDWGen is a Python-based generator for realistic retail test data.
+
+The project generates structured CSV files suitable for software testing, training, demonstrations, and the development and validation of Data Warehouse (DWH), Business Intelligence (BI), and analytics solutions.
+
+The generated datasets are based on common retail business processes and can be imported into virtually any database system for further processing and analysis.
+
+---
+
+# Version 2.0
+
+Version **2.0** transforms RetailDWGen into a comprehensive platform for generating realistic retail datasets.
+
+In addition to master data, the project now generates transaction data, inventory data, and technical control files. This makes RetailDWGen particularly suitable for Data Warehouse projects, ETL development, software testing, analytics, and demonstrations.
+
+The datasets generated in version 2.0 intentionally focus on establishing a complete retail data landscape. Functional consistency between the different data domains will be enhanced step by step in future releases.
+
+---
+
+# Features
+
+* Realistic master data generation
+* Realistic transaction data generation
+* Inventory data generation
+* Technical control (check) files
+* Continuous technical sequence numbers
 * Reproducible datasets using configurable random seeds
+* UTF-8 CSV output with semicolon separators
 * Modular generator architecture
-* Written for Python 3.10.12
+* Consistent generator design
+* Developed with Python 3.10
 
-## Current Data Generators
+---
 
-The current release supports generation of:
+# Supported Data Domains
 
-* Product Categories
+## Master Data
+
+* Product groups
+* Products
 * Manufacturers
 * Suppliers
 * Customers
+* Stores
+* Warehouses
+* Employees
+* Cash registers
+* Shopping carts
+* Additional master data
 
-Additional generators will be introduced in future releases.
+---
 
-## Requirements
+## Transaction Data
 
-* Python 3.10.12
-* pip
-* Virtual Environment (recommended)
+* Sales
+* Goods receipts
+* Customer returns
+* Lost / damaged goods
+* Receipt (basket) sales
+* Shopping cart movements
 
-## Installation
+---
 
-Clone the repository:
+## Inventory Data
+
+* Warehouse inventory
+* Inventory counts
+
+---
+
+## Technical Components
+
+Each generator follows the same structure and produces:
+
+* CSV data file
+* Technical check file
+* Continuous technical sequence numbers
+
+---
+
+# Typical Use Cases
+
+RetailDWGen is suitable for:
+
+* Data Warehouse projects
+* Business Intelligence
+* ETL development
+* Software testing
+* Performance testing
+* Data migration
+* Demonstrations
+* Training
+* Prototyping
+* Analytical applications
+
+---
+
+# Requirements
+
+* Python 3.10
+* Python virtual environment (recommended)
+
+---
+
+# Installation
+
+Clone the repository
 
 ```bash
 git clone <repository-url>
 cd RetailDWGen
 ```
 
-Create a virtual environment:
+Create a virtual environment
 
 ```bash
 python3 -m venv .venv
 ```
 
-Activate the environment:
+Activate the virtual environment
 
 ```bash
 source .venv/bin/activate
 ```
 
-Install the required packages:
+Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Usage
+---
 
-Generate the CSV files by running:
+# Usage
+
+Start the data generation process
 
 ```bash
 python generate.py
 ```
 
-Generated files are written to
+Generated CSV files are written to:
 
 ```text
-output/stammdaten/
+output/
 ```
 
-## Configuration
+---
 
-The amount of generated data and additional settings are controlled through the configuration files located in the `config` directory.
-
-## Project Structure
+# Project Structure
 
 ```text
 RetailDWGen/
-
-config/
-generator/
-generator/stammdaten/
-generator/infrastruktur/
-output/
-
-generate.py
-requirements.txt
-VERSION
-README.md
+│
+├── config/
+├── generator/
+│   ├── infrastructure/
+│   ├── master_data/
+│   ├── transactions/
+│   └── inventory/
+│
+├── configuration/
+├── output/
+├── generate.py
+├── requirements.txt
+├── VERSION
+├── LICENSE
+├── README.md
+├── README.de.md
+├── README.es.md
+└── README.fr.md
 ```
 
-## Design Principles
+---
 
-RetailDWGen follows a few simple principles:
+# Configuration
 
-* Easy to understand
-* Easy to extend
-* Reproducible data generation
-* Clear project structure
-* Database independent
+The number of generated records and additional settings are centrally managed through configuration files.
 
-The project intentionally focuses on generating high-quality CSV data without being tied to any specific database system.
+---
 
-## License
+# Roadmap
 
-RetailDWGen is released under the MIT License.
+## Version 2.x
 
-See the LICENSE file for details.
+* Additional data domains
+* Improved business consistency
+* Extended warehouse and inventory logic
+* More simulation data
+
+## Version 3.x
+
+* Cross-domain business consistency
+* Complete retail process simulation
+* Enhanced shopping cart movement simulation
+* Consistent receipt and sales data
+* Realistic inventory management
+
+## Long-Term Vision
+
+RetailDWGen aims to become a comprehensive simulation platform for retail businesses.
+
+Future plans include:
+
+* Complete Data Warehouse test datasets
+* End-to-end retail process simulation
+* Shopping cart movement analytics
+* Shelf and store simulations
+* AI-ready analytical datasets
+* Visualization of customer movements within stores
+
+---
+
+# Author
+
+**Detlef Bracker**
+
+RetailDWGen is an open-source project created by Detlef Bracker to demonstrate modern software engineering, data modeling, and Data Warehouse architectures for retail environments.
+
+---
+
+# Feedback and Discussions
+
+Questions, ideas, suggestions, and professional discussions are always welcome.
+
+Please use **GitHub Discussions** for general topics or create an **Issue** if you discover a bug or would like to suggest an improvement.
+
+Your feedback is greatly appreciated and helps improve RetailDWGen.
+
+---
+
+# License
+
+This project is licensed under the MIT License.
+
+Copyright © Detlef Bracker
+
+For more information, please refer to the `LICENSE` file.
 

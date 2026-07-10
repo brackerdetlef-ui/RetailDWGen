@@ -31,6 +31,20 @@ from generator.transaktionen.verloren_vernichtet.verloren_vernichtet_sequence im
 from generator.transaktionen.verloren_vernichtet.verloren_vernichtet_writer import VerlorenVernichtetWriter
 from generator.transaktionen.verloren_vernichtet.verloren_vernichtet_check_writer import VerlorenVernichtetCheckWriter
 from generator.transaktionen.verloren_vernichtet.verloren_vernichtet_generator import VerlorenVernichtetGenerator
+from generator.transaktionen.einkaufswagen_bewegungen.einkaufswagen_bewegungen_sequence import EinkaufswagenBewegungenSequence
+from generator.transaktionen.einkaufswagen_bewegungen.einkaufswagen_bewegungen_writer import EinkaufswagenBewegungenWriter
+from generator.transaktionen.einkaufswagen_bewegungen.einkaufswagen_bewegungen_check_writer import EinkaufswagenBewegungenCheckWriter
+from generator.transaktionen.einkaufswagen_bewegungen.einkaufswagen_bewegungen_generator import EinkaufswagenBewegungenGenerator
+from generator.bestaende.bestaende_sequence import BestaendeSequence
+from generator.bestaende.bestaende_writer import BestaendeWriter
+from generator.bestaende.bestaende_check_writer import BestaendeCheckWriter
+from generator.bestaende.bestaende_generator import BestaendeGenerator
+from generator.inventuren.inventuren_sequence import InventurenSequence
+from generator.inventuren.inventuren_writer import InventurenWriter
+from generator.inventuren.inventuren_check_writer import InventurenCheckWriter
+from generator.inventuren.inventuren_generator import InventurenGenerator
+
+
 
 
 
@@ -125,6 +139,21 @@ class GeneratorManager:
             ),
 
             VerlorenVernichtetGenerator(
+                self.config,
+                self.logger
+            ),
+
+            BestaendeGenerator(
+                self.config,
+                self.logger
+            ),
+ 
+            InventurenGenerator(
+                self.config,
+                self.logger
+            ),
+
+            EinkaufswagenBewegungenGenerator(
                 self.config,
                 self.logger
             )
