@@ -1,8 +1,18 @@
-"""
-RetailDWGen
-Generator Registry
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
-Version 1.7
+"""
+============================================================
+Projekt : RetailDWGen
+Datei   : registry.py
+Version : 2.0.1
+
+Beschreibung:
+TODO: Beschreibung ergänzen.
+
+Autor   : Detlef Bracker
+Lizenz  : MIT License
+============================================================
 """
 
 from __future__ import annotations

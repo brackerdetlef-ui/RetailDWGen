@@ -1,3 +1,20 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+============================================================
+Projekt : RetailDWGen
+Datei   : inventuren_check_writer.py
+Version : 2.0.1
+
+Beschreibung:
+TODO: Beschreibung ergänzen.
+
+Autor   : Detlef Bracker
+Lizenz  : MIT License
+============================================================
+"""
+
 """
 Writer fuer die technische Kontroll-Datei eines
 Inventur-Exports.

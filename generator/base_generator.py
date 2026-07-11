@@ -1,9 +1,18 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 """
-RetailDWGen
+============================================================
+Projekt : RetailDWGen
+Datei   : base_generator.py
+Version : 2.0.1
 
-Basisklasse aller Generatoren.
+Beschreibung:
+TODO: Beschreibung ergänzen.
 
-Version 1.7
+Autor   : Detlef Bracker
+Lizenz  : MIT License
+============================================================
 """
 
 from __future__ import annotations

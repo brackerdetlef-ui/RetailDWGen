@@ -1,8 +1,18 @@
-"""
-RetailDWGen
-DataContext
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
-Gemeinsamer Speicher für während eines Generatorlaufs erzeugte Objekte.
+"""
+============================================================
+Projekt : RetailDWGen
+Datei   : context.py
+Version : 2.0.1
+
+Beschreibung:
+TODO: Beschreibung ergänzen.
+
+Autor   : Detlef Bracker
+Lizenz  : MIT License
+============================================================
 """
 
 from dataclasses import dataclass, field

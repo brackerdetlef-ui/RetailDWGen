@@ -1,3 +1,20 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+============================================================
+Projekt : RetailDWGen
+Datei   : generate.py
+Version : 2.0.1
+
+Beschreibung:
+TODO: Beschreibung ergänzen.
+
+Autor   : Detlef Bracker
+Lizenz  : MIT License
+============================================================
+"""
+
 from pathlib import Path
 
 from generator.infrastruktur.config import Config

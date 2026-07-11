@@ -1,3 +1,20 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+============================================================
+Projekt : RetailDWGen
+Datei   : kostenstellen.py
+Version : 2.0.1
+
+Beschreibung:
+TODO: Beschreibung ergänzen.
+
+Autor   : Detlef Bracker
+Lizenz  : MIT License
+============================================================
+"""
+
 from generator.csv_generator import CSVGenerator
 from generator.registry import register_generator
 

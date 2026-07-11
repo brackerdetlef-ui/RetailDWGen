@@ -1,3 +1,20 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+============================================================
+Projekt : RetailDWGen
+Datei   : personalnummer.py
+Version : 2.0.1
+
+Beschreibung:
+TODO: Beschreibung ergänzen.
+
+Autor   : Detlef Bracker
+Lizenz  : MIT License
+============================================================
+"""
+
 class PersonalnummerGenerator:
 
     def __init__(self, start=1000, increment=10):

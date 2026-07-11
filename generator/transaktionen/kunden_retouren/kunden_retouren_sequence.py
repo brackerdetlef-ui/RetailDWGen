@@ -1,3 +1,20 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+============================================================
+Projekt : RetailDWGen
+Datei   : kunden_retouren_sequence.py
+Version : 2.0.1
+
+Beschreibung:
+TODO: Beschreibung ergänzen.
+
+Autor   : Detlef Bracker
+Lizenz  : MIT License
+============================================================
+"""
+
 """
 Verwaltung der fortlaufenden Kundenretouren-IDs.
 
