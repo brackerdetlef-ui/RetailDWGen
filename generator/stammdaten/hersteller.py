@@ -5,7 +5,7 @@
 ============================================================
 Projekt : RetailDWGen
 Datei   : hersteller.py
-Version : 2.0.1
+Version : 2.1
 
 Beschreibung:
 TODO: Beschreibung ergänzen.
@@ -19,6 +19,7 @@ import yaml
 
 from generator.csv_generator import CSVGenerator
 from generator.registry import register_generator
+from datetime import datetime
 
 
 @register_generator
@@ -26,10 +27,14 @@ class HerstellerGenerator(CSVGenerator):
     """
     Generator für Hersteller.
 
-    Version 1.7
+    Version 2.1
     """
 
-    output_file = "output/stammdaten/hersteller.csv"
+    _timestamp = datetime.now().strftime(
+        "%Y-%m-%d_%H-%M-%S"
+    )
+
+    output_file = f"output/stammdaten/hersteller_{_timestamp}.csv"
 
     header = [
         "hersteller_id",

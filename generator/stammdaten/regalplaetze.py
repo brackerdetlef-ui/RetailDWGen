@@ -5,7 +5,7 @@
 ============================================================
 Projekt : RetailDWGen
 Datei   : regalplaetze.py
-Version : 2.0.1
+Version : 2.1.0
 
 Beschreibung:
 TODO: Beschreibung ergänzen.
@@ -20,6 +20,7 @@ import yaml
 
 from generator.base import BaseGenerator
 from generator.infrastruktur.csv_writer import CSVWriter
+from datetime import datetime
 
 
 class RegalplaetzeGenerator(BaseGenerator):
@@ -28,8 +29,13 @@ class RegalplaetzeGenerator(BaseGenerator):
 
         super().__init__(config, logger)
 
+        _timestamp = datetime.now().strftime(
+             "%Y-%m-%d_%H-%M-%S"
+        )
+
+
         self.writer = CSVWriter(
-            "output/stammdaten/regalplaetze.csv"
+            f"output/stammdaten/regalplaetze_{_timestamp}.csv"
         )
 
     def generate(self):

@@ -5,7 +5,7 @@
 ============================================================
 Projekt : RetailDWGen
 Datei   : organisation.py
-Version : 2.0.1
+Version : 2.1.0
 
 Beschreibung:
 TODO: Beschreibung ergänzen.
@@ -19,6 +19,7 @@ import yaml
 
 from generator.csv_generator import CSVGenerator
 from generator.registry import register_generator
+from datetime import datetime
 
 
 @register_generator
@@ -26,12 +27,15 @@ class OrganisationGenerator(CSVGenerator):
     """
     Generator für Organisationseinheiten.
 
-    Version 1.7
     """
 
     yaml_file = "config/organisation.yaml"
 
-    output_file = "output/stammdaten/organisation.csv"
+    _timestamp = datetime.now().strftime(
+        "%Y-%m-%d_%H-%M-%S"
+    )
+
+    output_file = f"output/stammdaten/organisation_{_timestamp}.csv"
 
     header = [
         "org_id",

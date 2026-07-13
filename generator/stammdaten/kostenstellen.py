@@ -5,7 +5,7 @@
 ============================================================
 Projekt : RetailDWGen
 Datei   : kostenstellen.py
-Version : 2.0.1
+Version : 2.1.0
 
 Beschreibung:
 TODO: Beschreibung ergänzen.
@@ -17,6 +17,7 @@ Lizenz  : MIT License
 
 from generator.csv_generator import CSVGenerator
 from generator.registry import register_generator
+from datetime import datetime
 
 
 @register_generator
@@ -24,12 +25,15 @@ class KostenstellenGenerator(CSVGenerator):
     """
     Generator für Kostenstellen.
 
-    Version 1.7
     """
 
     yaml_file = "config/kostenstellen.yaml"
 
-    output_file = "output/stammdaten/kostenstellen.csv"
+    _timestamp = datetime.now().strftime(
+        "%Y-%m-%d_%H-%M-%S"
+    )
+
+    output_file = f"output/stammdaten/kostenstellen_{_timestamp}.csv"
 
     header = [
         "kst_id",

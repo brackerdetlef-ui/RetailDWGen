@@ -5,7 +5,7 @@
 ============================================================
 Projekt : RetailDWGen
 Datei   : artikel.py
-Version : 2.0.1
+Version : 2.1.0
 
 Beschreibung:
 TODO: Beschreibung ergänzen.
@@ -19,6 +19,7 @@ from faker import Faker
 
 from generator.csv_generator import CSVGenerator
 from generator.registry import register_generator
+from datetime import datetime
 
 
 @register_generator
@@ -26,10 +27,16 @@ class ArtikelGenerator(CSVGenerator):
     """
     Generator für Artikel.
 
-    Version 1.7
+    Version 2.1
     """
 
-    output_file = "output/stammdaten/artikel.csv"
+    _timestamp = datetime.now().strftime(
+        "%Y-%m-%d_%H-%M-%S"
+    )
+
+    output_file = (
+        f"output/stammdaten/artikel_{_timestamp}.csv"
+    )
 
     yaml_file = None
 

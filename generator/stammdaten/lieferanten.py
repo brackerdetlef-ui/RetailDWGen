@@ -5,7 +5,7 @@
 ============================================================
 Projekt : RetailDWGen
 Datei   : lieferanten.py
-Version : 2.0.1
+Version : 2.1.0
 
 Beschreibung:
 TODO: Beschreibung ergänzen.
@@ -21,6 +21,7 @@ from generator.csv_generator import CSVGenerator
 from generator.registry import register_generator
 from generator.utils import create_email
 from generator.utils import create_website
+from datetime import datetime
 
 
 @register_generator
@@ -28,10 +29,14 @@ class LieferantenGenerator(CSVGenerator):
     """
     Generator für Lieferanten.
 
-    Version 1.7
+    Version 2.1
     """
 
-    output_file = "output/stammdaten/lieferanten.csv"
+    _timestamp = datetime.now().strftime(
+        "%Y-%m-%d_%H-%M-%S"
+    )
+
+    output_file = f"output/stammdaten/lieferanten_{_timestamp}.csv"
 
     header = [
         "lieferant_id",

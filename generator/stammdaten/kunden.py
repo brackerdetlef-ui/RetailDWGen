@@ -23,6 +23,7 @@ from generator.base import BaseGenerator
 from generator.csv_generator import CSVGenerator
 from generator.registry import register_generator
 from generator.utils import slugify
+from datetime import datetime
 
 
 @register_generator
@@ -33,7 +34,11 @@ class KundenGenerator(CSVGenerator):
     Version 1.7
     """
 
-    output_file = "output/stammdaten/kunden.csv"
+    _timestamp = datetime.now().strftime(
+        "%Y-%m-%d_%H-%M-%S"
+    )
+ 
+    output_file = f"output/stammdaten/kunden_{_timestamp}.csv"
 
     yaml_file = None
 

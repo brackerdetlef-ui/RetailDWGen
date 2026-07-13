@@ -5,7 +5,7 @@
 ============================================================
 Projekt : RetailDWGen
 Datei   : warengruppen.py
-Version : 2.0.1
+Version : 2.1.0
 
 Beschreibung:
 TODO: Beschreibung ergänzen.
@@ -19,6 +19,7 @@ import yaml
 
 from generator.csv_generator import CSVGenerator
 from generator.registry import register_generator
+from datetime import datetime
 
 
 @register_generator
@@ -26,10 +27,13 @@ class WarengruppenGenerator(CSVGenerator):
     """
     Generator für Warengruppen.
 
-    Version 1.7
     """
 
-    output_file = "output/stammdaten/warengruppen.csv"
+    _timestamp = datetime.now().strftime(
+        "%Y-%m-%d_%H-%M-%S"
+    )
+
+    output_file = f"output/stammdaten/warengruppen_{_timestamp}.csv"
 
     yaml_file = "config/warengruppen.yaml"
 
