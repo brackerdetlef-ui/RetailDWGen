@@ -5,7 +5,7 @@
 ============================================================
 Projekt : RetailDWGen
 Datei   : kunden_retouren_writer.py
-Version : 2.0.1
+Version : 2.2.0
 
 Beschreibung:
 TODO: Beschreibung ergänzen.
@@ -54,7 +54,7 @@ class KundenRetourenWriter:
 
         Beispiel:
 
-        kunden_retouren_003_2026-07-09_23:58.csv
+        kunden_retouren_2026-07-09_23:58.csv
 
         Rueckgabe:
         Dateiname der erzeugten Kundenretourendatei.
@@ -70,7 +70,7 @@ class KundenRetourenWriter:
         )
 
         filename = (
-            f"kunden_retouren_{store_id}_{timestamp}.csv"
+            f"kunden_retouren_{timestamp}.csv"
         )
 
         filepath = (

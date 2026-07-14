@@ -5,7 +5,7 @@
 ============================================================
 Projekt : RetailDWGen
 Datei   : bestaende_writer.py
-Version : 2.0.1
+Version : 2.2.0
 
 Beschreibung:
 TODO: Beschreibung ergänzen.
@@ -54,7 +54,7 @@ class BestaendeWriter:
 
         Beispiel:
 
-        artikelbestaende_210_2026-07-10_23:58.csv
+        artikelbestaende_2026-07-10_23:58.csv
 
         Rueckgabe:
         Dateiname der erzeugten Bestandsdatei.
@@ -70,7 +70,7 @@ class BestaendeWriter:
         )
 
         filename = (
-            f"artikelbestaende_{warehouse_id}_{timestamp}.csv"
+            f"artikelbestaende_{timestamp}.csv"
         )
 
         filepath = (

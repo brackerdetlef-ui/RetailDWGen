@@ -5,7 +5,7 @@
 ============================================================
 Projekt : RetailDWGen
 Datei   : inventuren_writer.py
-Version : 2.0.1
+Version : 2.2.0
 
 Beschreibung:
 TODO: Beschreibung ergänzen.
@@ -54,7 +54,7 @@ class InventurenWriter:
 
         Beispiel:
 
-        inventuren_210_2026-07-10_23:58.csv
+        inventuren_2026-07-10_23:58.csv
 
         Rueckgabe:
         Dateiname der erzeugten Inventurdatei.
@@ -70,7 +70,7 @@ class InventurenWriter:
         )
 
         filename = (
-            f"inventuren_{warehouse_id}_{timestamp}.csv"
+            f"inventuren_{timestamp}.csv"
         )
 
         filepath = (

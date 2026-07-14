@@ -5,7 +5,7 @@
 ============================================================
 Projekt : RetailDWGen
 Datei   : wareneingaenge_check_writer.py
-Version : 2.0.1
+Version : 2.2.0
 
 Beschreibung:
 TODO: Beschreibung ergänzen.
@@ -63,7 +63,7 @@ class WareneingaengeCheckWriter:
         Schreibt die Check-Datei.
 
         Beispiel:
-        wareneingaenge_003_2026-07-09_23:58_check.csv
+        wareneingaenge_2026-07-09_23:58_check.csv
         """
 
         self.output_directory.mkdir(
@@ -76,7 +76,7 @@ class WareneingaengeCheckWriter:
         )
 
         filename = (
-            f"wareneingaenge_{store_id}_{timestamp}_check.csv"
+            f"wareneingaenge_{timestamp}_check.csv"
         )
 
         filepath = (

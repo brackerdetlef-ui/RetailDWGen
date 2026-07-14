@@ -5,7 +5,7 @@
 ============================================================
 Projekt : RetailDWGen
 Datei   : verkaeufe_writer.py
-Version : 2.0.1
+Version : 2.2.0
 
 Beschreibung:
 TODO: Beschreibung ergänzen.
@@ -51,7 +51,7 @@ class VerkaeufeWriter:
         Schreibt eine Verkaufsdatei.
 
         Beispiel:
-        verkaeufe_003_2026-07-09_23:58.csv
+        verkaeufe_2026-07-09_23:58.csv
 
         Rueckgabe:
         Dateiname der erzeugten Verkaufsdatei.
@@ -67,7 +67,7 @@ class VerkaeufeWriter:
         )
 
         filename = (
-            f"verkaeufe_{store_id}_{timestamp}.csv"
+            f"verkaeufe_{timestamp}.csv"
         )
 
         filepath = (

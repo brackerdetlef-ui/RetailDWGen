@@ -5,7 +5,7 @@
 ============================================================
 Projekt : RetailDWGen
 Datei   : einkaufswagen_bewegungen_writer.py
-Version : 2.0.1
+Version : 2.2.0
 
 Beschreibung:
 TODO: Beschreibung ergänzen.
@@ -59,7 +59,7 @@ class EinkaufswagenBewegungenWriter:
 
         Beispiel:
 
-        einkaufswagen_bewegungen_001_2026-07-10_23:58.csv
+        einkaufswagen_bewegungen_2026-07-10_23:58.csv
 
         Rueckgabe:
         Dateiname der erzeugten CSV-Datei.
@@ -76,7 +76,7 @@ class EinkaufswagenBewegungenWriter:
 
         filename = (
             f"einkaufswagen_bewegungen_"
-            f"{store_id}_{timestamp}.csv"
+            f"{timestamp}.csv"
         )
 
         filepath = (

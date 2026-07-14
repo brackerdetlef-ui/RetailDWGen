@@ -5,7 +5,7 @@
 ============================================================
 Projekt : RetailDWGen
 Datei   : bestaende_check_writer.py
-Version : 2.0.1
+Version : 2.2.0
 
 Beschreibung:
 TODO: Beschreibung ergänzen.
@@ -66,7 +66,7 @@ class BestaendeCheckWriter:
 
         Beispiel:
 
-        artikelbestaende_210_2026-07-10_23:58_check.csv
+        artikelbestaende_2026-07-10_23:58_check.csv
         """
 
         self.output_directory.mkdir(
@@ -79,7 +79,7 @@ class BestaendeCheckWriter:
         )
 
         filename = (
-            f"artikelbestaende_{warehouse_id}_{timestamp}_check.csv"
+            f"artikelbestaende_{timestamp}_check.csv"
         )
 
         filepath = (

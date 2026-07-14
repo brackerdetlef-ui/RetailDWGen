@@ -5,7 +5,7 @@
 ============================================================
 Projekt : RetailDWGen
 Datei   : bon_verkaeufe_writer.py
-Version : 2.0.1
+Version : 2.2.0
 
 Beschreibung:
 TODO: Beschreibung ergänzen.
@@ -53,7 +53,7 @@ class BonVerkaeufeWriter:
 
         Beispiel:
 
-        bon_verkaeufe_001_2026-07-10_23:58.csv
+        bon_verkaeufe_2026-07-10_23:58.csv
 
         Rueckgabe:
         Dateiname der erzeugten Bon-Verkaufsdatei.
@@ -69,7 +69,7 @@ class BonVerkaeufeWriter:
         )
 
         filename = (
-            f"bon_verkaeufe_{store_id}_{timestamp}.csv"
+            f"bon_verkaeufe_{timestamp}.csv"
         )
 
         filepath = (

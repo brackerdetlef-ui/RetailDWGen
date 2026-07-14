@@ -5,7 +5,7 @@
 ============================================================
 Projekt : RetailDWGen
 Datei   : kunden_retouren_check_writer.py
-Version : 2.0.1
+Version : 2.2.0
 
 Beschreibung:
 TODO: Beschreibung ergänzen.
@@ -66,7 +66,7 @@ class KundenRetourenCheckWriter:
 
         Beispiel:
 
-        kunden_retouren_003_2026-07-09_23:58_check.csv
+        kunden_retouren_2026-07-09_23:58_check.csv
         """
 
         self.output_directory.mkdir(
@@ -79,7 +79,7 @@ class KundenRetourenCheckWriter:
         )
 
         filename = (
-            f"kunden_retouren_{store_id}_{timestamp}_check.csv"
+            f"kunden_retouren_{timestamp}_check.csv"
         )
 
         filepath = (

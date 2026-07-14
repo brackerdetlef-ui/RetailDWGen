@@ -5,7 +5,7 @@
 ============================================================
 Projekt : RetailDWGen
 Datei   : einkaufswagen_bewegungen_check_writer.py
-Version : 2.0.1
+Version : 2.2.0
 
 Beschreibung:
 TODO: Beschreibung ergänzen.
@@ -70,7 +70,7 @@ class EinkaufswagenBewegungenCheckWriter:
 
         Beispiel:
 
-        einkaufswagen_bewegungen_003_2026-07-09_23:58_check.csv
+        einkaufswagen_bewegungen_2026-07-09_23:58_check.csv
         """
 
         self.output_directory.mkdir(
@@ -84,7 +84,7 @@ class EinkaufswagenBewegungenCheckWriter:
 
         filename = (
             f"einkaufswagen_bewegungen_"
-            f"{store_id}_{timestamp}_check.csv"
+            f"{timestamp}_check.csv"
         )
 
         filepath = (

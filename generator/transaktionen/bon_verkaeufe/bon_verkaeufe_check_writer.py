@@ -5,7 +5,7 @@
 ============================================================
 Projekt : RetailDWGen
 Datei   : bon_verkaeufe_check_writer.py
-Version : 2.0.1
+Version : 2.2.0
 
 Beschreibung:
 TODO: Beschreibung ergänzen.
@@ -67,7 +67,7 @@ class BonVerkaeufeCheckWriter:
 
         Beispiel:
 
-        bon_verkaeufe_001_2026-07-10_23:58_check.csv
+        bon_verkaeufe_2026-07-10_23:58_check.csv
         """
 
         self.output_directory.mkdir(
@@ -80,7 +80,7 @@ class BonVerkaeufeCheckWriter:
         )
 
         filename = (
-            f"bon_verkaeufe_{store_id}_{timestamp}_check.csv"
+            f"bon_verkaeufe_{timestamp}_check.csv"
         )
 
         filepath = (

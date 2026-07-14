@@ -5,7 +5,7 @@
 ============================================================
 Projekt : RetailDWGen
 Datei   : verloren_vernichtet_check_writer.py
-Version : 2.0.1
+Version : 2.2.0
 
 Beschreibung:
 TODO: Beschreibung ergänzen.
@@ -66,7 +66,7 @@ class VerlorenVernichtetCheckWriter:
 
         Beispiel:
 
-        verloren_vernichtet_003_2026-07-09_23:58_check.csv
+        verloren_vernichtet_2026-07-09_23:58_check.csv
         """
 
         self.output_directory.mkdir(
@@ -79,7 +79,7 @@ class VerlorenVernichtetCheckWriter:
         )
 
         filename = (
-            f"verloren_vernichtet_{store_id}_{timestamp}_check.csv"
+            f"verloren_vernichtet_{timestamp}_check.csv"
         )
 
         filepath = (
